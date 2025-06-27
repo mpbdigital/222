@@ -1,0 +1,516 @@
+
+/* --- ملف التوطين Localizable.strings (ar) --- */
+
+/*  (фильтры) */
+
+"filter.all" = "الكل";
+"filter.events" = "الفعاليات";
+"filter.birthdays" = "أعياد الميلاد";
+"picker.title" = "اختر فئة";
+"empty.prefix" = "ليس لديك أي";
+"empty.event" = " فعاليات";
+"empty.middle" = " و ";
+"empty.birthday" = " أعياد ميلاد";
+"header.pinned" = "المثبتة";
+"header.events" = "الفعاليات";
+"header.birthdays" = "أعياد الميلاد";
+"navigation.title" = "الفعاليات";
+"search.prompt" = "بحث...";
+
+/* SettingsSheetView (Widget) */
+
+// مفاتيح خاصة بعناصر الواجهة (WIDGETS)
+
+"WIDGET_ADD_EVENT" = "إضافة حدث";
+"WIDGET_BIRTHDAY_EVENT" = "عيد ميلاد!";
+"WIDGET_EVENT_TODAY" = "الحدث اليوم!";
+"WIDGET_EVENT_PASSED" = "الحدث قد انتهى";
+"WIDGET_DISPLAY_NAME" = "الحدث القادم";
+"WIDGET_DISPLAY_DESCRIPTION" = "يعرض الحدث القادم.";
+"SOON_LABEL" = "قريباً";
+
+"SAMPLE_EVENT_MEET_FRIENDS" = "لقاء مع الأصدقاء";
+"SAMPLE_EVENT_CHECK_PIZZA" = "شراء بيتزا";
+"SAMPLE_EVENT_CHECK_CALL_FRIENDS" = "الاتصال بالأصدقاء";
+"SAMPLE_EVENT_ANNA_BIRTHDAY" = "عيد ميلاد آنا";
+"SAMPLE_EVENT_ANNA_NOTE" = "لا تنسَ شراء الهدية!";
+"SAMPLE_EVENT_CHECK_CHOOSE_GIFT" = "اختيار هدية";
+"SAMPLE_EVENT_WORK_MEETING" = "اجتماع عمل";
+
+"SAMPLE_EVENT_PICNIC" = "نزهة";
+"SAMPLE_EVENT_CHECK_BRING_FOOD" = "إحضار الطعام";
+"SAMPLE_EVENT_CHECK_SETUP_GAMES" = "تحضير الألعاب";
+
+"SAMPLE_EVENT_ELON_NAME" = "إيلون ماسك";
+"SAMPLE_EVENT_ELON_NOTE" = "اتصل لتهنئته بعيد ميلاده.";
+"SAMPLE_EVENT_ELON_CHECK_CALL" = "الاتصال بإيلون";
+
+"SAMPLE_EVENT_CHECK_PREPARE_GIFT" = "تحضير الهدية";
+
+"event_type_event" = "حدث";
+"event_type_birthday" = "عيد ميلاد";
+
+
+
+// Экран редактирования события (EditEventView)
+"editEvent.sectionHeader.birthday" = "عيد الميلاد";
+"editEvent.sectionHeader.event" = "الحدث";
+"editEvent.namePlaceholder" = "اسم الحدث";
+"editEvent.placeholder.notes" = "ملاحظات";
+"editEvent.checklist.header" = "قائمة المهام";
+"editEvent.notification.toggle" = "تمكين الإشعارات";
+"editEvent.deletePastEvents.label" = "حذف بعد الانتهاء";
+"editEvent.repeatSettings.linkTitle" = "التكرار";
+// Эмодзи
+"editEvent.emoji.sectionHeader"  = "الرموز التعبيرية";
+"editEvent.emoji.categoryPicker" = "فئة الرموز التعبيرية";
+
+
+//интервалы
+/*********************/
+/*  RepeatInterval   */
+/*********************/
+"repeatInterval.none" = "بدون تكرار";
+"repeatInterval.minute1" = "دقيقة واحدة";
+"repeatInterval.minute5" = "5 دقائق";
+"repeatInterval.minute10" = "10 دقائق";
+"repeatInterval.minute15" = "15 دقيقة";
+"repeatInterval.minute30" = "30 دقيقة";
+"repeatInterval.minute35" = "35 دقيقة";
+"repeatInterval.minute40" = "40 دقيقة";
+"repeatInterval.hour" = "60 دقيقة";
+
+
+// превью
+
+"event_type_event" = "حدث";
+"event_type_birthday" = "عيد ميلاد";
+
+/* SettingsSheetView (struct EventCardView) */
+
+"event.age_prefix" = "العمر: %d";
+"event.birthday_today" = "عيد ميلاد!";
+
+"event.repeat_annually_text" = "يتكرر سنويًا";
+"event.repeat_monthly_text" = "يتكرر شهريًا";
+
+// الإعدادات
+
+/* SettingsSheetView (الاشتراك، الإشعارات، التعليقات) */
+"SETTINGS_SUBSCRIPTION_HEADER" = "الاشتراك";
+"SETTINGS_SUBSCRIPTION_CURRENT_STATUS" = "الحالة الحالية:";
+"SETTINGS_SUBSCRIPTION_ACTIVE" = "مفعل";
+"SETTINGS_SUBSCRIPTION_INACTIVE" = "غير مفعل";
+"SETTINGS_SUBSCRIPTION_BUY_BUTTON" = "اشترِ الاشتراك";
+
+"SETTINGS_NOTIFICATIONS_HEADER" = "الإشعارات";
+"SETTINGS_NOTIFICATIONS_PERMISSION" = "الإذن:";
+"SETTINGS_NOTIFICATIONS_GRANTED" = "مسموح به";
+"SETTINGS_NOTIFICATIONS_ALLOW_BUTTON" = "السماح";
+
+"SETTINGS_FEEDBACK_HEADER" = "التعليقات";
+"SETTINGS_FEEDBACK_SEND_BUTTON" = "إرسال تعليق";
+
+/* SubscriptionModalView */
+"SUBSCRIPTION_MODAL_TITLE" = "اشترك الآن";
+"SUBSCRIPTION_MODAL_BUY_BUTTON" = "اشترِ الاشتراك";
+"SUBSCRIPTION_NAV_TITLE" = "الاشتراك";
+"SUBSCRIPTION_NAV_CLOSE" = "إغلاق";
+
+/* FeedbackView */
+"FEEDBACK_SECTION_HEADER" = "تعليقك";
+"FEEDBACK_SEND_BUTTON" = "إرسال";
+"FEEDBACK_NAV_TITLE" = "إرسال تعليق";
+"FEEDBACK_TELEGRAM_INFO" = "سيتم إرسال رسالتك عبر تيليجرام.";
+"FEEDBACK_CONFIRM_TITLE" = "إرسال التعليق عبر تيليجرام؟";
+"FEEDBACK_CANCEL_BUTTON" = "إلغاء";
+
+/* OnboardingView */
+"ONBOARDING_STEP_TITLE" = "الخطوة %d من التوجيه";
+"ONBOARDING_STEP_CONTINUE" = "استمر";
+
+/*  --- الفئات التعبيرية --- */
+
+/* Emoji Category Names */
+"CATEGORY_NAME_NONE" = "بدون فئة";
+"CATEGORY_NAME_CELEBRATION" = "احتفالي";
+"CATEGORY_NAME_FOOD" = "طعام";
+"CATEGORY_NAME_SPORTS" = "رياضة";
+"CATEGORY_NAME_NATURE" = "طبيعة";
+"CATEGORY_NAME_BEAUTY" = "جمال";
+
+/* الشاشة الرئيسية */
+
+/* رسالة عند أن القائمة فارغة */
+"empty_prefix" = "أضف ";
+"empty_event" = "حدث";
+"empty_middle" = "أو ";
+"empty_birthday" = "عيد ميلاد";
+
+/* عناوين الأقسام */
+"pinned_events_header" = "الأحداث المثبتة";
+"events_header" = "الأحداث";
+"birthdays_header" = "أعياد الميلاد";
+
+/* الإجراءات (حركات التمرير) */
+"delete_label" = "حذف";
+"pin_label" = "تثبيت";
+"unpin_label" = "إلغاء التثبيت";
+
+/* Widgets */
+
+/* Sample events */
+"SAMPLE_EVENT_MEET_FRIENDS" = "لقاء مع الأصدقاء";
+"SAMPLE_EVENT_CHECK_PIZZA" = "شراء بيتزا";
+"SAMPLE_EVENT_CHECK_CALL_FRIENDS" = "اتصل بالأصدقاء";
+
+"SAMPLE_EVENT_ANNA_BIRTHDAY" = "عيد ميلاد آنا";
+"SAMPLE_EVENT_ANNA_NOTE" = "لا تنسى شراء الهدية!";
+"SAMPLE_EVENT_CHECK_CHOOSE_GIFT" = "اختيار هدية";
+
+"SAMPLE_EVENT_WORK_MEETING" = "اجتماع عمل";
+
+/* Snapshot events */
+"SAMPLE_EVENT_PICNIC" = "نزهة";
+"SAMPLE_EVENT_CHECK_BRING_FOOD" = "إحضار الطعام";
+"SAMPLE_EVENT_CHECK_SETUP_GAMES" = "إعداد الألعاب";
+
+"SAMPLE_EVENT_ELON_NAME" = "إيلون ماسك";
+"SAMPLE_EVENT_ELON_NOTE" = "اتصل وهنئه.";
+"SAMPLE_EVENT_ELON_CHECK_CALL" = "اتصل بإيلون";
+
+"SAMPLE_EVENT_CHECK_PREPARE_GIFT" = "إعداد الهدية";
+
+/* Widget strings */
+"WIDGET_ADD_EVENT" = "أضف حدثًا";
+"WIDGET_BIRTHDAY_EVENT" = "عيد ميلاد!";
+"WIDGET_EVENT_TODAY" = "حدث اليوم!";
+"WIDGET_EVENT_PASSED" = "الحدث قد انتهى";
+"WIDGET_DISPLAY_NAME" = "أقرب حدث";
+"WIDGET_DISPLAY_DESCRIPTION" = "يعرض أقرب حدث.";
+
+/*  ---- مثال آخر ---- */
+
+/* SidebarMenuPreviewView */
+
+// الترجمة الروسية
+
+// شاشة إضافة حدث
+"event_type_event" = "حدث";
+"event_type_birthday" = "عيد ميلاد";
+
+// ---------- الشاشة الرئيسية ----------
+"event_type_picker_title" = "نوع الحدث";
+"birthday_name_placeholder" = "الاسم الكامل";
+"event_name_placeholder" = "العنوان";
+
+/* ملاحظات وقائمة */
+"enter_text_placeholder" = "أدخل النص";
+"notes_placeholder_text" = "ملاحظة...";
+"notes_tab_title" = "الملاحظات";
+"checklist_tab_title" = "قائمة";
+"new_checklist_item_placeholder" = "عنصر جديد";
+
+/* التاريخ والإشعارات */
+"date_section_header" = "التاريخ";
+"notification_toggle_title" = "الإشعار";
+"notification_type_message" = "رسالة";
+"notification_type_sound" = "صوت";
+
+/* الرموز التعبيرية */
+"emoji_section_header" = "الرموز التعبيرية";
+"emoji_category_picker_title" = "فئة الرموز التعبيرية";
+
+/* التكرار */
+"repeat_section_header" = "التكرار";
+"yearly_repeat" = "سنويًا";
+"monthly_repeat" = "شهريًا";
+"weekdays_format" = "حسب الأيام: %@";
+"months_format" = "حسب الأشهر: %@";
+"no_repeat" = "بدون تكرار";
+
+/* حذف الحدث السابق */
+"delete_past_events_text" = "حذف بعد الانتهاء";
+
+/* الأزرار */
+"save_button_title" = "حفظ";
+
+/* 3rd Card */
+
+/* VacationCardPreviewViewTHRE (شاشات المؤقتات) */
+"THIRD_SCREEN_TIMER_TITLE" = "المؤقت";
+"THIRD_SCREEN_TIMER_BEFORE" = "قبل الحدث";
+"THIRD_SCREEN_BLUE_TIMER_INFO" = "المؤقت الأزرق - يظهر الوقت المتبقي حتى بداية الحدث";
+"THIRD_SCREEN_TIME_PASSED_TITLE" = "مر الوقت منذ الحدث";
+"THIRD_SCREEN_GRAY_TIMER_INFO" = "المؤقت الرمادي - يظهر الوقت الذي مضى منذ الحدث";
+
+"EVENT_1_NAME" = "الحدث 1";
+"EVENT_1_NOTE" = "وصف الحدث 1";
+
+"EVENT_2_BIRTHDAY_NAME" = "عيد ميلاد صديق";
+"EVENT_2_BIRTHDAY_NOTE" = "شراء هدية";
+
+"EVENT_3_BIRTHDAY_NAME" = "عيد ميلاد زميل";
+"EVENT_3_BIRTHDAY_NOTE" = "تذكير باللقاء";
+
+"SIDEBAR_TODAY_EVENTS" = "أحداث اليوم";
+"TIME_11_30" = "11:30";
+"TIME_18_00" = "18:00";
+"SIDEBAR_MEETING" = "اجتماع";
+"SIDEBAR_MEETING_EMOJI" = "💼";
+"SIDEBAR_DOCTOR" = "زيارة للطبيب";
+"SIDEBAR_DOCTOR_EMOJI" = "💊";
+"SIDEBAR_CONVENIENT_CALENDAR" = "تقويم مريح";
+"SIDEBAR_SHOWS_ALL_EVENTS" = "يعرض جميع الأحداث في يوم محدد";
+
+/* FirstScreenView */
+"FIRST_SCREEN_CREATE_EVENTS" = "أنشئ الأحداث وأعياد الميلاد";
+
+/* SecondScreenView */
+"SECOND_SCREEN_CHECKLISTS" = "اكتب الملاحظات والقوائم التفاعلية";
+
+/* VacationCardPreviewView */
+"VACATION_BALI_EVENT_NAME" = "إجازة في بالي";
+"VACATION_BALI_EVENT_NOTE" = "احجز فندقًا، حضّر حقيبة";
+"VACATION_BALI_CHECK_1" = "شراء التذاكر";
+"VACATION_BALI_CHECK_2" = "احجز الفندق";
+"VACATION_BALI_CHECK_3" = "احضر الحقيبة";
+"SECOND_SCREEN_EVENTS" = "الأحداث";
+
+/* ThirdScreenView */
+"THIRD_SCREEN_TIMER_TITLE" = "المؤقت";
+"THIRD_SCREEN_TIMER_BEFORE" = "قبل الحدث";
+"THIRD_SCREEN_TIMER_AFTER" = "مر الوقت منذ الحدث";
+
+/* Timer Card Events (VacationCardPreviewViewTHRE) */
+"TIMER_EVENT_1_NAME" = "حدث";
+"TIMER_EVENT_2_NAME" = "حدث آخر";
+
+/* EventCardPreviewView (لأول شاشة) */
+"FIRST_SCREEN_EVENT_NAME" = "لقاء مع الفريق";
+"FIRST_SCREEN_EVENT_NOTE" = "مناقشة الاستراتيجية للربع الأول";
+"FIRST_SCREEN_CHECK_1" = "إعداد التقرير";
+"FIRST_SCREEN_CHECK_2" = "إعداد العرض التقديمي";
+
+"FIRST_SCREEN_BIRTHDAY_NAME" = "عيد ميلاد آنا";
+"FIRST_SCREEN_BIRTHDAY_NOTE" = "شراء الهدية";
+
+"FIRST_SCREEN_EVENTS_LABEL" = "الأحداث";
+"FIRST_SCREEN_BIRTHDAYS_LABEL" = "أعياد الميلاد";
+
+/* العمر (مثال تنسيق النص) */
+"FIRST_SCREEN_AGE_LABEL" = "العمر: %d سنة";
+
+/* NotificationWelcomeView (الشاشة 5) */
+"NOTIFICATION_SCREEN_TITLE" = "تلقَ إشعارات قصيرة أو طويلة";
+"NOTIFICATION_SCREEN_SUBTITLE" = "لتكون على دراية بالأحداث القادمة";
+"NOTIFICATION_ALLOW_BUTTON" = "السماح بالإشعارات";
+
+/* SubscriptionWelcomeView (الشاشة 6) */
+"SUBSCRIPTION_UNLIMITED_EVENTS" = "أنشئ عدد غير محدود من الأحداث";
+"SUBSCRIPTION_BUTTON_ANNUAL" = "اشترك لمدة عام";
+"SUBSCRIPTION_NOT_NOW_BUTTON" = "ليس الآن";
+"SUBSCRIPTION_RESTORE_BUTTON" = "استعادة المشتريات";
+
+/* أخطاء الاشتراك */
+"SUBSCRIPTION_ERROR_TITLE" = "خطأ";
+"SUBSCRIPTION_ERROR_DEFAULT" = "حدث خطأ";
+"SUBSCRIPTION_OK_BUTTON" = "حسنًا";
+"SUBSCRIPTION_NO_PACKAGES" = "لم يتم العثور على حزم متاحة للشراء";
+"SUBSCRIPTION_CANCELED_BY_USER" = "تم إلغاء الشراء من قبل المستخدم";
+"SUBSCRIPTION_PURCHASE_ERROR" = "حدث خطأ عند محاولة شراء الاشتراك";
+
+/* أخرى */
+"SECOND_SCREEN_EVENTS" = "الأحداث";
+
+
+
+
+/* SidebarMenuPreviewView */
+
+// شاشة إضافة حدث
+
+"event_type_event" = "حدث";
+"event_type_birthday" = "عيد ميلاد";
+
+// شاشة الإنشاء
+
+"event_type_picker_title" = "نوع الحدث";
+"birthday_name_placeholder" = "الاسم";
+"event_name_placeholder" = "اسم الحدث";
+"enter_text_placeholder" = "أدخل النص";
+"notes_placeholder_text" = "ملاحظات...";
+"notes_tab_title" = "الملاحظات";
+"checklist_tab_title" = "قائمة المراجعة";
+"new_checklist_item_placeholder" = "عنصر جديد";
+"date_section_header" = "التاريخ";
+"notification_toggle_title" = "الإشعارات";
+"notification_type_message" = "رسالة";
+"notification_type_sound" = "صوت";
+"emoji_section_header" = "الرموز التعبيرية";
+"emoji_category_picker_title" = "فئة الرموز التعبيرية";
+"repeat_section_header" = "التكرار";
+"yearly_repeat" = "سنويًا";
+"monthly_repeat" = "شهريًا";
+"weekdays_format" = "حسب اليوم: %@";
+"months_format" = "حسب الشهر: %@";
+"no_repeat" = "بدون تكرار";
+"delete_past_events_text" = "الحذف بعد الانتهاء";
+"save_button_title" = "حفظ";
+"editEvent.sectionHeader.birthday" = "عيد ميلاد";
+"editEvent.sectionHeader.event" = "حدث";
+"editEvent.checklist.header" = "قائمة المراجعة";
+"editEvent.checklist.taskPlaceholder" = "مهمة";
+"editEvent.checklist.newItemPlaceholder" = "إضافة مهمة جديدة";
+"common.saveButton" = "حفظ";
+
+// البطاقة الثالثة
+
+/* VacationCardPreviewViewTHRE (شاشة المؤقت) */
+"THIRD_SCREEN_TIMER_TITLE" = "المؤقت";
+"THIRD_SCREEN_TIMER_BEFORE" = "قبل الحدث";
+"THIRD_SCREEN_BLUE_TIMER_INFO" = "المؤقت الأزرق يعرض الوقت المتبقي حتى بداية الحدث";
+"THIRD_SCREEN_TIME_PASSED_TITLE" = "الوقت المنقضي";
+"THIRD_SCREEN_GRAY_TIMER_INFO" = "المؤقت الرمادي يعرض الوقت المنقضي بعد الحدث";
+
+"EVENT_1_NAME" = "الحدث 1";
+"EVENT_1_NOTE" = "وصف الحدث 1";
+
+"EVENT_2_BIRTHDAY_NAME" = "عيد ميلاد صديق";
+"EVENT_2_BIRTHDAY_NOTE" = "شراء هدية";
+
+"EVENT_3_BIRTHDAY_NAME" = "عيد ميلاد زميل";
+"EVENT_3_BIRTHDAY_NOTE" = "تذكير بالاجتماع";
+
+"SIDEBAR_TODAY_EVENTS" = "أحداث اليوم";
+"TIME_11_30" = "11:30";
+"TIME_18_00" = "18:00";
+"SIDEBAR_MEETING" = "اجتماع";
+"SIDEBAR_MEETING_EMOJI" = "💼";
+"SIDEBAR_DOCTOR" = "موعد الطبيب";
+"SIDEBAR_DOCTOR_EMOJI" = "💊";
+"SIDEBAR_CONVENIENT_CALENDAR" = "التقويم المناسب";
+"SIDEBAR_SHOWS_ALL_EVENTS" = "عرض جميع الأحداث ليوم معين";
+
+// شاشة الإعدادات
+
+"event.age_prefix" = "العمر: %d";
+"event.birthday_today" = "عيد ميلاد!";
+
+"event.repeat_annually_text" = "التكرار السنوي";
+"event.repeat_monthly_text" = "التكرار الشهري";
+
+/* شاشة الإعدادات (الاشتراك، الإشعارات، التعليقات) */
+"SETTINGS_SUBSCRIPTION_HEADER" = "الاشتراك";
+"SETTINGS_SUBSCRIPTION_CURRENT_STATUS" = "الحالة الحالية:";
+"SETTINGS_SUBSCRIPTION_ACTIVE" = "نشط";
+"SETTINGS_SUBSCRIPTION_INACTIVE" = "غير نشط";
+"SETTINGS_SUBSCRIPTION_BUY_BUTTON" = "اشترِ الاشتراك";
+
+"SETTINGS_NOTIFICATIONS_HEADER" = "الإشعارات";
+"SETTINGS_NOTIFICATIONS_PERMISSION" = "إذن:";
+"SETTINGS_NOTIFICATIONS_GRANTED" = "مسموح به";
+"SETTINGS_NOTIFICATIONS_ALLOW_BUTTON" = "مسموح";
+
+"SETTINGS_FEEDBACK_HEADER" = "التعليقات";
+"SETTINGS_FEEDBACK_SEND_BUTTON" = "إرسال التعليق";
+
+/* نافذة الاشتراك */
+"SUBSCRIPTION_MODAL_TITLE" = "اشترِ الاشتراك";
+"SUBSCRIPTION_MODAL_BUY_BUTTON" = "شراء";
+"SUBSCRIPTION_NAV_TITLE" = "الاشتراك";
+"SUBSCRIPTION_NAV_CLOSE" = "إغلاق";
+
+/* شاشة التعليقات */
+"FEEDBACK_SECTION_HEADER" = "التعليقات";
+"FEEDBACK_SEND_BUTTON" = "إرسال";
+"FEEDBACK_NAV_TITLE" = "إرسال التعليقات";
+
+/* خطوات التسجيل */
+"ONBOARDING_STEP_TITLE" = "خطوة التسجيل %d";
+"ONBOARDING_STEP_CONTINUE" = "متابعة";
+
+/* فئات الرموز التعبيرية */
+"CATEGORY_NAME_NONE" = "لا فئة";
+"CATEGORY_NAME_CELEBRATION" = "احتفال";
+"CATEGORY_NAME_FOOD" = "طعام";
+"CATEGORY_NAME_SPORTS" = "رياضة";
+"CATEGORY_NAME_NATURE" = "طبيعة";
+"CATEGORY_NAME_BEAUTY" = "جمال";
+
+/* رسالة القائمة الفارغة */
+"empty_prefix" = "إضافة ";
+"empty_event" = "حدث";
+"empty_middle" = " أو ";
+"empty_birthday" = "عيد ميلاد";
+
+/* عناوين الأقسام */
+"pinned_events_header" = "الأحداث المثبتة";
+"events_header" = "الأحداث";
+"birthdays_header" = "أعياد الميلاد";
+
+/* إجراء السحب */
+"delete_label" = "حذف";
+"pin_label" = "تثبيت";
+"unpin_label" = "إلغاء التثبيت";
+
+/* أحداث العينة */
+"SAMPLE_EVENT_MEET_FRIENDS" = "لقاء الأصدقاء";
+"SAMPLE_EVENT_CHECK_PIZZA" = "شراء بيتزا";
+"SAMPLE_EVENT_CHECK_CALL_FRIENDS" = "الاتصال بالأصدقاء";
+
+"SAMPLE_EVENT_ANNA_BIRTHDAY" = "عيد ميلاد آنا";
+"SAMPLE_EVENT_ANNA_NOTE" = "لا تنسى الهدية!";
+"SAMPLE_EVENT_CHECK_CHOOSE_GIFT" = "اختيار هدية";
+
+"SAMPLE_EVENT_WORK_MEETING" = "اجتماع العمل";
+
+/* سلاسل ويدجت */
+"WIDGET_ADD_EVENT" = "إضافة حدث";
+"WIDGET_BIRTHDAY_EVENT" = "عيد ميلاد!";
+"WIDGET_EVENT_TODAY" = "أحداث اليوم!";
+"WIDGET_EVENT_PASSED" = "الأحداث المنتهية";
+"WIDGET_DISPLAY_NAME" = "الحدث التالي";
+"WIDGET_DISPLAY_DESCRIPTION" = "عرض الحدث التالي المخطط.";
+
+/* أيام الأسبوع */
+"dayOfWeek.monday" = "الاثنين";
+"dayOfWeek.tuesday" = "الثلاثاء";
+"dayOfWeek.wednesday" = "الأربعاء";
+"dayOfWeek.thursday" = "الخميس";
+"dayOfWeek.friday" = "الجمعة";
+"dayOfWeek.saturday" = "السبت";
+"dayOfWeek.sunday" = "الأحد";
+
+/* الشهور */
+"month.january" = "يناير";
+"month.february" = "فبراير";
+"month.march" = "مارس";
+"month.april" = "أبريل";
+"month.may" = "مايو";
+"month.june" = "يونيو";
+"month.july" = "يوليو";
+"month.august" = "أغسطس";
+"month.september" = "سبتمبر";
+"month.october" = "أكتوبر";
+"month.november" = "نوفمبر";
+"month.december" = "ديسمبر";
+
+/* إعدادات التكرار */
+"repeatSettings.annualRepeatHeader" = "التكرار السنوي";
+"repeatSettings.annualRepeatToggle" = "التكرار السنوي";
+"repeatSettings.intervalHeader" = "فاصل التكرار";
+"repeatSettings.intervalPicker" = "اختر الفاصل";
+"repeatSettings.daysOfWeekHeader" = "التكرار حسب أيام الأسبوع";
+"repeatSettings.monthsHeader" = "التكرار حسب الشهر";
+"repeatSettings.monthlyRepeatHeader" = "التكرار الشهري";
+"repeatSettings.monthlyRepeatToggle" = "التكرار الشهري";
+
+/* القائمة الجانبية */
+"add_event_button_title" = "إضافة حدث";
+"events_section_header" = "الأحداث";
+"NO_EVENTS" = "لا أحداث";
+"NO_SHORT" = "لا";
+"COMPLICATION_DISPLAY_NAME" = "اللحظة التالية";
+"COMPLICATION_DISPLAY_DESCRIPTION" = "تقدم دائري ومؤقت للحدث";
+"COMPLICATION_EVENTS_LABEL" = "الأحداث";

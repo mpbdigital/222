@@ -1,0 +1,397 @@
+/* --- 로컬라이징 파일 Localizable.strings (ko) --- */
+
+/*  (фильтры) */
+
+"filter.all" = "전체";
+"filter.events" = "이벤트";
+"filter.birthdays" = "생일";
+"picker.title" = "카테고리 선택";
+"empty.prefix" = "아직";
+"empty.event" = " 이벤트가 없습니다";
+"empty.middle" = " 및 ";
+"empty.birthday" = " 생일이 없습니다";
+"header.pinned" = "고정됨";
+"header.events" = "이벤트";
+"header.birthdays" = "생일";
+"navigation.title" = "이벤트";
+"search.prompt" = "검색...";
+
+/* SettingsSheetView (Widget) */
+
+// Chiavi relative ai widget (WIDGETS)
+
+"WIDGET_ADD_EVENT" = "Aggiungi evento";
+"WIDGET_BIRTHDAY_EVENT" = "Compleanno!";
+"WIDGET_EVENT_TODAY" = "Evento di oggi!";
+"WIDGET_EVENT_PASSED" = "L'evento è terminato";
+"WIDGET_DISPLAY_NAME" = "Prossimo evento";
+"WIDGET_DISPLAY_DESCRIPTION" = "Mostra il prossimo evento.";
+"SOON_LABEL" = "곧";
+
+"SAMPLE_EVENT_MEET_FRIENDS" = "Incontro con amici";
+"SAMPLE_EVENT_CHECK_PIZZA" = "Compra la pizza";
+"SAMPLE_EVENT_CHECK_CALL_FRIENDS" = "Chiama gli amici";
+"SAMPLE_EVENT_ANNA_BIRTHDAY" = "Compleanno di Anna";
+"SAMPLE_EVENT_ANNA_NOTE" = "Non dimenticare il regalo!";
+"SAMPLE_EVENT_CHECK_CHOOSE_GIFT" = "Scegli un regalo";
+"SAMPLE_EVENT_WORK_MEETING" = "Riunione di lavoro";
+
+"SAMPLE_EVENT_PICNIC" = "Picnic";
+"SAMPLE_EVENT_CHECK_BRING_FOOD" = "Porta il cibo";
+"SAMPLE_EVENT_CHECK_SETUP_GAMES" = "Prepara i giochi";
+
+"SAMPLE_EVENT_ELON_NAME" = "Elon Musk";
+"SAMPLE_EVENT_ELON_NOTE" = "Chiama per fare gli auguri.";
+"SAMPLE_EVENT_ELON_CHECK_CALL" = "Chiama Elon";
+
+"SAMPLE_EVENT_CHECK_PREPARE_GIFT" = "Prepara il regalo";
+
+"event_type_event" = "Evento";
+"event_type_birthday" = "Compleanno";
+
+
+/* SettingsSheetView (위젯) */
+
+// 위젯 관련 키 (WIDGETS)
+
+"WIDGET_ADD_EVENT" = "이벤트 추가";
+"WIDGET_BIRTHDAY_EVENT" = "생일!";
+"WIDGET_EVENT_TODAY" = "오늘의 이벤트!";
+"WIDGET_EVENT_PASSED" = "이벤트가 종료되었습니다";
+"WIDGET_DISPLAY_NAME" = "다음 이벤트";
+"WIDGET_DISPLAY_DESCRIPTION" = "다음 이벤트를 표시합니다.";
+
+"SAMPLE_EVENT_MEET_FRIENDS" = "친구 만나기";
+"SAMPLE_EVENT_CHECK_PIZZA" = "피자 구매";
+"SAMPLE_EVENT_CHECK_CALL_FRIENDS" = "친구에게 전화하기";
+"SAMPLE_EVENT_ANNA_BIRTHDAY" = "안나의 생일";
+"SAMPLE_EVENT_ANNA_NOTE" = "선물 잊지 마세요!";
+"SAMPLE_EVENT_CHECK_CHOOSE_GIFT" = "선물 고르기";
+"SAMPLE_EVENT_WORK_MEETING" = "업무 회의";
+
+"SAMPLE_EVENT_PICNIC" = "피크닉";
+"SAMPLE_EVENT_CHECK_BRING_FOOD" = "음식 가져오기";
+"SAMPLE_EVENT_CHECK_SETUP_GAMES" = "게임 준비하기";
+
+"SAMPLE_EVENT_ELON_NAME" = "일론 머스크";
+"SAMPLE_EVENT_ELON_NOTE" = "전화해서 축하하기";
+"SAMPLE_EVENT_ELON_CHECK_CALL" = "일론에게 전화하기";
+
+"SAMPLE_EVENT_CHECK_PREPARE_GIFT" = "선물 준비하기";
+
+"event_type_event" = "이벤트";
+"event_type_birthday" = "생일";
+
+
+// 이벤트 편집 화면 (EditEventView)
+"editEvent.sectionHeader.birthday" = "생일";
+"editEvent.sectionHeader.event" = "이벤트";
+"editEvent.namePlaceholder" = "이름 입력";
+"editEvent.placeholder.notes" = "메모 입력";
+"editEvent.checklist.header" = "체크리스트";
+"editEvent.notification.toggle" = "알림 활성화";
+"editEvent.deletePastEvents.label" = "완료 후 삭제";
+"editEvent.repeatSettings.linkTitle" = "반복";
+"editEvent.emoji.sectionHeader"  = "이모지";
+"editEvent.emoji.categoryPicker" = "이모지 카테고리";
+
+
+
+/*********************/
+/*  RepeatInterval   */
+/*********************/
+"repeatInterval.none" = "반복 없음";
+"repeatInterval.minute1" = "1분";
+"repeatInterval.minute5" = "5분";
+"repeatInterval.minute10" = "10분";
+"repeatInterval.minute15" = "15분";
+"repeatInterval.minute30" = "30분";
+"repeatInterval.minute35" = "35분";
+"repeatInterval.minute40" = "40분";
+"repeatInterval.hour" = "60분";
+
+
+
+/*  VacationCardPreviewViewTHRE (타이머 화면) */
+"THIRD_SCREEN_TIMER_TITLE" = "타이머";
+"THIRD_SCREEN_TIMER_BEFORE" = "이벤트까지 남은 시간";
+"THIRD_SCREEN_BLUE_TIMER_INFO" = "파란색 타이머 - 이벤트 시작까지 남은 시간을 표시합니다";
+"THIRD_SCREEN_TIME_PASSED_TITLE" = "이벤트 이후 경과 시간";
+"THIRD_SCREEN_GRAY_TIMER_INFO" = "회색 타이머 - 이벤트가 끝난 후 경과한 시간을 표시합니다";
+
+/* 역 */
+"EVENT_1_NAME" = "이벤트 1";
+"EVENT_1_NOTE" = "이벤트 1 설명";
+
+"EVENT_2_BIRTHDAY_NAME" = "친구의 생일";
+"EVENT_2_BIRTHDAY_NOTE" = "선물 구매";
+
+"EVENT_3_BIRTHDAY_NAME" = "직장 동료의 생일";
+"EVENT_3_BIRTHDAY_NOTE" = "모임 알림 설정";
+
+"SIDEBAR_TODAY_EVENTS" = "오늘의 이벤트";
+"TIME_11_30" = "11:30";
+"TIME_18_00" = "18:00";
+"SIDEBAR_MEETING" = "회의";
+"SIDEBAR_MEETING_EMOJI" = "💼";
+"SIDEBAR_DOCTOR" = "병원 예약";
+"SIDEBAR_DOCTOR_EMOJI" = "💊";
+"SIDEBAR_CONVENIENT_CALENDAR" = "편리한 캘린더";
+"SIDEBAR_SHOWS_ALL_EVENTS" = "특정 날짜의 모든 이벤트를 표시합니다";
+
+/* FirstScreenView */
+"FIRST_SCREEN_CREATE_EVENTS" = "이벤트 및 생일 생성";
+
+/* SecondScreenView */
+"SECOND_SCREEN_CHECKLISTS" = "메모 및 체크리스트 작성";
+
+/* VacationCardPreviewView */
+"VACATION_BALI_EVENT_NAME" = "발리 휴가";
+"VACATION_BALI_EVENT_NOTE" = "호텔 예약, 짐 싸기";
+"VACATION_BALI_CHECK_1" = "비행기 티켓 구매";
+"VACATION_BALI_CHECK_2" = "호텔 예약";
+"VACATION_BALI_CHECK_3" = "짐 꾸리기";
+"SECOND_SCREEN_EVENTS" = "이벤트";
+
+/* ThirdScreenView */
+"THIRD_SCREEN_TIMER_TITLE" = "타이머";
+"THIRD_SCREEN_TIMER_BEFORE" = "이벤트까지 남은 시간";
+"THIRD_SCREEN_TIMER_AFTER" = "이벤트 이후 경과 시간";
+
+/* Timer Card Events (VacationCardPreviewViewTHRE) */
+"TIMER_EVENT_1_NAME" = "이벤트";
+"TIMER_EVENT_2_NAME" = "다른 이벤트";
+
+/* EventCardPreviewView (첫 번째 화면용) */
+"FIRST_SCREEN_EVENT_NAME" = "팀 회의";
+"FIRST_SCREEN_EVENT_NOTE" = "1분기 전략 논의";
+"FIRST_SCREEN_CHECK_1" = "보고서 준비";
+"FIRST_SCREEN_CHECK_2" = "프레젠테이션 준비";
+
+"FIRST_SCREEN_BIRTHDAY_NAME" = "안나의 생일";
+"FIRST_SCREEN_BIRTHDAY_NOTE" = "선물 구매";
+
+"FIRST_SCREEN_EVENTS_LABEL" = "이벤트";
+"FIRST_SCREEN_BIRTHDAYS_LABEL" = "생일";
+
+/* 나이 (문자열 형식 예시) */
+"FIRST_SCREEN_AGE_LABEL" = "나이: %d세";
+
+/* NotificationWelcomeView (5번째 화면) */
+"NOTIFICATION_SCREEN_TITLE" = "짧거나 긴 알림을 받아보세요";
+"NOTIFICATION_SCREEN_SUBTITLE" = "다가오는 이벤트를 놓치지 않도록 도와줍니다";
+"NOTIFICATION_ALLOW_BUTTON" = "알림 허용";
+
+/* SubscriptionWelcomeView (6번째 화면) */
+"SUBSCRIPTION_UNLIMITED_EVENTS" = "무제한 이벤트 생성";
+"SUBSCRIPTION_BUTTON_ANNUAL" = "1년 구독 신청";
+"SUBSCRIPTION_NOT_NOW_BUTTON" = "나중에 하기";
+"SUBSCRIPTION_RESTORE_BUTTON" = "구매 복원";
+
+/* 구독 오류 */
+"SUBSCRIPTION_ERROR_TITLE" = "오류";
+"SUBSCRIPTION_ERROR_DEFAULT" = "오류가 발생했습니다";
+"SUBSCRIPTION_OK_BUTTON" = "확인";
+"SUBSCRIPTION_NO_PACKAGES" = "구매 가능한 구독 패키지를 찾을 수 없습니다";
+"SUBSCRIPTION_CANCELED_BY_USER" = "사용자가 구매를 취소했습니다";
+"SUBSCRIPTION_PURCHASE_ERROR" = "구독 구매 중 오류가 발생했습니다";
+
+/* 기타 */
+"SECOND_SCREEN_EVENTS" = "이벤트";
+
+
+
+
+
+
+/* SidebarMenuPreviewView */
+
+// 이벤트 추가 화면
+
+"event_type_event" = "이벤트";
+"event_type_birthday" = "생일";
+
+// 생성 화면
+
+"event_type_picker_title" = "이벤트 종류";
+"birthday_name_placeholder" = "이름";
+"event_name_placeholder" = "이벤트 이름";
+"enter_text_placeholder" = "텍스트 입력";
+"notes_placeholder_text" = "메모...";
+"notes_tab_title" = "메모";
+"checklist_tab_title" = "체크리스트";
+"new_checklist_item_placeholder" = "새 항목";
+"date_section_header" = "날짜";
+"notification_toggle_title" = "알림";
+"notification_type_message" = "메시지";
+"notification_type_sound" = "소리";
+"emoji_section_header" = "이모지";
+"emoji_category_picker_title" = "이모지 카테고리";
+"repeat_section_header" = "반복";
+"yearly_repeat" = "매년";
+"monthly_repeat" = "매월";
+"weekdays_format" = "요일별: %@";
+"months_format" = "월별: %@";
+"no_repeat" = "반복 없음";
+"delete_past_events_text" = "종료 후 삭제";
+"save_button_title" = "저장";
+"editEvent.sectionHeader.birthday" = "생일";
+"editEvent.sectionHeader.event" = "이벤트";
+"editEvent.checklist.header" = "체크리스트";
+"editEvent.checklist.taskPlaceholder" = "작업";
+"editEvent.checklist.newItemPlaceholder" = "새 작업 추가";
+"common.saveButton" = "저장";
+
+// 세 번째 카드
+
+/* VacationCardPreviewViewTHRE (타이머 화면) */
+"THIRD_SCREEN_TIMER_TITLE" = "타이머";
+"THIRD_SCREEN_TIMER_BEFORE" = "이벤트 전";
+"THIRD_SCREEN_BLUE_TIMER_INFO" = "파란색 타이머는 이벤트 시작까지 남은 시간을 나타냅니다";
+"THIRD_SCREEN_TIME_PASSED_TITLE" = "이벤트 경과 시간";
+"THIRD_SCREEN_GRAY_TIMER_INFO" = "회색 타이머는 이벤트 종료 후 경과 시간을 나타냅니다";
+
+"EVENT_1_NAME" = "이벤트 1";
+"EVENT_1_NOTE" = "이벤트 1 설명";
+
+"EVENT_2_BIRTHDAY_NAME" = "친구 생일";
+"EVENT_2_BIRTHDAY_NOTE" = "선물 구입";
+
+"EVENT_3_BIRTHDAY_NAME" = "동료 생일";
+"EVENT_3_BIRTHDAY_NOTE" = "회의 알림";
+
+"SIDEBAR_TODAY_EVENTS" = "오늘의 이벤트";
+"TIME_11_30" = "11:30";
+"TIME_18_00" = "18:00";
+"SIDEBAR_MEETING" = "회의";
+"SIDEBAR_MEETING_EMOJI" = "💼";
+"SIDEBAR_DOCTOR" = "의사 예약";
+"SIDEBAR_DOCTOR_EMOJI" = "💊";
+"SIDEBAR_CONVENIENT_CALENDAR" = "편리한 달력";
+"SIDEBAR_SHOWS_ALL_EVENTS" = "특정 날짜의 모든 이벤트 보기";
+
+// 설정 화면
+
+"event.age_prefix" = "나이: %d";
+"event.birthday_today" = "생일!";
+
+"event.repeat_annually_text" = "매년 반복";
+"event.repeat_monthly_text" = "매월 반복";
+
+/* 설정 화면 (구독, 알림, 피드백) */
+"SETTINGS_SUBSCRIPTION_HEADER" = "구독";
+"SETTINGS_SUBSCRIPTION_CURRENT_STATUS" = "현재 상태:";
+"SETTINGS_SUBSCRIPTION_ACTIVE" = "활성";
+"SETTINGS_SUBSCRIPTION_INACTIVE" = "비활성";
+"SETTINGS_SUBSCRIPTION_BUY_BUTTON" = "구독 구매";
+
+"SETTINGS_NOTIFICATIONS_HEADER" = "알림";
+"SETTINGS_NOTIFICATIONS_PERMISSION" = "허용:";
+"SETTINGS_NOTIFICATIONS_GRANTED" = "허용됨";
+"SETTINGS_NOTIFICATIONS_ALLOW_BUTTON" = "허용";
+
+"SETTINGS_FEEDBACK_HEADER" = "피드백";
+"SETTINGS_FEEDBACK_SEND_BUTTON" = "피드백 보내기";
+
+/* 구독 모달 */
+"SUBSCRIPTION_MODAL_TITLE" = "구독 구매";
+"SUBSCRIPTION_MODAL_BUY_BUTTON" = "구매";
+"SUBSCRIPTION_NAV_TITLE" = "구독";
+"SUBSCRIPTION_NAV_CLOSE" = "닫기";
+
+/* 피드백 화면 */
+"FEEDBACK_SECTION_HEADER" = "피드백";
+"FEEDBACK_SEND_BUTTON" = "보내기";
+"FEEDBACK_NAV_TITLE" = "피드백 보내기";
+"FEEDBACK_TELEGRAM_INFO" = "메시지는 Telegram을 통해 전송됩니다.";
+"FEEDBACK_CONFIRM_TITLE" = "Telegram으로 피드백을 보내시겠습니까?";
+"FEEDBACK_CANCEL_BUTTON" = "취소";
+
+/* 온보딩 */
+"ONBOARDING_STEP_TITLE" = "온보딩 단계 %d";
+"ONBOARDING_STEP_CONTINUE" = "계속하기";
+
+/* 이모지 카테고리 */
+"CATEGORY_NAME_NONE" = "카테고리 없음";
+"CATEGORY_NAME_CELEBRATION" = "축하";
+"CATEGORY_NAME_FOOD" = "음식";
+"CATEGORY_NAME_SPORTS" = "스포츠";
+"CATEGORY_NAME_NATURE" = "자연";
+"CATEGORY_NAME_BEAUTY" = "미용";
+
+/* 빈 목록 메시지 */
+"empty_prefix" = "추가 ";
+"empty_event" = "이벤트";
+"empty_middle" = " 또는 ";
+"empty_birthday" = "생일";
+
+/* 섹션 제목 */
+"pinned_events_header" = "고정 이벤트";
+"events_header" = "이벤트";
+"birthdays_header" = "생일";
+
+/* 스와이프 액션 */
+"delete_label" = "삭제";
+"pin_label" = "고정";
+"unpin_label" = "고정 해제";
+
+/* 샘플 이벤트 */
+"SAMPLE_EVENT_MEET_FRIENDS" = "친구 만나기";
+"SAMPLE_EVENT_CHECK_PIZZA" = "피자 사기";
+"SAMPLE_EVENT_CHECK_CALL_FRIENDS" = "친구에게 전화하기";
+
+"SAMPLE_EVENT_ANNA_BIRTHDAY" = "안나 생일";
+"SAMPLE_EVENT_ANNA_NOTE" = "선물 잊지 마세요!";
+"SAMPLE_EVENT_CHECK_CHOOSE_GIFT" = "선물 선택하기";
+
+"SAMPLE_EVENT_WORK_MEETING" = "업무 회의";
+
+/* 위젯 문자열 */
+"WIDGET_ADD_EVENT" = "이벤트 추가";
+"WIDGET_BIRTHDAY_EVENT" = "생일!";
+"WIDGET_EVENT_TODAY" = "오늘의 이벤트!";
+"WIDGET_EVENT_PASSED" = "종료된 이벤트";
+"WIDGET_DISPLAY_NAME" = "다음 이벤트";
+"WIDGET_DISPLAY_DESCRIPTION" = "다음 예정된 이벤트를 표시합니다.";
+
+/* 요일 */
+"dayOfWeek.monday" = "월요일";
+"dayOfWeek.tuesday" = "화요일";
+"dayOfWeek.wednesday" = "수요일";
+"dayOfWeek.thursday" = "목요일";
+"dayOfWeek.friday" = "금요일";
+"dayOfWeek.saturday" = "토요일";
+"dayOfWeek.sunday" = "일요일";
+
+/* 월 */
+"month.january" = "1월";
+"month.february" = "2월";
+"month.march" = "3월";
+"month.april" = "4월";
+"month.may" = "5월";
+"month.june" = "6월";
+"month.july" = "7월";
+"month.august" = "8월";
+"month.september" = "9월";
+"month.october" = "10월";
+"month.november" = "11월";
+"month.december" = "12월";
+
+/* 반복 설정 */
+"repeatSettings.annualRepeatHeader" = "매년 반복";
+"repeatSettings.annualRepeatToggle" = "연 단위 반복";
+"repeatSettings.intervalHeader" = "반복 간격";
+"repeatSettings.intervalPicker" = "간격 선택";
+"repeatSettings.daysOfWeekHeader" = "요일별 반복";
+"repeatSettings.monthsHeader" = "월별 반복";
+"repeatSettings.monthlyRepeatHeader" = "월별 반복";
+"repeatSettings.monthlyRepeatToggle" = "매월 반복";
+
+/* 사이드 메뉴 */
+"add_event_button_title" = "이벤트 추가";
+"events_section_header" = "이벤트";
+"NO_EVENTS" = "이벤트 없음";
+"NO_SHORT" = "없음";
+"COMPLICATION_DISPLAY_NAME" = "다음 순간";
+"COMPLICATION_DISPLAY_DESCRIPTION" = "이벤트까지의 원형 진행률과 타이머";
+"COMPLICATION_EVENTS_LABEL" = "이벤트";

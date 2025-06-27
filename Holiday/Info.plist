@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>remote-notification</string>
+	</array>
+    <key>REVENUECAT_API_KEY</key>
+    <string>appl_DgAibwThhPyyBFjllfbkpukiUQb</string>
+    <key>CFBundleDisplayName</key>
+    <string>$(PRODUCT_NAME)</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Для записи голосовых заметок</string>
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>Для распознавания вашего голоса</string>
+</dict>
+</plist>

@@ -1,0 +1,408 @@
+
+/*  --- Example file Localizable.strings (en) ---  ПРЕВЬЮ*/
+
+/*  (фильтры) */
+
+"SETTINGS_PRIVACY_POLICY" = "Privacy Policy";
+"SETTINGS_TERMS_OF_USE" = "Terms of Use";
+"filter.all" = "All";
+"filter.events" = "Events";
+"filter.birthdays" = "Birthdays";
+"picker.title" = "Choose a category";
+"empty.prefix" = "You don't have any";
+"empty.event" = " events";
+"empty.middle" = " and ";
+"empty.birthday" = " birthdays";
+"header.pinned" = "Pinned";
+"header.events" = "Events";
+"header.birthdays" = "Birthdays";
+"navigation.title" = "Events";
+"search.prompt" = "Search...";
+
+
+/* SettingsSheetView (Widget) */
+
+// Keys related to widgets (WIDGETS)
+
+"WIDGET_ADD_EVENT" = "Add event";
+"WIDGET_BIRTHDAY_EVENT" = "Birthday!";
+"WIDGET_EVENT_TODAY" = "Event today!";
+"WIDGET_EVENT_PASSED" = "The event has already passed";
+"WIDGET_DISPLAY_NAME" = "Upcoming event";
+"WIDGET_DISPLAY_DESCRIPTION" = "Displays the next event.";
+"SOON_LABEL" = "Soon";
+
+"SAMPLE_EVENT_MEET_FRIENDS" = "Meeting with friends";
+"SAMPLE_EVENT_CHECK_PIZZA" = "Buy pizza";
+"SAMPLE_EVENT_CHECK_CALL_FRIENDS" = "Call friends";
+"SAMPLE_EVENT_ANNA_BIRTHDAY" = "Anna's birthday";
+"SAMPLE_EVENT_ANNA_NOTE" = "Don't forget the gift!";
+"SAMPLE_EVENT_CHECK_CHOOSE_GIFT" = "Choose a gift";
+"SAMPLE_EVENT_WORK_MEETING" = "Work meeting";
+"PREVIEW_EVENT_MEETING" = "Meeting";
+
+"SAMPLE_EVENT_PICNIC" = "Picnic";
+"SAMPLE_EVENT_CHECK_BRING_FOOD" = "Bring food";
+"SAMPLE_EVENT_CHECK_SETUP_GAMES" = "Set up games";
+
+"SAMPLE_EVENT_ELON_NAME" = "Elon Musk";
+"SAMPLE_EVENT_ELON_NOTE" = "Call to wish a happy birthday.";
+"SAMPLE_EVENT_ELON_CHECK_CALL" = "Call Elon";
+
+"SAMPLE_EVENT_CHECK_PREPARE_GIFT" = "Prepare the gift";
+
+"event_type_event" = "Event";
+"event_type_birthday" = "Birthday";
+
+
+
+/* SettingsSheetView (struct EventCardView) */
+
+"event.age_prefix" = "Age: %d";
+"event.birthday_today" = "Birthday!";
+
+"event.repeat_annually_text" = "Repeat annually";
+"event.repeat_monthly_text" = "Repeat monthly";
+
+
+/* SidebarMenuPreviewView */
+
+
+// НАСТРОЙКИ
+
+/* SettingsSheetView (subscription, notifications, feedback) */
+"SETTINGS_SUBSCRIPTION_HEADER" = "Subscription";
+"SETTINGS_SUBSCRIPTION_CURRENT_STATUS" = "Current status:";
+"SETTINGS_SUBSCRIPTION_ACTIVE" = "Active";
+"SETTINGS_SUBSCRIPTION_INACTIVE" = "Inactive";
+"SETTINGS_SUBSCRIPTION_BUY_BUTTON" = "Buy subscription";
+"SETTINGS_SUBSCRIPTION_LIMITS_INFO" = "Free version: up to 3 events and up to 10 birthdays. Subscribe to remove limits.";
+"SETTINGS_SUBSCRIPTION_UNLIMITED_INFO" = "Create events and birthdays without limits";
+
+"SETTINGS_NOTIFICATIONS_HEADER" = "Notifications";
+"SETTINGS_NOTIFICATIONS_PERMISSION" = "Permission:";
+"SETTINGS_NOTIFICATIONS_GRANTED" = "Granted";
+"SETTINGS_NOTIFICATIONS_ALLOW_BUTTON" = "Allow";
+"SETTINGS_NOTIFICATIONS_PERMISSION_INFO" = "To fully use the app, please allow notifications.";
+
+"SETTINGS_FEEDBACK_HEADER" = "Feedback";
+"SETTINGS_FEEDBACK_SEND_BUTTON" = "Send feedback";
+
+/* SubscriptionModalView */
+"SUBSCRIPTION_MODAL_TITLE" = "Subscribe now";
+"SUBSCRIPTION_MODAL_BUY_BUTTON" = "Purchase subscription";
+"SUBSCRIPTION_NAV_TITLE" = "Subscription";
+"SUBSCRIPTION_NAV_CLOSE" = "Close";
+
+/* FeedbackView */
+"FEEDBACK_SECTION_HEADER" = "Your feedback";
+"FEEDBACK_SEND_BUTTON" = "Send";
+"FEEDBACK_NAV_TITLE" = "Send feedback";
+"FEEDBACK_TELEGRAM_INFO" = "Your message will be sent via Telegram.";
+"FEEDBACK_CONFIRM_TITLE" = "Send feedback via Telegram?";
+"FEEDBACK_CANCEL_BUTTON" = "Cancel";
+
+/* OnboardingView */
+"ONBOARDING_STEP_TITLE" = "Onboarding step %d";
+"ONBOARDING_STEP_CONTINUE" = "Continue";
+
+// КАТЕГОРИЯ ЭМОДЗИ
+
+/* Emoji Category Names */
+"CATEGORY_NAME_NONE" = "No category";
+"CATEGORY_NAME_CELEBRATION" = "Celebration";
+"CATEGORY_NAME_FOOD" = "Food";
+"CATEGORY_NAME_SPORTS" = "Sports";
+"CATEGORY_NAME_NATURE" = "Nature";
+"CATEGORY_NAME_BEAUTY" = "Beauty";
+
+// главный экран
+
+/* Message when list is empty */
+"empty_prefix" = "Add ";
+"empty_event" = "an event";
+"empty_middle" = " or ";
+"empty_birthday" = "a birthday";
+
+
+/* Section headers */
+"pinned_events_header" = "Pinned Events";
+"events_header" = "Events";
+"birthdays_header" = "Birthdays";
+
+/* Actions (Swipe Actions) */
+"delete_label" = "Delete";
+"pin_label" = "Pin";
+"unpin_label" = "Unpin";
+
+
+// виджеты
+
+/* Sample events */
+"SAMPLE_EVENT_MEET_FRIENDS" = "Meet with friends";
+"SAMPLE_EVENT_CHECK_PIZZA" = "Buy pizza";
+"SAMPLE_EVENT_CHECK_CALL_FRIENDS" = "Call friends";
+
+"SAMPLE_EVENT_ANNA_BIRTHDAY" = "Anna's birthday";
+"SAMPLE_EVENT_ANNA_NOTE" = "Don't forget to buy a gift!";
+"SAMPLE_EVENT_CHECK_CHOOSE_GIFT" = "Choose a gift";
+
+"SAMPLE_EVENT_WORK_MEETING" = "Work meeting";
+
+/* Snapshot events */
+"SAMPLE_EVENT_PICNIC" = "Picnic";
+"SAMPLE_EVENT_CHECK_BRING_FOOD" = "Bring food";
+"SAMPLE_EVENT_CHECK_SETUP_GAMES" = "Plan games";
+
+"SAMPLE_EVENT_ELON_NAME" = "Elon Musk";
+"SAMPLE_EVENT_ELON_NOTE" = "Call to congratulate him.";
+"SAMPLE_EVENT_ELON_CHECK_CALL" = "Call Elon";
+
+"SAMPLE_EVENT_CHECK_PREPARE_GIFT" = "Prepare a gift";
+
+/* Widget strings */
+"WIDGET_ADD_EVENT" = "Add event";
+"WIDGET_BIRTHDAY_EVENT" = "Birthday!";
+"WIDGET_EVENT_TODAY" = "Event is today!";
+"WIDGET_EVENT_PASSED" = "Event has passed";
+"WIDGET_DISPLAY_NAME" = "Upcoming Event";
+"WIDGET_DISPLAY_DESCRIPTION" = "Shows the next upcoming event.";
+
+// Экран добовления события
+
+"event_type_event" = "Event";
+"event_type_birthday" = "Birthday";
+
+
+/* ---------- Main screen ---------- */
+"event_type_picker_title" = "Event Type";
+"birthday_name_placeholder" = "Name Surname";
+"event_name_placeholder" = "Title";
+
+/* Notes and checklist */
+"enter_text_placeholder" = "Enter text";
+"notes_placeholder_text" = "Note...";
+"notes_tab_title" = "Notes";
+"checklist_tab_title" = "Checklist";
+"new_checklist_item_placeholder" = "New item";
+
+/* Date and notifications */
+"date_section_header" = "Date";
+"notification_toggle_title" = "Notification";
+"notification_type_message" = "Message";
+"notification_type_sound" = "Sound";
+
+/* Emoji */
+"emoji_section_header" = "Emoji";
+"emoji_category_picker_title" = "Emoji Category";
+
+/* Repeat */
+"repeat_section_header" = "Repeat";
+"yearly_repeat" = "Yearly";
+"monthly_repeat" = "Monthly";
+"weekdays_format" = "On weekdays: %@";
+"months_format" = "On months: %@";
+"no_repeat" = "No repeat";
+
+/* Delete old event */
+"delete_past_events_text" = "Delete after completion";
+
+/* Buttons */
+"save_button_title" = "Save";
+
+// 3 карточка
+
+/* VacationCardPreviewViewTHRE (timer screens) */
+"THIRD_SCREEN_TIMER_TITLE" = "Timer";
+"THIRD_SCREEN_TIMER_BEFORE" = "Before the event";
+"THIRD_SCREEN_BLUE_TIMER_INFO" = "Blue timer shows how much time is left until the event starts";
+"THIRD_SCREEN_TIME_PASSED_TITLE" = "Time since the event";
+"THIRD_SCREEN_GRAY_TIMER_INFO" = "Gray timer shows how much time has passed since the event";
+
+
+"EVENT_1_NAME" = "Event 1";
+"EVENT_1_NOTE" = "Event 1 description";
+
+"EVENT_2_BIRTHDAY_NAME" = "Friend's birthday";
+"EVENT_2_BIRTHDAY_NOTE" = "Buy a gift";
+
+"EVENT_3_BIRTHDAY_NAME" = "Colleague's birthday";
+"EVENT_3_BIRTHDAY_NOTE" = "Remind about the meeting";
+
+"SIDEBAR_TODAY_EVENTS" = "Today's events";
+"TIME_11_30" = "11:30";
+"TIME_18_00" = "18:00";
+"SIDEBAR_MEETING" = "Meeting";
+"SIDEBAR_MEETING_EMOJI" = "💼";
+"SIDEBAR_DOCTOR" = "Doctor's appointment";
+"SIDEBAR_DOCTOR_EMOJI" = "💊";
+"SIDEBAR_CONVENIENT_CALENDAR" = "A convenient calendar";
+"SIDEBAR_SHOWS_ALL_EVENTS" = "Shows all events for a selected day";
+
+/* FirstScreenView */
+"FIRST_SCREEN_CREATE_EVENTS" = "Create events and birthdays";
+
+/* SecondScreenView */
+"SECOND_SCREEN_CHECKLISTS" = "Add notes and interactive checklists";
+
+/* VacationCardPreviewView */
+"VACATION_BALI_EVENT_NAME" = "Vacation in Bali";
+"VACATION_BALI_EVENT_NOTE" = "Book a hotel, pack your suitcase";
+"VACATION_BALI_CHECK_1" = "Buy tickets";
+"VACATION_BALI_CHECK_2" = "Book a hotel";
+"VACATION_BALI_CHECK_3" = "Pack the suitcase";
+"SECOND_SCREEN_EVENTS" = "Events";
+
+/* ThirdScreenView */
+"THIRD_SCREEN_TIMER_TITLE" = "Timer";
+"THIRD_SCREEN_TIMER_BEFORE" = "Until the event";
+"THIRD_SCREEN_TIMER_AFTER" = "Time since the event";
+
+/* Timer Card Events (VacationCardPreviewViewTHRE) */
+"TIMER_EVENT_1_NAME" = "Event";
+"TIMER_EVENT_2_NAME" = "Another event";
+
+/* EventCardPreviewView (для первого экрана) */
+"FIRST_SCREEN_EVENT_NAME" = "Team meeting";
+"FIRST_SCREEN_EVENT_NOTE" = "Discuss strategy for Q1";
+"FIRST_SCREEN_CHECK_1" = "Prepare a report";
+"FIRST_SCREEN_CHECK_2" = "Create a presentation";
+
+"FIRST_SCREEN_BIRTHDAY_NAME" = "Anna's birthday";
+"FIRST_SCREEN_BIRTHDAY_NOTE" = "Buy a gift";
+
+"FIRST_SCREEN_EVENTS_LABEL" = "Events";
+"FIRST_SCREEN_BIRTHDAYS_LABEL" = "Birthdays";
+
+/* Возраст (пример форматирования строк) */
+"FIRST_SCREEN_AGE_LABEL" = "Age: %d years";
+
+/* NotificationWelcomeView (5 экран) */
+"NOTIFICATION_SCREEN_TITLE" = "Get short or extended notifications";
+"NOTIFICATION_SCREEN_SUBTITLE" = "Stay updated about upcoming events";
+"NOTIFICATION_ALLOW_BUTTON" = "Allow notifications";
+
+/* SubscriptionWelcomeView (6 экран) */
+"SUBSCRIPTION_UNLIMITED_EVENTS" = "Create an unlimited number of events";
+"SUBSCRIPTION_BUTTON_ANNUAL" = "Get an annual subscription";
+"SUBSCRIPTION_NOT_NOW_BUTTON" = "Not now";
+"SUBSCRIPTION_RESTORE_BUTTON" = "Restore Purchases";
+
+/* Ошибки подписки */
+"SUBSCRIPTION_ERROR_TITLE" = "Error";
+"SUBSCRIPTION_ERROR_DEFAULT" = "An error occurred";
+"SUBSCRIPTION_OK_BUTTON" = "OK";
+"SUBSCRIPTION_NO_PACKAGES" = "No available packages to purchase";
+"SUBSCRIPTION_CANCELED_BY_USER" = "Purchase canceled by user";
+"SUBSCRIPTION_PURCHASE_ERROR" = "Error trying to purchase the subscription";
+
+/* Прочее */
+"SECOND_SCREEN_EVENTS" = "Events";
+
+
+
+/*********************/
+
+
+
+/*  DayOfWeek        */
+/*********************/
+"dayOfWeek.monday" = "Monday";
+"dayOfWeek.tuesday" = "Tuesday";
+"dayOfWeek.wednesday" = "Wednesday";
+"dayOfWeek.thursday" = "Thursday";
+"dayOfWeek.friday" = "Friday";
+"dayOfWeek.saturday" = "Saturday";
+"dayOfWeek.sunday" = "Sunday";
+
+/*********************/
+/*  Month            */
+/*********************/
+"month.january" = "January";
+"month.february" = "February";
+"month.march" = "March";
+"month.april" = "April";
+"month.may" = "May";
+"month.june" = "June";
+"month.july" = "July";
+"month.august" = "August";
+"month.september" = "September";
+"month.october" = "October";
+"month.november" = "November";
+"month.december" = "December";
+
+/*********************/
+/*  RepeatInterval   */
+/*********************/
+"repeatInterval.none" = "No repeat";
+"repeatInterval.minute1" = "1 minute";
+"repeatInterval.minute5" = "5 minutes";
+"repeatInterval.minute10" = "10 minutes";
+"repeatInterval.minute15" = "15 minutes";
+"repeatInterval.minute30" = "30 minutes";
+"repeatInterval.minute35" = "35 minutes";
+"repeatInterval.minute40" = "40 minutes";
+"repeatInterval.hour" = "1 hour";
+
+
+/*********************/
+/*  EditEventView    */
+/*********************/
+// Section header (birthday/event)
+"editEvent.sectionHeader.birthday" = "Birthday";
+"editEvent.sectionHeader.event"    = "Event";
+
+// Input fields
+"editEvent.namePlaceholder"        = "Name";
+"editEvent.placeholder.notes"      = "Notes";
+
+// Checklist
+"editEvent.checklist.header"             = "Checklist";
+"editEvent.checklist.taskPlaceholder"    = "Task";
+"editEvent.checklist.newItemPlaceholder" = "Add a new task";
+
+// Notifications
+"editEvent.notification.toggle"          = "Notification";
+"editEvent.notification.typePickerTitle" = "Notification Type";
+"editEvent.notification.type.message"    = "Message";
+"editEvent.notification.type.sound"      = "Sound";
+
+// Emoji
+"editEvent.emoji.sectionHeader"  = "Emoji";
+"editEvent.emoji.categoryPicker" = "Emoji Category";
+
+// Delete past event
+"editEvent.deletePastEvents.label" = "Delete after completion";
+
+// Link to repeat settings
+"editEvent.repeatSettings.linkTitle" = "Repeat";
+
+// Common "Save" button
+"common.saveButton" = "Save";
+
+/*********************/
+/*  RepeatSettings   */
+/*********************/
+"repeatSettings.annualRepeatHeader"    = "Annual Repeat";
+"repeatSettings.annualRepeatToggle"    = "Yearly Repeat";
+"repeatSettings.intervalHeader"        = "Repeat Interval";
+"repeatSettings.intervalPicker"        = "Repeat Interval";
+"repeatSettings.daysOfWeekHeader"      = "Repeat on Weekdays";
+"repeatSettings.monthsHeader"          = "Repeat on Months";
+"repeatSettings.monthlyRepeatHeader"   = "Monthly Repeat";
+"repeatSettings.monthlyRepeatToggle"   = "Monthly Repeat";
+
+
+// Боковое меню
+
+/* Button "Add Event" */
+"add_event_button_title" = "Add Event";
+
+/* Section header "Events" */
+"events_section_header" = "Events";
+"WATCH_PAST_EVENTS_TITLE" = "Past events";
+"NO_EVENTS" = "No events";
+"NO_SHORT" = "No";
+"COMPLICATION_DISPLAY_NAME" = "Upcoming moment";
+"COMPLICATION_DISPLAY_DESCRIPTION" = "Circular progress and timer to the event";
+"COMPLICATION_EVENTS_LABEL" = "Events";

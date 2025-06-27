@@ -1,0 +1,350 @@
+// Японский весь
+
+/*  (фильтры) */
+"filter.all" = "すべて";
+"filter.events" = "イベント";
+"filter.birthdays" = "誕生日";
+"picker.title" = "カテゴリーを選択";
+"empty.prefix" = "まだ";
+"empty.event" = " イベントがありません";
+"empty.middle" = " と ";
+"empty.birthday" = " 誕生日がありません";
+"header.pinned" = "ピン留め";
+"header.events" = "イベント";
+"header.birthdays" = "誕生日";
+"navigation.title" = "イベント";
+"search.prompt" = "検索...";
+
+/* SettingsSheetView (ウィジェット) */
+
+// ウィジェットに関連するキー (WIDGETS)
+
+"WIDGET_ADD_EVENT" = "イベントを追加";
+"WIDGET_BIRTHDAY_EVENT" = "誕生日！";
+"WIDGET_EVENT_TODAY" = "今日のイベント！";
+"WIDGET_EVENT_PASSED" = "イベントは終了しました";
+"WIDGET_DISPLAY_NAME" = "次のイベント";
+"WIDGET_DISPLAY_DESCRIPTION" = "次のイベントを表示します。";
+"SOON_LABEL" = "まもなく";
+
+"SAMPLE_EVENT_MEET_FRIENDS" = "友達と会う";
+"SAMPLE_EVENT_CHECK_PIZZA" = "ピザを買う";
+"SAMPLE_EVENT_CHECK_CALL_FRIENDS" = "友達に電話する";
+"SAMPLE_EVENT_ANNA_BIRTHDAY" = "アンナの誕生日";
+"SAMPLE_EVENT_ANNA_NOTE" = "プレゼントを忘れないで！";
+"SAMPLE_EVENT_CHECK_CHOOSE_GIFT" = "プレゼントを選ぶ";
+"SAMPLE_EVENT_WORK_MEETING" = "仕事の会議";
+
+"SAMPLE_EVENT_PICNIC" = "ピクニック";
+"SAMPLE_EVENT_CHECK_BRING_FOOD" = "食べ物を持ってくる";
+"SAMPLE_EVENT_CHECK_SETUP_GAMES" = "ゲームを準備する";
+
+"SAMPLE_EVENT_ELON_NAME" = "イーロン・マスク";
+"SAMPLE_EVENT_ELON_NOTE" = "電話してお祝いする";
+"SAMPLE_EVENT_ELON_CHECK_CALL" = "イーロンに電話する";
+
+"SAMPLE_EVENT_CHECK_PREPARE_GIFT" = "プレゼントを準備する";
+
+"event_type_event" = "イベント";
+"event_type_birthday" = "誕生日";
+
+
+/* SettingsSheetView (struct EventCardView) */
+"event.age_prefix" = "年齢: %d歳";
+"event.birthday_today" = "誕生日!";
+
+"event.repeat_annually_text" = "毎年繰り返す";
+"event.repeat_monthly_text" = "毎月繰り返す";
+
+
+
+/* SettingsSheetView (subscription, notifications, feedback) */
+"SETTINGS_SUBSCRIPTION_HEADER" = "サブスクリプション";
+"SETTINGS_SUBSCRIPTION_CURRENT_STATUS" = "現在のステータス:";
+"SETTINGS_SUBSCRIPTION_ACTIVE" = "有効";
+"SETTINGS_SUBSCRIPTION_INACTIVE" = "無効";
+"SETTINGS_SUBSCRIPTION_BUY_BUTTON" = "サブスクリプションを購入";
+
+"SETTINGS_NOTIFICATIONS_HEADER" = "通知";
+"SETTINGS_NOTIFICATIONS_PERMISSION" = "権限:";
+"SETTINGS_NOTIFICATIONS_GRANTED" = "許可済み";
+"SETTINGS_NOTIFICATIONS_ALLOW_BUTTON" = "許可";
+
+"SETTINGS_FEEDBACK_HEADER" = "フィードバック";
+"SETTINGS_FEEDBACK_SEND_BUTTON" = "フィードバックを送る";
+
+/* SubscriptionModalView */
+"SUBSCRIPTION_MODAL_TITLE" = "サブスクリプション登録";
+"SUBSCRIPTION_MODAL_BUY_BUTTON" = "サブスクリプションを購入";
+"SUBSCRIPTION_NAV_TITLE" = "サブスクリプション";
+"SUBSCRIPTION_NAV_CLOSE" = "閉じる";
+
+/* FeedbackView */
+"FEEDBACK_SECTION_HEADER" = "あなたのフィードバック";
+"FEEDBACK_SEND_BUTTON" = "送信";
+"FEEDBACK_NAV_TITLE" = "フィードバックを送る";
+"FEEDBACK_TELEGRAM_INFO" = "メッセージはTelegramで送信されます。";
+"FEEDBACK_CONFIRM_TITLE" = "Telegramでフィードバックを送信しますか？";
+"FEEDBACK_CANCEL_BUTTON" = "キャンセル";
+
+/* OnboardingView */
+"ONBOARDING_STEP_TITLE" = "オンボーディングステップ %d";
+"ONBOARDING_STEP_CONTINUE" = "続行";
+
+/* Emoji Category Names */
+"CATEGORY_NAME_NONE" = "カテゴリーなし";
+"CATEGORY_NAME_CELEBRATION" = "お祝い";
+"CATEGORY_NAME_FOOD" = "食べ物";
+"CATEGORY_NAME_SPORTS" = "スポーツ";
+"CATEGORY_NAME_NATURE" = "自然";
+"CATEGORY_NAME_BEAUTY" = "美容";
+
+/* 空リストメッセージ */
+"empty_prefix" = "追加 ";
+"empty_event" = "イベント";
+"empty_middle" = " または ";
+"empty_birthday" = "誕生日";
+
+/* セクション見出し */
+"pinned_events_header" = "ピン留めされたイベント";
+"events_header" = "イベント";
+"birthdays_header" = "誕生日";
+
+/* スワイプアクション */
+"delete_label" = "削除";
+"pin_label" = "ピン留め";
+"unpin_label" = "ピン解除";
+
+/* Sample events */
+"SAMPLE_EVENT_MEET_FRIENDS" = "友達と会う";
+"SAMPLE_EVENT_CHECK_PIZZA" = "ピザを買う";
+"SAMPLE_EVENT_CHECK_CALL_FRIENDS" = "友達に電話する";
+
+"SAMPLE_EVENT_ANNA_BIRTHDAY" = "アンナの誕生日";
+"SAMPLE_EVENT_ANNA_NOTE" = "プレゼントを忘れないように！";
+"SAMPLE_EVENT_CHECK_CHOOSE_GIFT" = "プレゼントを選ぶ";
+
+"SAMPLE_EVENT_WORK_MEETING" = "仕事のミーティング";
+
+/* Snapshot events */
+"SAMPLE_EVENT_PICNIC" = "ピクニック";
+"SAMPLE_EVENT_CHECK_BRING_FOOD" = "食べ物を持参";
+"SAMPLE_EVENT_CHECK_SETUP_GAMES" = "ゲームを用意";
+
+"SAMPLE_EVENT_ELON_NAME" = "イーロン・マスク";
+"SAMPLE_EVENT_ELON_NOTE" = "電話してお祝い。";
+"SAMPLE_EVENT_ELON_CHECK_CALL" = "イーロンに電話する";
+
+"SAMPLE_EVENT_CHECK_PREPARE_GIFT" = "プレゼントを準備する";
+
+/* Widget strings */
+"WIDGET_ADD_EVENT" = "イベントを追加";
+"WIDGET_BIRTHDAY_EVENT" = "誕生日！";
+"WIDGET_EVENT_TODAY" = "今日のイベント！";
+"WIDGET_EVENT_PASSED" = "イベントが終了しました";
+"WIDGET_DISPLAY_NAME" = "次のイベント";
+"WIDGET_DISPLAY_DESCRIPTION" = "次に来るイベントを表示します。";
+
+/* FirstScreenView */
+"FIRST_SCREEN_CREATE_EVENTS" = "イベントと誕生日を作成";
+
+/* SecondScreenView */
+"SECOND_SCREEN_CHECKLISTS" = "メモとインタラクティブチェックリストを記録";
+
+/* VacationCardPreviewView */
+"VACATION_BALI_EVENT_NAME" = "バリ島の休暇";
+"VACATION_BALI_EVENT_NOTE" = "ホテルを予約して、荷物をまとめる";
+"VACATION_BALI_CHECK_1" = "航空券を購入";
+"VACATION_BALI_CHECK_2" = "ホテルを予約";
+"VACATION_BALI_CHECK_3" = "荷物を準備";
+"SECOND_SCREEN_EVENTS" = "イベント";
+
+/* ThirdScreenView */
+"THIRD_SCREEN_TIMER_TITLE" = "タイマー";
+"THIRD_SCREEN_TIMER_BEFORE" = "イベントまで";
+"THIRD_SCREEN_TIMER_AFTER" = "イベントから経過";
+
+/* Timer Card Events (VacationCardPreviewViewTHRE) */
+"TIMER_EVENT_1_NAME" = "イベント";
+"TIMER_EVENT_2_NAME" = "別のイベント";
+
+/* EventCardPreviewView */
+"FIRST_SCREEN_EVENT_NAME" = "チームミーティング";
+"FIRST_SCREEN_EVENT_NOTE" = "Q1戦略を検討";
+"FIRST_SCREEN_CHECK_1" = "レポートを準備";
+"FIRST_SCREEN_CHECK_2" = "プレゼン資料を作成";
+
+"FIRST_SCREEN_BIRTHDAY_NAME" = "アンナの誕生日";
+"FIRST_SCREEN_BIRTHDAY_NOTE" = "プレゼントを買う";
+
+"FIRST_SCREEN_EVENTS_LABEL" = "イベント";
+"FIRST_SCREEN_BIRTHDAYS_LABEL" = "誕生日";
+
+/* 年齢 (例: 年齢: %d 歳) */
+"FIRST_SCREEN_AGE_LABEL" = "年齢: %d 歳";
+
+/* NotificationWelcomeView */
+"NOTIFICATION_SCREEN_TITLE" = "短いまたは長い通知を受け取る";
+"NOTIFICATION_SCREEN_SUBTITLE" = "これからのイベントをお見逃しなく";
+"NOTIFICATION_ALLOW_BUTTON" = "通知を許可";
+
+/* SubscriptionWelcomeView */
+"SUBSCRIPTION_UNLIMITED_EVENTS" = "無制限にイベントを作成";
+"SUBSCRIPTION_BUTTON_ANNUAL" = "年間サブスクリプション";
+"SUBSCRIPTION_NOT_NOW_BUTTON" = "後で";
+"SUBSCRIPTION_RESTORE_BUTTON" = "購入を復元する";
+
+/* サブスクリプションエラー */
+"SUBSCRIPTION_ERROR_TITLE" = "エラー";
+"SUBSCRIPTION_ERROR_DEFAULT" = "エラーが発生しました";
+"SUBSCRIPTION_OK_BUTTON" = "OK";
+"SUBSCRIPTION_NO_PACKAGES" = "購入できるパッケージがありません";
+"SUBSCRIPTION_CANCELED_BY_USER" = "ユーザーが購入をキャンセルしました";
+"SUBSCRIPTION_PURCHASE_ERROR" = "サブスクリプション購入時にエラーが発生しました";
+
+/* その他 */
+"SECOND_SCREEN_EVENTS" = "イベント";
+
+/*********************/
+/*  DayOfWeek        */
+/*********************/
+"dayOfWeek.monday" = "月曜日";
+"dayOfWeek.tuesday" = "火曜日";
+"dayOfWeek.wednesday" = "水曜日";
+"dayOfWeek.thursday" = "木曜日";
+"dayOfWeek.friday" = "金曜日";
+"dayOfWeek.saturday" = "土曜日";
+"dayOfWeek.sunday" = "日曜日";
+
+/*********************/
+/*  Month            */
+/*********************/
+"month.january" = "1月";
+"month.february" = "2月";
+"month.march" = "3月";
+"month.april" = "4月";
+"month.may" = "5月";
+"month.june" = "6月";
+"month.july" = "7月";
+"month.august" = "8月";
+"month.september" = "9月";
+"month.october" = "10月";
+"month.november" = "11月";
+"month.december" = "12月";
+
+/*********************/
+/*  RepeatInterval   */
+/*********************/
+"repeatInterval.none" = "リピートなし";
+"repeatInterval.minute1" = "1分";
+"repeatInterval.minute5" = "5分";
+"repeatInterval.minute10" = "10分";
+"repeatInterval.minute15" = "15分";
+"repeatInterval.minute30" = "30分";
+"repeatInterval.minute35" = "35分";
+"repeatInterval.minute40" = "40分";
+"repeatInterval.hour" = "60分";
+
+/*********************/
+/*  EditEventView    */
+/*********************/
+"editEvent.sectionHeader.birthday" = "誕生日";
+"editEvent.sectionHeader.event" = "イベント";
+
+"editEvent.namePlaceholder" = "名称";
+"editEvent.placeholder.notes" = "メモ";
+
+"editEvent.checklist.header" = "チェックリスト";
+"editEvent.checklist.taskPlaceholder" = "タスク";
+"editEvent.checklist.newItemPlaceholder" = "新しいタスクを追加";
+
+"editEvent.notification.toggle" = "通知";
+"editEvent.notification.typePickerTitle" = "通知タイプ";
+"editEvent.notification.type.message" = "メッセージ";
+"editEvent.notification.type.sound" = "サウンド";
+
+"editEvent.emoji.sectionHeader" = "絵文字";
+"editEvent.emoji.categoryPicker" = "絵文字カテゴリ";
+
+"editEvent.deletePastEvents.label" = "完了後に削除";
+
+"editEvent.repeatSettings.linkTitle" = "リピート";
+
+"common.saveButton" = "保存";
+
+/*********************/
+/*  RepeatSettings   */
+/*********************/
+"repeatSettings.annualRepeatHeader" = "年ごとのリピート";
+"repeatSettings.annualRepeatToggle" = "毎年リピート";
+"repeatSettings.intervalHeader" = "リピート間隔";
+"repeatSettings.intervalPicker" = "リピート間隔を選択";
+"repeatSettings.daysOfWeekHeader" = "曜日でのリピート";
+"repeatSettings.monthsHeader" = "月でのリピート";
+"repeatSettings.monthlyRepeatHeader" = "毎月のリピート設定";
+"repeatSettings.monthlyRepeatToggle" = "毎月リピート";
+
+/* サイドメニュー */
+"add_event_button_title" = "イベントを追加";
+"events_section_header" = "イベント";
+"NO_EVENTS" = "イベントなし";
+"NO_SHORT" = "なし";
+"COMPLICATION_DISPLAY_NAME" = "次の瞬間";
+"COMPLICATION_DISPLAY_DESCRIPTION" = "イベントまでの円形進行とタイマー";
+"COMPLICATION_EVENTS_LABEL" = "イベント";
+
+
+// экран добавить событие
+
+"event_type_event" = "イベント";
+"event_type_birthday" = "誕生日";
+
+/* ---------- メイン画面 ---------- */
+"event_type_picker_title" = "イベントの種類";
+"birthday_name_placeholder" = "氏名";
+"event_name_placeholder" = "イベント名";
+
+/* メモとリスト */
+"enter_text_placeholder" = "テキストを入力";
+"notes_placeholder_text" = "メモ...";
+"notes_tab_title" = "メモ";
+"checklist_tab_title" = "チェックリスト";
+"new_checklist_item_placeholder" = "新しい項目";
+
+/* 日付と通知 */
+"date_section_header" = "日付";
+"notification_toggle_title" = "通知";
+"notification_type_message" = "メッセージ";
+"notification_type_sound" = "サウンド";
+
+/* 絵文字 */
+"emoji_section_header" = "絵文字";
+"emoji_category_picker_title" = "絵文字カテゴリ";
+
+/* 繰り返し */
+"repeat_section_header" = "繰り返し";
+"yearly_repeat" = "毎年";
+"monthly_repeat" = "毎月";
+"weekdays_format" = "曜日指定: %@";
+"months_format" = "月指定: %@";
+"no_repeat" = "繰り返しなし";
+
+/* 過去のイベント削除 */
+"delete_past_events_text" = "終了後に削除";
+
+/* ボタン */
+"save_button_title" = "保存";
+
+"THIRD_SCREEN_BLUE_TIMER_INFO" = "青いタイマーは、イベント開始までの残り時間を表示します。";
+
+"THIRD_SCREEN_GRAY_TIMER_INFO" = "灰色のタイマーは、イベントが開始されてから経過した時間を表示します。";
+
+"SIDEBAR_TODAY_EVENTS" = "今日のイベント";
+"TIME_11_30" = "11:30";
+"TIME_18_00" = "18:00";
+"SIDEBAR_MEETING" = "会議";
+"SIDEBAR_MEETING_EMOJI" = "💼";
+"SIDEBAR_DOCTOR" = "診察の予約";
+"SIDEBAR_DOCTOR_EMOJI" = "💊";
+"SIDEBAR_CONVENIENT_CALENDAR" = "便利なカレンダー";
+"SIDEBAR_SHOWS_ALL_EVENTS" = "特定の日のすべてのイベントを表示します。";

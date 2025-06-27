@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "A_group_of_German_friends_celebrating_indoors_with.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

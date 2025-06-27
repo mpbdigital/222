@@ -1,0 +1,279 @@
+/*  (фильтры) */
+
+"filter.all" = "Todos";
+"filter.events" = "Eventos";
+"filter.birthdays" = "Aniversários";
+"picker.title" = "Escolha uma categoria";
+"empty.prefix" = "Você ainda não tem";
+"empty.event" = " eventos";
+"empty.middle" = " e ";
+"empty.birthday" = " aniversários";
+"header.pinned" = "Fixados";
+"header.events" = "Eventos";
+"header.birthdays" = "Aniversários";
+"navigation.title" = "Eventos";
+"search.prompt" = "Buscar...";
+
+
+/*********************/
+/*  редактирование   */
+/*********************/
+
+
+/* SettingsSheetView (Widget) */
+
+// Chaves relacionadas aos widgets (WIDGETS)
+
+"WIDGET_ADD_EVENT" = "Adicionar evento";
+"WIDGET_BIRTHDAY_EVENT" = "Aniversário!";
+"WIDGET_EVENT_TODAY" = "Evento hoje!";
+"WIDGET_EVENT_PASSED" = "O evento já passou";
+"WIDGET_DISPLAY_NAME" = "Próximo evento";
+"WIDGET_DISPLAY_DESCRIPTION" = "Mostra o próximo evento.";
+"SOON_LABEL" = "Em breve";
+
+"SAMPLE_EVENT_MEET_FRIENDS" = "Encontro com amigos";
+"SAMPLE_EVENT_CHECK_PIZZA" = "Comprar pizza";
+"SAMPLE_EVENT_CHECK_CALL_FRIENDS" = "Ligar para os amigos";
+"SAMPLE_EVENT_ANNA_BIRTHDAY" = "Aniversário da Ana";
+"SAMPLE_EVENT_ANNA_NOTE" = "Não se esqueça do presente!";
+"SAMPLE_EVENT_CHECK_CHOOSE_GIFT" = "Escolher um presente";
+"SAMPLE_EVENT_WORK_MEETING" = "Reunião de trabalho";
+
+"SAMPLE_EVENT_PICNIC" = "Piquenique";
+"SAMPLE_EVENT_CHECK_BRING_FOOD" = "Levar comida";
+"SAMPLE_EVENT_CHECK_SETUP_GAMES" = "Preparar os jogos";
+
+"SAMPLE_EVENT_ELON_NAME" = "Elon Musk";
+"SAMPLE_EVENT_ELON_NOTE" = "Ligar para dar os parabéns.";
+"SAMPLE_EVENT_ELON_CHECK_CALL" = "Ligar para o Elon";
+
+"SAMPLE_EVENT_CHECK_PREPARE_GIFT" = "Preparar o presente";
+
+"event_type_event" = "Evento";
+"event_type_birthday" = "Aniversário";
+
+
+
+
+// редактирование
+
+"editEvent.sectionHeader.birthday" = "Aniversário";
+"editEvent.sectionHeader.event" = "Evento";
+"editEvent.namePlaceholder" = "Nome";
+"editEvent.placeholder.notes" = "Notas";
+"editEvent.checklist.header" = "Lista de tarefas";
+"editEvent.notification.toggle" = "Ativar notificações";
+"editEvent.deletePastEvents.label" = "Excluir após a conclusão";
+"editEvent.repeatSettings.linkTitle" = "Configurar repetição";
+"editEvent.emoji.sectionHeader"  = "Emojis";
+"editEvent.emoji.categoryPicker" = "Categoria de emojis";
+
+// интервалы
+
+/*********************/
+/*  RepeatInterval   */
+/*********************/
+"repeatInterval.none" = "Sem repetição";
+"repeatInterval.minute1" = "1 minuto";
+"repeatInterval.minute5" = "5 minutos";
+"repeatInterval.minute10" = "10 minutos";
+"repeatInterval.minute15" = "15 minutos";
+"repeatInterval.minute30" = "30 minutos";
+"repeatInterval.minute35" = "35 minutos";
+"repeatInterval.minute40" = "40 minutos";
+"repeatInterval.hour" = "60 minutos";
+
+/* SidebarMenuPreviewView */
+
+// Tela de adicionar evento
+
+"event_type_event" = "Evento";
+"event_type_birthday" = "Aniversário";
+
+// Tela de criação
+
+"event_type_picker_title" = "Tipo de evento";
+"birthday_name_placeholder" = "Nome";
+"event_name_placeholder" = "Nome do evento";
+"enter_text_placeholder" = "Digite o texto";
+"notes_placeholder_text" = "Notas...";
+"notes_tab_title" = "Notas";
+"checklist_tab_title" = "Lista de verificação";
+"new_checklist_item_placeholder" = "Novo item";
+"date_section_header" = "Data";
+"notification_toggle_title" = "Notificação";
+"notification_type_message" = "Mensagem";
+"notification_type_sound" = "Som";
+"emoji_section_header" = "Emojis";
+"emoji_category_picker_title" = "Categoria de emojis";
+"repeat_section_header" = "Repetir";
+"yearly_repeat" = "Anualmente";
+"monthly_repeat" = "Mensalmente";
+"weekdays_format" = "Por dias: %@";
+"months_format" = "Por meses: %@";
+"no_repeat" = "Sem repetição";
+"delete_past_events_text" = "Excluir após finalizar";
+"save_button_title" = "Salvar";
+"editEvent.sectionHeader.birthday" = "Aniversário";
+"editEvent.sectionHeader.event" = "Evento";
+"editEvent.checklist.header" = "Lista de verificação";
+"editEvent.checklist.taskPlaceholder" = "Tarefa";
+"editEvent.checklist.newItemPlaceholder" = "Adicionar nova tarefa";
+"common.saveButton" = "Salvar";
+
+// Terceiro cartão
+
+/* VacationCardPreviewViewTHRE (tela de temporizador) */
+"THIRD_SCREEN_TIMER_TITLE" = "Temporizador";
+"THIRD_SCREEN_TIMER_BEFORE" = "Antes do evento";
+"THIRD_SCREEN_BLUE_TIMER_INFO" = "O temporizador azul mostra o tempo restante até o início do evento";
+"THIRD_SCREEN_TIME_PASSED_TITLE" = "Tempo passado do evento";
+"THIRD_SCREEN_GRAY_TIMER_INFO" = "O temporizador cinza mostra o tempo passado após o evento";
+
+"EVENT_1_NAME" = "Evento 1";
+"EVENT_1_NOTE" = "Descrição do evento 1";
+
+"EVENT_2_BIRTHDAY_NAME" = "Aniversário de um amigo";
+"EVENT_2_BIRTHDAY_NOTE" = "Comprar presente";
+
+"EVENT_3_BIRTHDAY_NAME" = "Aniversário de um colega";
+"EVENT_3_BIRTHDAY_NOTE" = "Lembrar da reunião";
+
+"SIDEBAR_TODAY_EVENTS" = "Eventos de hoje";
+"TIME_11_30" = "11:30";
+"TIME_18_00" = "18:00";
+"SIDEBAR_MEETING" = "Reunião";
+"SIDEBAR_MEETING_EMOJI" = "💼";
+"SIDEBAR_DOCTOR" = "Consulta médica";
+"SIDEBAR_DOCTOR_EMOJI" = "💊";
+"SIDEBAR_CONVENIENT_CALENDAR" = "Calendário conveniente";
+"SIDEBAR_SHOWS_ALL_EVENTS" = "Mostrar todos os eventos de um dia específico";
+
+// Tela de configurações
+
+"event.age_prefix" = "Idade: %d";
+"event.birthday_today" = "Aniversário!";
+
+"event.repeat_annually_text" = "Repetir anualmente";
+"event.repeat_monthly_text" = "Repetir mensalmente";
+
+/* Tela de configurações (Assinatura, Notificações, Feedback) */
+"SETTINGS_SUBSCRIPTION_HEADER" = "Assinatura";
+"SETTINGS_SUBSCRIPTION_CURRENT_STATUS" = "Status atual:";
+"SETTINGS_SUBSCRIPTION_ACTIVE" = "Ativo";
+"SETTINGS_SUBSCRIPTION_INACTIVE" = "Inativo";
+"SETTINGS_SUBSCRIPTION_BUY_BUTTON" = "Comprar assinatura";
+
+"SETTINGS_NOTIFICATIONS_HEADER" = "Notificações";
+"SETTINGS_NOTIFICATIONS_PERMISSION" = "Permissão:";
+"SETTINGS_NOTIFICATIONS_GRANTED" = "Permitido";
+"SETTINGS_NOTIFICATIONS_ALLOW_BUTTON" = "Permitir";
+
+"SETTINGS_FEEDBACK_HEADER" = "Feedback";
+"SETTINGS_FEEDBACK_SEND_BUTTON" = "Enviar feedback";
+
+/* Modal de assinatura */
+"SUBSCRIPTION_MODAL_TITLE" = "Comprar assinatura";
+"SUBSCRIPTION_MODAL_BUY_BUTTON" = "Comprar";
+"SUBSCRIPTION_NAV_TITLE" = "Assinatura";
+"SUBSCRIPTION_NAV_CLOSE" = "Fechar";
+
+/* Tela de feedback */
+"FEEDBACK_SECTION_HEADER" = "Opiniões";
+"FEEDBACK_SEND_BUTTON" = "Enviar";
+"FEEDBACK_NAV_TITLE" = "Enviar feedback";
+"FEEDBACK_TELEGRAM_INFO" = "Sua mensagem será enviada via Telegram.";
+"FEEDBACK_CONFIRM_TITLE" = "Enviar feedback pelo Telegram?";
+"FEEDBACK_CANCEL_BUTTON" = "Cancelar";
+
+/* Onboarding */
+"ONBOARDING_STEP_TITLE" = "Passo de onboarding %d";
+"ONBOARDING_STEP_CONTINUE" = "Continuar";
+
+/* Categorias de emoji */
+"CATEGORY_NAME_NONE" = "Sem categoria";
+"CATEGORY_NAME_CELEBRATION" = "Celebração";
+"CATEGORY_NAME_FOOD" = "Comida";
+"CATEGORY_NAME_SPORTS" = "Esportes";
+"CATEGORY_NAME_NATURE" = "Natureza";
+"CATEGORY_NAME_BEAUTY" = "Beleza";
+
+/* Mensagens de lista vazia */
+"empty_prefix" = "Adicionar ";
+"empty_event" = "Evento";
+"empty_middle" = " ou ";
+"empty_birthday" = "Aniversário";
+
+/* Títulos de seção */
+"pinned_events_header" = "Eventos fixados";
+"events_header" = "Eventos";
+"birthdays_header" = "Aniversários";
+
+/* Ações de deslizar */
+"delete_label" = "Excluir";
+"pin_label" = "Fixar";
+"unpin_label" = "Desfixar";
+
+/* Eventos de exemplo */
+"SAMPLE_EVENT_MEET_FRIENDS" = "Encontrar amigos";
+"SAMPLE_EVENT_CHECK_PIZZA" = "Comprar pizza";
+"SAMPLE_EVENT_CHECK_CALL_FRIENDS" = "Ligar para os amigos";
+
+"SAMPLE_EVENT_ANNA_BIRTHDAY" = "Aniversário da Anna";
+"SAMPLE_EVENT_ANNA_NOTE" = "Não esquecer o presente!";
+"SAMPLE_EVENT_CHECK_CHOOSE_GIFT" = "Escolher presente";
+
+"SAMPLE_EVENT_WORK_MEETING" = "Reunião de trabalho";
+
+/* Cadenas de widgets */
+"WIDGET_ADD_EVENT" = "Adicionar evento";
+"WIDGET_BIRTHDAY_EVENT" = "Aniversário!";
+"WIDGET_EVENT_TODAY" = "Evento de hoje";
+"WIDGET_EVENT_PASSED" = "Evento passado";
+"WIDGET_DISPLAY_NAME" = "Próximo evento";
+"WIDGET_DISPLAY_DESCRIPTION" = "Exibe o próximo evento agendado.";
+
+/* Dias da semana */
+"dayOfWeek.monday" = "Segunda-feira";
+"dayOfWeek.tuesday" = "Terça-feira";
+"dayOfWeek.wednesday" = "Quarta-feira";
+"dayOfWeek.thursday" = "Quinta-feira";
+"dayOfWeek.friday" = "Sexta-feira";
+"dayOfWeek.saturday" = "Sábado";
+"dayOfWeek.sunday" = "Domingo";
+
+/* Meses */
+"month.january" = "Janeiro";
+"month.february" = "Fevereiro";
+"month.march" = "Março";
+"month.april" = "Abril";
+"month.may" = "Maio";
+"month.june" = "Junho";
+"month.july" = "Julho";
+"month.august" = "Agosto";
+"month.september" = "Setembro";
+"month.october" = "Outubro";
+"month.november" = "Novembro";
+"month.december" = "Dezembro";
+
+/* Configurações de repetição */
+"repeatSettings.annualRepeatHeader" = "Repetir anualmente";
+"repeatSettings.annualRepeatToggle" = "Repetir anualmente";
+"repeatSettings.intervalHeader" = "Intervalo de repetição";
+"repeatSettings.intervalPicker" = "Escolher intervalo";
+"repeatSettings.daysOfWeekHeader" = "Repetir por dias da semana";
+"repeatSettings.monthsHeader" = "Repetir por meses";
+"repeatSettings.monthlyRepeatHeader" = "Repetir mensalmente";
+"repeatSettings.monthlyRepeatToggle" = "Repetir mensalmente";
+
+/* Menu lateral */
+"add_event_button_title" = "Adicionar evento";
+"events_section_header" = "Eventos";
+"NO_EVENTS" = "Sem eventos";
+"NO_SHORT" = "Não";
+"COMPLICATION_DISPLAY_NAME" = "Próximo momento";
+"COMPLICATION_DISPLAY_DESCRIPTION" = "Progresso circular e cronômetro até o evento";
+"COMPLICATION_EVENTS_LABEL" = "Eventos";
+
+"SUBSCRIPTION_RESTORE_BUTTON" = "Restaurar compras";

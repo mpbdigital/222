@@ -1,0 +1,366 @@
+/* --- 本地化文件 Localizable.strings (简体中文) --- */
+
+/*  (фильтры) */
+
+"filter.all" = "全部";
+"filter.events" = "活动";
+"filter.birthdays" = "生日";
+"picker.title" = "选择类别";
+"empty.prefix" = "您还没有";
+"empty.event" = " 活动";
+"empty.middle" = " 和 ";
+"empty.birthday" = " 生日";
+"header.pinned" = "已固定";
+"header.events" = "活动";
+"header.birthdays" = "生日";
+"navigation.title" = "活动";
+"search.prompt" = "搜索...";
+
+
+
+/* SettingsSheetView (Widget) */
+
+// 与小组件相关的键 (WIDGETS)
+
+"WIDGET_ADD_EVENT" = "添加事件";
+"WIDGET_BIRTHDAY_EVENT" = "生日！";
+"WIDGET_EVENT_TODAY" = "今天的事件！";
+"WIDGET_EVENT_PASSED" = "事件已过期";
+"WIDGET_DISPLAY_NAME" = "即将发生的事件";
+"WIDGET_DISPLAY_DESCRIPTION" = "显示下一个事件。";
+"SOON_LABEL" = "即将";
+
+"SAMPLE_EVENT_MEET_FRIENDS" = "与朋友见面";
+"SAMPLE_EVENT_CHECK_PIZZA" = "购买披萨";
+"SAMPLE_EVENT_CHECK_CALL_FRIENDS" = "给朋友打电话";
+"SAMPLE_EVENT_ANNA_BIRTHDAY" = "安娜的生日";
+"SAMPLE_EVENT_ANNA_NOTE" = "别忘了买礼物！";
+"SAMPLE_EVENT_CHECK_CHOOSE_GIFT" = "选择礼物";
+"SAMPLE_EVENT_WORK_MEETING" = "工作会议";
+
+"SAMPLE_EVENT_PICNIC" = "野餐";
+"SAMPLE_EVENT_CHECK_BRING_FOOD" = "带上食物";
+"SAMPLE_EVENT_CHECK_SETUP_GAMES" = "准备游戏";
+
+"SAMPLE_EVENT_ELON_NAME" = "埃隆·马斯克";
+"SAMPLE_EVENT_ELON_NOTE" = "打电话祝他生日快乐。";
+"SAMPLE_EVENT_ELON_CHECK_CALL" = "给埃隆打电话";
+
+"SAMPLE_EVENT_CHECK_PREPARE_GIFT" = "准备礼物";
+
+"event_type_event" = "事件";
+"event_type_birthday" = "生日";
+
+
+
+// 编辑事件屏幕 (EditEventView)
+"editEvent.sectionHeader.birthday" = "生日";
+"editEvent.sectionHeader.event" = "事件";
+"editEvent.namePlaceholder" = "输入名称";
+"editEvent.placeholder.notes" = "输入备注";
+"editEvent.checklist.header" = "待办清单";
+"editEvent.notification.toggle" = "启用通知";
+"editEvent.deletePastEvents.label" = "完成后删除";
+"editEvent.repeatSettings.linkTitle" = "重复";
+"editEvent.emoji.sectionHeader"  = "表情";
+"editEvent.emoji.categoryPicker" = "表情类别";
+
+
+
+/*********************/
+/*  RepeatInterval   */
+/*********************/
+"repeatInterval.none" = "无重复";
+"repeatInterval.minute1" = "1 分钟";
+"repeatInterval.minute5" = "5 分钟";
+"repeatInterval.minute10" = "10 分钟";
+"repeatInterval.minute15" = "15 分钟";
+"repeatInterval.minute30" = "30 分钟";
+"repeatInterval.minute35" = "35 分钟";
+"repeatInterval.minute40" = "40 分钟";
+"repeatInterval.hour" = "60 分钟";
+
+
+
+// превью
+
+/*  VacationCardPreviewViewTHRE (计时器屏幕) */
+"THIRD_SCREEN_TIMER_TITLE" = "计时器";
+"THIRD_SCREEN_TIMER_BEFORE" = "距离事件";
+"THIRD_SCREEN_BLUE_TIMER_INFO" = "蓝色计时器 - 显示事件开始前的剩余时间";
+"THIRD_SCREEN_TIME_PASSED_TITLE" = "事件发生后";
+"THIRD_SCREEN_GRAY_TIMER_INFO" = "灰色计时器 - 显示事件发生后的时间";
+
+/* 车站 */
+"EVENT_1_NAME" = "事件 1";
+"EVENT_1_NOTE" = "事件 1 描述";
+
+"EVENT_2_BIRTHDAY_NAME" = "朋友的生日";
+"EVENT_2_BIRTHDAY_NOTE" = "购买礼物";
+
+"EVENT_3_BIRTHDAY_NAME" = "同事的生日";
+"EVENT_3_BIRTHDAY_NOTE" = "提醒聚会";
+
+"SIDEBAR_TODAY_EVENTS" = "今天的事件";
+"TIME_11_30" = "11:30";
+"TIME_18_00" = "18:00";
+"SIDEBAR_MEETING" = "会议";
+"SIDEBAR_MEETING_EMOJI" = "💼";
+"SIDEBAR_DOCTOR" = "医生预约";
+"SIDEBAR_DOCTOR_EMOJI" = "💊";
+"SIDEBAR_CONVENIENT_CALENDAR" = "便捷日历";
+"SIDEBAR_SHOWS_ALL_EVENTS" = "显示特定日期的所有事件";
+
+/* FirstScreenView */
+"FIRST_SCREEN_CREATE_EVENTS" = "创建事件和生日";
+
+/* SecondScreenView */
+"SECOND_SCREEN_CHECKLISTS" = "记录笔记和互动清单";
+
+/* VacationCardPreviewView */
+"VACATION_BALI_EVENT_NAME" = "巴厘岛度假";
+"VACATION_BALI_EVENT_NOTE" = "预订酒店，整理行李";
+"VACATION_BALI_CHECK_1" = "购买机票";
+"VACATION_BALI_CHECK_2" = "预订酒店";
+"VACATION_BALI_CHECK_3" = "整理行李";
+"SECOND_SCREEN_EVENTS" = "事件";
+
+/* ThirdScreenView */
+"THIRD_SCREEN_TIMER_TITLE" = "计时器";
+"THIRD_SCREEN_TIMER_BEFORE" = "距离事件";
+"THIRD_SCREEN_TIMER_AFTER" = "事件发生后";
+
+/* Timer Card Events (VacationCardPreviewViewTHRE) */
+"TIMER_EVENT_1_NAME" = "事件";
+"TIMER_EVENT_2_NAME" = "其他事件";
+
+/* EventCardPreviewView (用于第一个屏幕) */
+"FIRST_SCREEN_EVENT_NAME" = "团队会议";
+"FIRST_SCREEN_EVENT_NOTE" = "讨论第一季度战略";
+"FIRST_SCREEN_CHECK_1" = "准备报告";
+"FIRST_SCREEN_CHECK_2" = "制作演示文稿";
+
+"FIRST_SCREEN_BIRTHDAY_NAME" = "安娜的生日";
+"FIRST_SCREEN_BIRTHDAY_NOTE" = "购买礼物";
+
+"FIRST_SCREEN_EVENTS_LABEL" = "事件";
+"FIRST_SCREEN_BIRTHDAYS_LABEL" = "生日";
+
+/* 年龄 (示例字符串格式) */
+"FIRST_SCREEN_AGE_LABEL" = "年龄: %d 岁";
+
+/* NotificationWelcomeView (第 5 屏幕) */
+"NOTIFICATION_SCREEN_TITLE" = "接收短或长通知";
+"NOTIFICATION_SCREEN_SUBTITLE" = "随时了解即将发生的事件";
+"NOTIFICATION_ALLOW_BUTTON" = "允许通知";
+
+/* SubscriptionWelcomeView (第 6 屏幕) */
+"SUBSCRIPTION_UNLIMITED_EVENTS" = "创建无限数量的事件";
+"SUBSCRIPTION_BUTTON_ANNUAL" = "订阅一年";
+"SUBSCRIPTION_NOT_NOW_BUTTON" = "暂不";
+"SUBSCRIPTION_RESTORE_BUTTON" = "恢复购买";
+
+/* 订阅错误 */
+"SUBSCRIPTION_ERROR_TITLE" = "错误";
+"SUBSCRIPTION_ERROR_DEFAULT" = "发生错误";
+"SUBSCRIPTION_OK_BUTTON" = "确定";
+"SUBSCRIPTION_NO_PACKAGES" = "未找到可购买的订阅套餐";
+"SUBSCRIPTION_CANCELED_BY_USER" = "用户取消购买";
+"SUBSCRIPTION_PURCHASE_ERROR" = "购买订阅时出错";
+
+/* 其他 */
+"SECOND_SCREEN_EVENTS" = "事件";
+
+
+
+/* SidebarMenuPreviewView */
+
+// 事件添加界面
+
+"event_type_event" = "事件";
+"event_type_birthday" = "生日";
+
+// 创建界面
+
+"event_type_picker_title" = "事件类型";
+"birthday_name_placeholder" = "姓名";
+"event_name_placeholder" = "事件名称";
+"enter_text_placeholder" = "请输入文本";
+"notes_placeholder_text" = "备注...";
+"notes_tab_title" = "备注";
+"checklist_tab_title" = "待办事项";
+"new_checklist_item_placeholder" = "新项目";
+"date_section_header" = "日期";
+"notification_toggle_title" = "通知";
+"notification_type_message" = "消息";
+"notification_type_sound" = "声音";
+"emoji_section_header" = "表情符号";
+"emoji_category_picker_title" = "表情符号类别";
+"repeat_section_header" = "重复";
+"yearly_repeat" = "每年";
+"monthly_repeat" = "每月";
+"weekdays_format" = "按星期: %@";
+"months_format" = "按月: %@";
+"no_repeat" = "不重复";
+"delete_past_events_text" = "结束后删除";
+"save_button_title" = "保存";
+"editEvent.sectionHeader.birthday" = "生日";
+"editEvent.sectionHeader.event" = "事件";
+"editEvent.checklist.header" = "待办事项";
+"editEvent.checklist.taskPlaceholder" = "任务";
+"editEvent.checklist.newItemPlaceholder" = "添加新任务";
+"common.saveButton" = "保存";
+
+// 第三张卡片
+
+/* VacationCardPreviewViewTHRE (计时器界面) */
+"THIRD_SCREEN_TIMER_TITLE" = "计时器";
+"THIRD_SCREEN_TIMER_BEFORE" = "活动前";
+"THIRD_SCREEN_BLUE_TIMER_INFO" = "蓝色计时器显示距离活动开始的剩余时间";
+"THIRD_SCREEN_TIME_PASSED_TITLE" = "活动已过时间";
+"THIRD_SCREEN_GRAY_TIMER_INFO" = "灰色计时器显示活动结束后的经过时间";
+
+"EVENT_1_NAME" = "事件1";
+"EVENT_1_NOTE" = "事件1的描述";
+
+"EVENT_2_BIRTHDAY_NAME" = "朋友的生日";
+"EVENT_2_BIRTHDAY_NOTE" = "购买礼物";
+
+"EVENT_3_BIRTHDAY_NAME" = "同事的生日";
+"EVENT_3_BIRTHDAY_NOTE" = "提醒开会";
+
+"SIDEBAR_TODAY_EVENTS" = "今天的事件";
+"TIME_11_30" = "11:30";
+"TIME_18_00" = "18:00";
+"SIDEBAR_MEETING" = "会议";
+"SIDEBAR_MEETING_EMOJI" = "💼";
+"SIDEBAR_DOCTOR" = "医生预约";
+"SIDEBAR_DOCTOR_EMOJI" = "💊";
+"SIDEBAR_CONVENIENT_CALENDAR" = "便捷日历";
+"SIDEBAR_SHOWS_ALL_EVENTS" = "显示特定日期的所有事件";
+
+// 设置界面
+
+"event.age_prefix" = "年龄: %d";
+"event.birthday_today" = "生日！";
+
+"event.repeat_annually_text" = "每年重复";
+"event.repeat_monthly_text" = "每月重复";
+
+/* 设置界面 (订阅、通知、反馈) */
+"SETTINGS_SUBSCRIPTION_HEADER" = "订阅";
+"SETTINGS_SUBSCRIPTION_CURRENT_STATUS" = "当前状态:";
+"SETTINGS_SUBSCRIPTION_ACTIVE" = "已激活";
+"SETTINGS_SUBSCRIPTION_INACTIVE" = "未激活";
+"SETTINGS_SUBSCRIPTION_BUY_BUTTON" = "购买订阅";
+
+"SETTINGS_NOTIFICATIONS_HEADER" = "通知";
+"SETTINGS_NOTIFICATIONS_PERMISSION" = "允许:";
+"SETTINGS_NOTIFICATIONS_GRANTED" = "已允许";
+"SETTINGS_NOTIFICATIONS_ALLOW_BUTTON" = "允许";
+
+"SETTINGS_FEEDBACK_HEADER" = "反馈";
+"SETTINGS_FEEDBACK_SEND_BUTTON" = "发送反馈";
+
+/* 订阅模态 */
+"SUBSCRIPTION_MODAL_TITLE" = "购买订阅";
+"SUBSCRIPTION_MODAL_BUY_BUTTON" = "购买";
+"SUBSCRIPTION_NAV_TITLE" = "订阅";
+"SUBSCRIPTION_NAV_CLOSE" = "关闭";
+
+/* 反馈界面 */
+"FEEDBACK_SECTION_HEADER" = "反馈";
+"FEEDBACK_SEND_BUTTON" = "发送";
+"FEEDBACK_NAV_TITLE" = "发送反馈";
+"FEEDBACK_TELEGRAM_INFO" = "您的消息将通过Telegram发送。";
+"FEEDBACK_CONFIRM_TITLE" = "通过Telegram发送反馈？";
+"FEEDBACK_CANCEL_BUTTON" = "取消";
+
+/* 引导 */
+"ONBOARDING_STEP_TITLE" = "引导步骤 %d";
+"ONBOARDING_STEP_CONTINUE" = "继续";
+
+/* 表情符号类别 */
+"CATEGORY_NAME_NONE" = "无类别";
+"CATEGORY_NAME_CELEBRATION" = "庆祝";
+"CATEGORY_NAME_FOOD" = "食物";
+"CATEGORY_NAME_SPORTS" = "运动";
+"CATEGORY_NAME_NATURE" = "自然";
+"CATEGORY_NAME_BEAUTY" = "美容";
+
+/* 空列表消息 */
+"empty_prefix" = "添加 ";
+"empty_event" = "事件";
+"empty_middle" = " 或 ";
+"empty_birthday" = "生日";
+
+/* 部分标题 */
+"pinned_events_header" = "固定事件";
+"events_header" = "事件";
+"birthdays_header" = "生日";
+
+/* 滑动操作 */
+"delete_label" = "删除";
+"pin_label" = "固定";
+"unpin_label" = "取消固定";
+
+/* 示例事件 */
+"SAMPLE_EVENT_MEET_FRIENDS" = "见朋友";
+"SAMPLE_EVENT_CHECK_PIZZA" = "买披萨";
+"SAMPLE_EVENT_CHECK_CALL_FRIENDS" = "打电话给朋友";
+
+"SAMPLE_EVENT_ANNA_BIRTHDAY" = "安娜的生日";
+"SAMPLE_EVENT_ANNA_NOTE" = "别忘了买礼物！";
+"SAMPLE_EVENT_CHECK_CHOOSE_GIFT" = "选择礼物";
+
+"SAMPLE_EVENT_WORK_MEETING" = "工作会议";
+
+/* 小部件字符串 */
+"WIDGET_ADD_EVENT" = "添加事件";
+"WIDGET_BIRTHDAY_EVENT" = "生日！";
+"WIDGET_EVENT_TODAY" = "今天的事件！";
+"WIDGET_EVENT_PASSED" = "已结束的事件";
+"WIDGET_DISPLAY_NAME" = "下一个事件";
+"WIDGET_DISPLAY_DESCRIPTION" = "显示下一个计划的事件。";
+
+/* 星期 */
+"dayOfWeek.monday" = "星期一";
+"dayOfWeek.tuesday" = "星期二";
+"dayOfWeek.wednesday" = "星期三";
+"dayOfWeek.thursday" = "星期四";
+"dayOfWeek.friday" = "星期五";
+"dayOfWeek.saturday" = "星期六";
+"dayOfWeek.sunday" = "星期日";
+
+/* 月份 */
+"month.january" = "一月";
+"month.february" = "二月";
+"month.march" = "三月";
+"month.april" = "四月";
+"month.may" = "五月";
+"month.june" = "六月";
+"month.july" = "七月";
+"month.august" = "八月";
+"month.september" = "九月";
+"month.october" = "十月";
+"month.november" = "十一月";
+"month.december" = "十二月";
+
+/* 重复设置 */
+"repeatSettings.annualRepeatHeader" = "每年重复";
+"repeatSettings.annualRepeatToggle" = "按年重复";
+"repeatSettings.intervalHeader" = "重复间隔";
+"repeatSettings.intervalPicker" = "选择间隔";
+"repeatSettings.daysOfWeekHeader" = "按星期重复";
+"repeatSettings.monthsHeader" = "按月重复";
+"repeatSettings.monthlyRepeatHeader" = "按月重复";
+"repeatSettings.monthlyRepeatToggle" = "每月重复";
+
+/* 侧边菜单 */
+"add_event_button_title" = "添加事件";
+"events_section_header" = "事件";
+"NO_EVENTS" = "没有事件";
+"NO_SHORT" = "无";
+"COMPLICATION_DISPLAY_NAME" = "下个时刻";
+"COMPLICATION_DISPLAY_DESCRIPTION" = "事件倒计时和圆形进度";
+"COMPLICATION_EVENTS_LABEL" = "事件";

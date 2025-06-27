@@ -1,0 +1,364 @@
+/* --- Localizable.strings Dosyası (tr) --- */
+
+/*  (фильтры) */
+
+"filter.all" = "Hepsi";
+"filter.events" = "Etkinlikler";
+"filter.birthdays" = "Doğum Günleri";
+"picker.title" = "Kategori Seçin";
+"empty.prefix" = "Henüz";
+"empty.event" = " etkinliğiniz yok";
+"empty.middle" = " ve ";
+"empty.birthday" = " doğum gününüz yok";
+"header.pinned" = "Sabitlenenler";
+"header.events" = "Etkinlikler";
+"header.birthdays" = "Doğum Günleri";
+"navigation.title" = "Etkinlikler";
+"search.prompt" = "Ara...";
+
+
+/* SettingsSheetView (Widget) */
+
+// Widget ile ilgili anahtarlar (WIDGETS)
+
+"WIDGET_ADD_EVENT" = "Etkinlik ekle";
+"WIDGET_BIRTHDAY_EVENT" = "Doğum günü!";
+"WIDGET_EVENT_TODAY" = "Bugünkü etkinlik!";
+"WIDGET_EVENT_PASSED" = "Etkinlik geçti";
+"WIDGET_DISPLAY_NAME" = "Yaklaşan etkinlik";
+"WIDGET_DISPLAY_DESCRIPTION" = "Yaklaşan etkinliği gösterir.";
+"SOON_LABEL" = "Yakında";
+
+"SAMPLE_EVENT_MEET_FRIENDS" = "Arkadaşlarla buluşma";
+"SAMPLE_EVENT_CHECK_PIZZA" = "Pizza satın al";
+"SAMPLE_EVENT_CHECK_CALL_FRIENDS" = "Arkadaşları ara";
+"SAMPLE_EVENT_ANNA_BIRTHDAY" = "Anna'nın doğum günü";
+"SAMPLE_EVENT_ANNA_NOTE" = "Hediye almayı unutma!";
+"SAMPLE_EVENT_CHECK_CHOOSE_GIFT" = "Hediye seç";
+"SAMPLE_EVENT_WORK_MEETING" = "İş toplantısı";
+
+"SAMPLE_EVENT_PICNIC" = "Piknik";
+"SAMPLE_EVENT_CHECK_BRING_FOOD" = "Yiyecek getir";
+"SAMPLE_EVENT_CHECK_SETUP_GAMES" = "Oyunları hazırla";
+
+"SAMPLE_EVENT_ELON_NAME" = "Elon Musk";
+"SAMPLE_EVENT_ELON_NOTE" = "Arayıp tebrik et.";
+"SAMPLE_EVENT_ELON_CHECK_CALL" = "Elon'u ara";
+
+"SAMPLE_EVENT_CHECK_PREPARE_GIFT" = "Hediye hazırla";
+
+"event_type_event" = "Etkinlik";
+"event_type_birthday" = "Doğum günü";
+
+
+//редактирование
+// Etkinlik Düzenleme Ekranı (EditEventView)
+"editEvent.sectionHeader.birthday" = "Doğum Günü";
+"editEvent.sectionHeader.event" = "Etkinlik";
+"editEvent.namePlaceholder" = "Ad yer tutucusu";
+"editEvent.placeholder.notes" = "Notlar için yer tutucu";
+"editEvent.checklist.header" = "Kontrol Listesi Başlığı";
+"editEvent.notification.toggle" = "Bildirimleri Aç/Kapat";
+"editEvent.deletePastEvents.label" = "Tamamlandıktan sonra sil";
+"editEvent.repeatSettings.linkTitle" = "Tekrar";
+"editEvent.emoji.sectionHeader" = "Emoji";
+"editEvent.emoji.categoryPicker" = "Emoji Kategorisi";
+
+
+// интервалы
+
+/*********************/
+/*  RepeatInterval   */
+/*********************/
+"repeatInterval.none" = "Tekrar yok";
+"repeatInterval.minute1" = "1 dakika";
+"repeatInterval.minute5" = "5 dakika";
+"repeatInterval.minute10" = "10 dakika";
+"repeatInterval.minute15" = "15 dakika";
+"repeatInterval.minute30" = "30 dakika";
+"repeatInterval.minute35" = "35 dakika";
+"repeatInterval.minute40" = "40 dakika";
+"repeatInterval.hour" = "60 dakika";
+
+// превью
+
+/*  VacationCardPreviewViewTHRE (zamanlayıcı ekranları) */
+"THIRD_SCREEN_TIMER_TITLE" = "Zamanlayıcı";
+"THIRD_SCREEN_TIMER_BEFORE" = "Etkinlikten önce";
+"THIRD_SCREEN_BLUE_TIMER_INFO" = "Mavi zamanlayıcı - etkinlik başlamadan önce ne kadar süre kaldığını gösterir";
+"THIRD_SCREEN_TIME_PASSED_TITLE" = "Etkinlikten sonra geçen süre";
+"THIRD_SCREEN_GRAY_TIMER_INFO" = "Gri zamanlayıcı - etkinlikten sonra geçen süreyi gösterir";
+
+/* İSTASYON */
+"EVENT_1_NAME" = "Etkinlik 1";
+"EVENT_1_NOTE" = "Etkinlik 1 açıklaması";
+
+"EVENT_2_BIRTHDAY_NAME" = "Arkadaşın doğum günü";
+"EVENT_2_BIRTHDAY_NOTE" = "Hediye al";
+
+"EVENT_3_BIRTHDAY_NAME" = "Çalışma arkadaşı doğum günü";
+"EVENT_3_BIRTHDAY_NOTE" = "Toplantıyı hatırlat";
+
+"SIDEBAR_TODAY_EVENTS" = "Bugün Etkinlikler";
+"TIME_11_30" = "11:30";
+"TIME_18_00" = "18:00";
+"SIDEBAR_MEETING" = "Toplantı";
+"SIDEBAR_MEETING_EMOJI" = "💼";
+"SIDEBAR_DOCTOR" = "Doktora randevu";
+"SIDEBAR_DOCTOR_EMOJI" = "💊";
+"SIDEBAR_CONVENIENT_CALENDAR" = "Kullanışlı Takvim";
+"SIDEBAR_SHOWS_ALL_EVENTS" = "Belirli bir günde tüm etkinlikleri gösterir";
+
+/* FirstScreenView */
+"FIRST_SCREEN_CREATE_EVENTS" = "Etkinlikler ve Doğum Günü oluştur";
+
+/* SecondScreenView */
+"SECOND_SCREEN_CHECKLISTS" = "Notlar ve etkileşimli kontrol listeleri yaz";
+
+/* VacationCardPreviewView */
+"VACATION_BALI_EVENT_NAME" = "Bali Tatili";
+"VACATION_BALI_EVENT_NOTE" = "Otel rezervasyonu yap, valizini topla";
+"VACATION_BALI_CHECK_1" = "Bilet al";
+"VACATION_BALI_CHECK_2" = "Otel rezervasyonu yap";
+"VACATION_BALI_CHECK_3" = "Valizini topla";
+"SECOND_SCREEN_EVENTS" = "Etkinlikler";
+
+/* ThirdScreenView */
+"THIRD_SCREEN_TIMER_TITLE" = "Zamanlayıcı";
+"THIRD_SCREEN_TIMER_BEFORE" = "Etkinlikten önce";
+"THIRD_SCREEN_TIMER_AFTER" = "Etkinlikten sonra";
+
+/* Timer Card Events (VacationCardPreviewViewTHRE) */
+"TIMER_EVENT_1_NAME" = "Etkinlik";
+"TIMER_EVENT_2_NAME" = "Başka bir etkinlik";
+
+/* EventCardPreviewView (ilk ekran için) */
+"FIRST_SCREEN_EVENT_NAME" = "Takımla Toplantı";
+"FIRST_SCREEN_EVENT_NOTE" = "Q1 stratejisini tartış";
+"FIRST_SCREEN_CHECK_1" = "Rapor hazırla";
+"FIRST_SCREEN_CHECK_2" = "Sunum hazırla";
+
+"FIRST_SCREEN_BIRTHDAY_NAME" = "Anna'nın Doğum Günü";
+"FIRST_SCREEN_BIRTHDAY_NOTE" = "Hediye al";
+
+"FIRST_SCREEN_EVENTS_LABEL" = "Etkinlikler";
+"FIRST_SCREEN_BIRTHDAYS_LABEL" = "Doğum Günü";
+
+/* Yaş (örnek metin formatı) */
+"FIRST_SCREEN_AGE_LABEL" = "Yaş: %d yıl";
+
+/* NotificationWelcomeView (5. ekran) */
+"NOTIFICATION_SCREEN_TITLE" = "Kısa veya uzun bildirimler al";
+"NOTIFICATION_SCREEN_SUBTITLE" = "Yaklaşan etkinliklerden haberdar olmak için";
+"NOTIFICATION_ALLOW_BUTTON" = "Bildirimlere izin ver";
+
+/* SubscriptionWelcomeView (6. ekran) */
+"SUBSCRIPTION_UNLIMITED_EVENTS" = "Sonsuz sayıda etkinlik oluştur";
+"SUBSCRIPTION_BUTTON_ANNUAL" = "Yıllık abone ol";
+"SUBSCRIPTION_NOT_NOW_BUTTON" = "Şu an değil";
+"SUBSCRIPTION_RESTORE_BUTTON" = "Satın alımları geri yükle";
+
+/* Abonelik hataları */
+"SUBSCRIPTION_ERROR_TITLE" = "Hata";
+"SUBSCRIPTION_ERROR_DEFAULT" = "Bir hata oluştu";
+"SUBSCRIPTION_OK_BUTTON" = "Tamam";
+"SUBSCRIPTION_NO_PACKAGES" = "Satın alınabilecek paket bulunamadı";
+"SUBSCRIPTION_CANCELED_BY_USER" = "Kullanıcı tarafından iptal edildi";
+"SUBSCRIPTION_PURCHASE_ERROR" = "Abonelik satın alırken hata oluştu";
+
+/* Diğer */
+"SECOND_SCREEN_EVENTS" = "Etkinlikler";
+
+
+
+/* SidebarMenuPreviewView */
+
+// Etkinlik Ekleme Ekranı
+
+"event_type_event" = "Etkinlik";
+"event_type_birthday" = "Doğum Günü";
+
+// Yeni Etkinlik Ekranı
+
+"event_type_picker_title" = "Etkinlik Türü";
+"birthday_name_placeholder" = "İsim";
+"event_name_placeholder" = "Etkinlik İsmi";
+"enter_text_placeholder" = "Metin Giriniz";
+"notes_placeholder_text" = "Notlar...";
+"notes_tab_title" = "Notlar";
+"checklist_tab_title" = "Yapılacaklar";
+"new_checklist_item_placeholder" = "Yeni öğe";
+"date_section_header" = "Tarih";
+"notification_toggle_title" = "Bildirim";
+"notification_type_message" = "Mesaj";
+"notification_type_sound" = "Ses";
+"emoji_section_header" = "Emoji";
+"emoji_category_picker_title" = "Emoji Kategorisi";
+"repeat_section_header" = "Tekrar";
+"yearly_repeat" = "Yıllık";
+"monthly_repeat" = "Aylık";
+"weekdays_format" = "Hafta içi: %@";
+"months_format" = "Aylar: %@";
+"no_repeat" = "Tekrar Etmesin";
+"delete_past_events_text" = "Bitiminden Sonra Sil";
+"save_button_title" = "Kaydet";
+"editEvent.sectionHeader.birthday" = "Doğum Günü";
+"editEvent.sectionHeader.event" = "Etkinlik";
+"editEvent.checklist.header" = "Yapılacaklar";
+"editEvent.checklist.taskPlaceholder" = "Görev";
+"editEvent.checklist.newItemPlaceholder" = "Yeni görev ekle";
+"common.saveButton" = "Kaydet";
+
+// Üçüncü Sekme
+
+/* VacationCardPreviewViewTHRE (süre sayacı ekranı) */
+"THIRD_SCREEN_TIMER_TITLE" = "Zamanlayıcı";
+"THIRD_SCREEN_TIMER_BEFORE" = "Etkinlikten Önce";
+"THIRD_SCREEN_BLUE_TIMER_INFO" = "Mavi zamanlayıcı, etkinlik başlamadan önce kalan zamanı gösterir";
+"THIRD_SCREEN_TIME_PASSED_TITLE" = "Etkinlikten Geçen Zaman";
+"THIRD_SCREEN_GRAY_TIMER_INFO" = "Gri zamanlayıcı, etkinlikten sonra geçen zamanı gösterir";
+
+"EVENT_1_NAME" = "Etkinlik 1";
+"EVENT_1_NOTE" = "Etkinlik 1 Açıklaması";
+
+"EVENT_2_BIRTHDAY_NAME" = "Arkadaşın Doğum Günü";
+"EVENT_2_BIRTHDAY_NOTE" = "Hediye Al";
+
+"EVENT_3_BIRTHDAY_NAME" = "İş Arkadaşının Doğum Günü";
+"EVENT_3_BIRTHDAY_NOTE" = "Toplantıyı Hatırlat";
+
+"SIDEBAR_TODAY_EVENTS" = "Bugünün Etkinlikleri";
+"TIME_11_30" = "11:30";
+"TIME_18_00" = "18:00";
+"SIDEBAR_MEETING" = "Toplantı";
+"SIDEBAR_MEETING_EMOJI" = "💼";
+"SIDEBAR_DOCTOR" = "Doktor Randevusu";
+"SIDEBAR_DOCTOR_EMOJI" = "💊";
+"SIDEBAR_CONVENIENT_CALENDAR" = "Pratik Takvim";
+"SIDEBAR_SHOWS_ALL_EVENTS" = "Belirli Bir Günkü Tüm Etkinlikleri Göster";
+
+// Ayarlar Ekranı
+
+"event.age_prefix" = "Yaş: %d";
+"event.birthday_today" = "Doğum Günü!";
+
+"event.repeat_annually_text" = "Her Yıl Tekrar Et";
+"event.repeat_monthly_text" = "Her Ay Tekrar Et";
+
+/* Abonelik, Bildirimler, Geri Bildirim Ekranı */
+"SETTINGS_SUBSCRIPTION_HEADER" = "Abonelik";
+"SETTINGS_SUBSCRIPTION_CURRENT_STATUS" = "Mevcut Durum:";
+"SETTINGS_SUBSCRIPTION_ACTIVE" = "Aktif";
+"SETTINGS_SUBSCRIPTION_INACTIVE" = "Pasif";
+"SETTINGS_SUBSCRIPTION_BUY_BUTTON" = "Abonelik Satın Al";
+
+"SETTINGS_NOTIFICATIONS_HEADER" = "Bildirimler";
+"SETTINGS_NOTIFICATIONS_PERMISSION" = "İzin:";
+"SETTINGS_NOTIFICATIONS_GRANTED" = "Verildi";
+"SETTINGS_NOTIFICATIONS_ALLOW_BUTTON" = "İzin Ver";
+
+"SETTINGS_FEEDBACK_HEADER" = "Geri Bildirim";
+"SETTINGS_FEEDBACK_SEND_BUTTON" = "Geri Bildirim Gönder";
+
+/* Abonelik Modali */
+"SUBSCRIPTION_MODAL_TITLE" = "Abonelik Satın Al";
+"SUBSCRIPTION_MODAL_BUY_BUTTON" = "Satın Al";
+"SUBSCRIPTION_NAV_TITLE" = "Abonelik";
+"SUBSCRIPTION_NAV_CLOSE" = "Kapat";
+
+/* Geri Bildirim Ekranı */
+"FEEDBACK_SECTION_HEADER" = "Yorumlar";
+"FEEDBACK_SEND_BUTTON" = "Gönder";
+"FEEDBACK_NAV_TITLE" = "Geri Bildirim Gönder";
+"FEEDBACK_TELEGRAM_INFO" = "Mesajınız Telegram üzerinden gönderilecektir.";
+"FEEDBACK_CONFIRM_TITLE" = "Telegram ile geri bildirim gönderilsin mi?";
+"FEEDBACK_CANCEL_BUTTON" = "İptal";
+
+/* Onboarding */
+"ONBOARDING_STEP_TITLE" = "Onboarding Adımı %d";
+"ONBOARDING_STEP_CONTINUE" = "Devam Et";
+
+/* Emoji Kategorileri */
+"CATEGORY_NAME_NONE" = "Kategori Yok";
+"CATEGORY_NAME_CELEBRATION" = "Kutlama";
+"CATEGORY_NAME_FOOD" = "Yiyecek";
+"CATEGORY_NAME_SPORTS" = "Spor";
+"CATEGORY_NAME_NATURE" = "Doğa";
+"CATEGORY_NAME_BEAUTY" = "Güzellik";
+
+/* Boş Liste Mesajı */
+"empty_prefix" = "Ekle ";
+"empty_event" = "Etkinlik";
+"empty_middle" = " ya da ";
+"empty_birthday" = "Doğum Günü";
+
+/* Bölüm Başlıkları */
+"pinned_events_header" = "Sabit Etkinlikler";
+"events_header" = "Etkinlikler";
+"birthdays_header" = "Doğum Günleri";
+
+/* Kaydırma Eylemleri */
+"delete_label" = "Sil";
+"pin_label" = "Sabitle";
+"unpin_label" = "Sabitlemeyi Kaldır";
+
+/* Örnek Etkinlikler */
+"SAMPLE_EVENT_MEET_FRIENDS" = "Arkadaşlarla Buluş";
+"SAMPLE_EVENT_CHECK_PIZZA" = "Pizza Al";
+"SAMPLE_EVENT_CHECK_CALL_FRIENDS" = "Arkadaşları Ara";
+
+"SAMPLE_EVENT_ANNA_BIRTHDAY" = "Anna'nın Doğum Günü";
+"SAMPLE_EVENT_ANNA_NOTE" = "Hediyeyi Unutma!";
+"SAMPLE_EVENT_CHECK_CHOOSE_GIFT" = "Hediye Seç";
+
+"SAMPLE_EVENT_WORK_MEETING" = "İş Toplantısı";
+
+/* Widget Metinleri */
+"WIDGET_ADD_EVENT" = "Etkinlik Ekle";
+"WIDGET_BIRTHDAY_EVENT" = "Doğum Günü!";
+"WIDGET_EVENT_TODAY" = "Bugünkü Etkinlik";
+"WIDGET_EVENT_PASSED" = "Geçmiş Etkinlik";
+"WIDGET_DISPLAY_NAME" = "Sonraki Etkinlik";
+"WIDGET_DISPLAY_DESCRIPTION" = "Planlanmış sonraki etkinliği görüntüle.";
+
+/* Hafta Günleri */
+"dayOfWeek.monday" = "Pazartesi";
+"dayOfWeek.tuesday" = "Salı";
+"dayOfWeek.wednesday" = "Çarşamba";
+"dayOfWeek.thursday" = "Perşembe";
+"dayOfWeek.friday" = "Cuma";
+"dayOfWeek.saturday" = "Cumartesi";
+"dayOfWeek.sunday" = "Pazar";
+
+/* Aylar */
+"month.january" = "Ocak";
+"month.february" = "Şubat";
+"month.march" = "Mart";
+"month.april" = "Nisan";
+"month.may" = "Mayıs";
+"month.june" = "Haziran";
+"month.july" = "Temmuz";
+"month.august" = "Ağustos";
+"month.september" = "Eylül";
+"month.october" = "Ekim";
+"month.november" = "Kasım";
+"month.december" = "Aralık";
+
+/* Tekrar Ayarları */
+"repeatSettings.annualRepeatHeader" = "Yıllık Tekrar";
+"repeatSettings.annualRepeatToggle" = "Her Yıl Tekrar Et";
+"repeatSettings.intervalHeader" = "Tekrar Aralığı";
+"repeatSettings.intervalPicker" = "Aralık Seç";
+"repeatSettings.daysOfWeekHeader" = "Haftanın Günleriyle Tekrar";
+"repeatSettings.monthsHeader" = "Aylara Göre Tekrar";
+"repeatSettings.monthlyRepeatHeader" = "Aylık Tekrar";
+"repeatSettings.monthlyRepeatToggle" = "Her Ay Tekrar Et";
+
+/* Yan Menü */
+"add_event_button_title" = "Etkinlik Ekle";
+"events_section_header" = "Etkinlikler";
+"NO_EVENTS" = "Etkinlik yok";
+"NO_SHORT" = "Yok";
+"COMPLICATION_DISPLAY_NAME" = "Sonraki an";
+"COMPLICATION_DISPLAY_DESCRIPTION" = "Etkinliğe kadar dairesel ilerleme ve zamanlayıcı";
+"COMPLICATION_EVENTS_LABEL" = "Etkinlikler";

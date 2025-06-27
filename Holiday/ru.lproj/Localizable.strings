@@ -1,0 +1,426 @@
+/* 
+  Localizable.strings
+  Holiday
+
+  Created by Ирина Башкова on 29.01.2025.
+ 
+ 
+ /*  (фильтры) */
+"checklist_section_header" = "Чеклист";
+"SETTINGS_PRIVACY_POLICY" = "Политика конфиденциальности";
+"SETTINGS_TERMS_OF_USE" = "Условия использования";
+"filter.all" = "Все";
+"filter.events" = "События";
+"filter.birthdays" = "Дни рождения";
+"picker.title" = "Выбрать категорию";
+"empty.prefix" = "У вас пока нет";
+"empty.event" = " событий";
+"empty.middle" = " и ";
+"empty.birthday" = " дней рождений";
+"header.pinned" = "Закрепленные";
+"header.events" = "События";
+"header.birthdays" = "Дни рождения";
+"navigation.title" = "События";
+"search.prompt" = "Поиск...";
+
+
+ 
+ /* SettingsSheetView (виджеты) */
+ 
+ //Ключи, относящиеся к виджетам (WIDGETS)
+
+ "WIDGET_ADD_EVENT" = "Добавить событие";
+ "WIDGET_BIRTHDAY_EVENT" = "День рождения!";
+ "WIDGET_EVENT_TODAY" = "Событие сегодня!";
+ "WIDGET_EVENT_PASSED" = "Событие уже прошло";
+ "WIDGET_DISPLAY_NAME" = "Ближайшее событие";
+"WIDGET_DISPLAY_DESCRIPTION" = "Отображает ближайшее событие.";
+"SOON_LABEL" = "Скоро";
+
+ "SAMPLE_EVENT_MEET_FRIENDS" = "Встреча с друзьями";
+ "SAMPLE_EVENT_CHECK_PIZZA" = "Купить пиццу";
+ "SAMPLE_EVENT_CHECK_CALL_FRIENDS" = "Позвонить друзьям";
+ "SAMPLE_EVENT_ANNA_BIRTHDAY" = "День рождения Анны";
+ "SAMPLE_EVENT_ANNA_NOTE" = "Не забыть купить подарок!";
+"SAMPLE_EVENT_CHECK_CHOOSE_GIFT" = "Выбрать подарок";
+"SAMPLE_EVENT_WORK_MEETING" = "Совещание на работе";
+"PREVIEW_EVENT_MEETING" = "Совещание";
+
+"SAMPLE_EVENT_PICNIC" = "Пикник";
+ "SAMPLE_EVENT_CHECK_BRING_FOOD" = "Принести еду";
+ "SAMPLE_EVENT_CHECK_SETUP_GAMES" = "Устроить игры";
+ 
+ "SAMPLE_EVENT_ELON_NAME" = "Илон Маск";
+ "SAMPLE_EVENT_ELON_NOTE" = "Позвонить и поздравить.";
+ "SAMPLE_EVENT_ELON_CHECK_CALL" = "Позвонить Илону";
+
+ "SAMPLE_EVENT_CHECK_PREPARE_GIFT" = "Подготовить подарок";
+ 
+ 
+ "event_type_event" = "Événement";
+ "event_type_birthday" = "Anniversaire";
+
+ /* SettingsSheetView (struct EventCardView) */
+
+"event.age_prefix" = "Возраст: %d";
+"event.birthday_today" = "День рождения!";
+
+"event.repeat_annually_text" = "Повтор ежегодно";
+"event.repeat_monthly_text" = "Повтор ежемесячно";
+
+
+ // НАСТРОЙКИ
+ 
+ /* SettingsSheetView (подписка, уведомления, обратная связь) */
+ "SETTINGS_SUBSCRIPTION_HEADER" = "Подписка";
+ "SETTINGS_SUBSCRIPTION_CURRENT_STATUS" = "Текущий статус:";
+ "SETTINGS_SUBSCRIPTION_ACTIVE" = "Активна";
+ "SETTINGS_SUBSCRIPTION_INACTIVE" = "Неактивна";
+"SETTINGS_SUBSCRIPTION_BUY_BUTTON" = "Купить подписку";
+"SETTINGS_SUBSCRIPTION_LIMITS_INFO" = "В бесплатной версии можно создать не более 3 событий и 10 дней рождения. Чтобы снять ограничения, купите подписку.";
+"SETTINGS_SUBSCRIPTION_UNLIMITED_INFO" = "Создание событий и дней рождений без ограничений";
+
+"SETTINGS_NOTIFICATIONS_HEADER" = "Уведомления";
+ "SETTINGS_NOTIFICATIONS_PERMISSION" = "Разрешение:";
+ "SETTINGS_NOTIFICATIONS_GRANTED" = "Разрешено";
+ "SETTINGS_NOTIFICATIONS_ALLOW_BUTTON" = "Разрешить";
+"SETTINGS_NOTIFICATIONS_PERMISSION_INFO" = "Для полноценной работы приложения разрешите отправку уведомлений.";
+
+ "SETTINGS_FEEDBACK_HEADER" = "Обратная связь";
+ "SETTINGS_FEEDBACK_SEND_BUTTON" = "Отправить отзыв";
+
+ /* SubscriptionModalView */
+ "SUBSCRIPTION_MODAL_TITLE" = "Оформите подписку";
+ "SUBSCRIPTION_MODAL_BUY_BUTTON" = "Закупить подписку";
+ "SUBSCRIPTION_NAV_TITLE" = "Подписка";
+ "SUBSCRIPTION_NAV_CLOSE" = "Закрыть";
+
+ /* FeedbackView */
+ "FEEDBACK_SECTION_HEADER" = "Ваш отзыв";
+ "FEEDBACK_SEND_BUTTON" = "Отправить";
+ "FEEDBACK_NAV_TITLE" = "Отправить отзыв";
+ "FEEDBACK_TELEGRAM_INFO" = "Данные будут отправлены через Telegram.";
+ "FEEDBACK_CONFIRM_TITLE" = "Отправить отзыв через Telegram?";
+ "FEEDBACK_CANCEL_BUTTON" = "Отмена";
+
+ /* OnboardingView */
+ "ONBOARDING_STEP_TITLE" = "Онбординг шаг %d";
+ "ONBOARDING_STEP_CONTINUE" = "Продолжить";
+
+ 
+ // КАТЕГОРИЯ ЭМОДЗИ
+ 
+ /* Emoji Category Names */
+ "CATEGORY_NAME_NONE" = "Нет";
+ "CATEGORY_NAME_CELEBRATION" = "Праздник";
+ "CATEGORY_NAME_FOOD" = "Еда";
+ "CATEGORY_NAME_SPORTS" = "Спорт";
+ "CATEGORY_NAME_NATURE" = "Природа";
+ "CATEGORY_NAME_BEAUTY" = "Красота";
+
+ // главный экран
+
+
+ /* Сообщение, когда список пуст */
+ "empty_prefix" = "Добавь ";
+ "empty_event" = "событие";
+ "empty_middle" = " или ";
+ "empty_birthday" = "день рождение";
+
+
+ /* Заголовки секций */
+ "pinned_events_header" = "Закреплённые события";
+ "events_header" = "События";
+ "birthdays_header" = "Дни рождения";
+
+ /* Действия (Swipe Actions) */
+ "delete_label" = "Удалить";
+ "pin_label" = "Закрепить";
+ "unpin_label" = "Открепить";
+ 
+ // ВИДЖЕТЫ
+ 
+ /* Sample events */
+ "SAMPLE_EVENT_MEET_FRIENDS" = "Встреча с друзьями";
+ "SAMPLE_EVENT_CHECK_PIZZA" = "Купить пиццу";
+ "SAMPLE_EVENT_CHECK_CALL_FRIENDS" = "Позвонить друзьям";
+
+ "SAMPLE_EVENT_ANNA_BIRTHDAY" = "День рождения Анны";
+ "SAMPLE_EVENT_ANNA_NOTE" = "Не забыть купить подарок!";
+ "SAMPLE_EVENT_CHECK_CHOOSE_GIFT" = "Выбрать подарок";
+
+ "SAMPLE_EVENT_WORK_MEETING" = "Совещание на работе";
+
+ /* Snapshot events */
+ "SAMPLE_EVENT_PICNIC" = "Пикник";
+ "SAMPLE_EVENT_CHECK_BRING_FOOD" = "Принести еду";
+ "SAMPLE_EVENT_CHECK_SETUP_GAMES" = "Устроить игры";
+
+ "SAMPLE_EVENT_ELON_NAME" = "Илон Маск";
+ "SAMPLE_EVENT_ELON_NOTE" = "Позвонить и поздравить.";
+ "SAMPLE_EVENT_ELON_CHECK_CALL" = "Позвонить Илону";
+
+ "SAMPLE_EVENT_CHECK_PREPARE_GIFT" = "Подготовить подарок";
+
+ /* Widget strings */
+ "WIDGET_ADD_EVENT" = "Добавить событие";
+ "WIDGET_BIRTHDAY_EVENT" = "День рождения!";
+ "WIDGET_EVENT_TODAY" = "Событие сегодня!";
+ "WIDGET_EVENT_PASSED" = "Событие уже прошло";
+ "WIDGET_DISPLAY_NAME" = "Ближайшее событие";
+ "WIDGET_DISPLAY_DESCRIPTION" = "Отображает ближайшее событие.";
+
+ 
+ // ПРЕВЬЮ
+ 
+ /*  --- Пример файла Localizable.strings (ru) --- */
+
+ /* SidebarMenuPreviewView */
+
+
+// локализация русский
+
+
+// экран добавления события
+
+
+"event_type_event" = "Событие";
+"event_type_birthday" = "День рождения";
+
+
+//
+/* ---------- Основной экран ---------- */
+"event_type_picker_title" = "Тип события";
+"birthday_name_placeholder" = "Имя Фамилия";
+"event_name_placeholder" = "Название";
+
+/* Заметки и список */
+"enter_text_placeholder" = "Введите текст";
+"notes_placeholder_text" = "Заметка...";
+"notes_tab_title" = "Заметки";
+"checklist_tab_title" = "Список";
+"new_checklist_item_placeholder" = "Новый элемент";
+
+/* Дата и уведомления */
+"date_section_header" = "Дата";
+"notification_toggle_title" = "Уведомление";
+"notification_type_message" = "Сообщение";
+"notification_type_sound" = "Звук";
+
+/* Эмоджи */
+"emoji_section_header" = "Эмоджи";
+"emoji_category_picker_title" = "Категория эмодзи";
+
+/* Повтор */
+"repeat_section_header" = "Повтор";
+"yearly_repeat" = "Ежегодно";
+"monthly_repeat" = "Ежемесячно";
+"weekdays_format" = "По дням: %@";
+"months_format" = "По месяцам: %@";
+"no_repeat" = "Без повтора";
+
+/* Удаление прошлого события */
+"delete_past_events_text" = "Удалить после завершения";
+
+/* Кнопки */
+"save_button_title" = "Сохранить";
+
+
+
+// 3 карточка
+
+/* VacationCardPreviewViewTHRE (экраны таймеров) */
+"THIRD_SCREEN_TIMER_TITLE" = "Таймер";
+"THIRD_SCREEN_TIMER_BEFORE" = "До события";
+"THIRD_SCREEN_BLUE_TIMER_INFO" = "Синий таймер - покажет, сколько времени осталось до начала события";
+"THIRD_SCREEN_TIME_PASSED_TITLE" = "Прошло с момента события";
+"THIRD_SCREEN_GRAY_TIMER_INFO" = "Серый таймер - покажет, сколько прошло времени с момента события";
+
+"EVENT_1_NAME" = "Событие 1";
+ "EVENT_1_NOTE" = "Описание события 1";
+
+ "EVENT_2_BIRTHDAY_NAME" = "День рождения друга";
+ "EVENT_2_BIRTHDAY_NOTE" = "Купить подарок";
+
+ "EVENT_3_BIRTHDAY_NAME" = "День рождения коллеги";
+ "EVENT_3_BIRTHDAY_NOTE" = "Напомнить о встрече";
+
+ "SIDEBAR_TODAY_EVENTS" = "События на сегодня";
+ "TIME_11_30" = "11:30";
+ "TIME_18_00" = "18:00";
+ "SIDEBAR_MEETING" = "Совещание";
+ "SIDEBAR_MEETING_EMOJI" = "💼";
+ "SIDEBAR_DOCTOR" = "Запись к врачу";
+ "SIDEBAR_DOCTOR_EMOJI" = "💊";
+ "SIDEBAR_CONVENIENT_CALENDAR" = "Удобный календарь";
+ "SIDEBAR_SHOWS_ALL_EVENTS" = "Покажет все события на определенный день";
+
+ /* FirstScreenView */
+ "FIRST_SCREEN_CREATE_EVENTS" = "Создавай события и Дни Рождения";
+
+ /* SecondScreenView */
+ "SECOND_SCREEN_CHECKLISTS" = "Записывай заметки и интерактивные чек-листы";
+
+ /* VacationCardPreviewView */
+ "VACATION_BALI_EVENT_NAME" = "Отпуск на Бали";
+ "VACATION_BALI_EVENT_NOTE" = "Забронировать отель, собрать чемодан";
+ "VACATION_BALI_CHECK_1" = "Купить билеты";
+ "VACATION_BALI_CHECK_2" = "Забронировать отель";
+ "VACATION_BALI_CHECK_3" = "Собрать чемодан";
+ "SECOND_SCREEN_EVENTS" = "События";
+
+ /* ThirdScreenView */
+ "THIRD_SCREEN_TIMER_TITLE" = "Таймер";
+ "THIRD_SCREEN_TIMER_BEFORE" = "До события";
+ "THIRD_SCREEN_TIMER_AFTER" = "Прошло с момента события";
+
+ /* Timer Card Events (VacationCardPreviewViewTHRE) */
+ "TIMER_EVENT_1_NAME" = "Событие";
+ "TIMER_EVENT_2_NAME" = "Другое событие";
+
+ /* EventCardPreviewView (для первого экрана) */
+ "FIRST_SCREEN_EVENT_NAME" = "Встреча с командой";
+ "FIRST_SCREEN_EVENT_NOTE" = "Обсудить стратегию на Q1";
+ "FIRST_SCREEN_CHECK_1" = "Подготовить отчет";
+ "FIRST_SCREEN_CHECK_2" = "Собрать презентацию";
+
+ "FIRST_SCREEN_BIRTHDAY_NAME" = "День рождения Анны";
+ "FIRST_SCREEN_BIRTHDAY_NOTE" = "Подарок купить";
+
+ "FIRST_SCREEN_EVENTS_LABEL" = "События";
+ "FIRST_SCREEN_BIRTHDAYS_LABEL" = "Дни рождения";
+
+ /* Возраст (пример форматирования строк) */
+ "FIRST_SCREEN_AGE_LABEL" = "Возраст: %d года";
+
+ /* NotificationWelcomeView (5 экран) */
+ "NOTIFICATION_SCREEN_TITLE" = "Получай короткие или длинные уведомления";
+ "NOTIFICATION_SCREEN_SUBTITLE" = "Что бы быть в курсе предстоящих событий";
+ "NOTIFICATION_ALLOW_BUTTON" = "Разрешить уведомления";
+
+ /* SubscriptionWelcomeView (6 экран) */
+ "SUBSCRIPTION_UNLIMITED_EVENTS" = "Создавай неограниченное число событий";
+ "SUBSCRIPTION_BUTTON_ANNUAL" = "Подключить на год";
+ "SUBSCRIPTION_NOT_NOW_BUTTON" = "Не сейчас";
+"SUBSCRIPTION_RESTORE_BUTTON" = "Восстановить покупки";
+
+ /* Ошибки подписки */
+ "SUBSCRIPTION_ERROR_TITLE" = "Ошибка";
+ "SUBSCRIPTION_ERROR_DEFAULT" = "Произошла ошибка";
+ "SUBSCRIPTION_OK_BUTTON" = "ОК";
+ "SUBSCRIPTION_NO_PACKAGES" = "Не найдены доступные пакеты для покупки";
+ "SUBSCRIPTION_CANCELED_BY_USER" = "Покупка была отменена пользователем";
+ "SUBSCRIPTION_PURCHASE_ERROR" = "Ошибка при попытке купить подписку";
+
+ /* Прочее */
+ "SECOND_SCREEN_EVENTS" = "События";
+
+
+/*********************/
+/*  DayOfWeek        */
+/*********************/
+"dayOfWeek.monday" = "Понедельник";
+"dayOfWeek.tuesday" = "Вторник";
+"dayOfWeek.wednesday" = "Среда";
+"dayOfWeek.thursday" = "Четверг";
+"dayOfWeek.friday" = "Пятница";
+"dayOfWeek.saturday" = "Суббота";
+"dayOfWeek.sunday" = "Воскресенье";
+
+/*********************/
+/*  Month            */
+/*********************/
+"month.january" = "Январь";
+"month.february" = "Февраль";
+"month.march" = "Март";
+"month.april" = "Апрель";
+"month.may" = "Май";
+"month.june" = "Июнь";
+"month.july" = "Июль";
+"month.august" = "Август";
+"month.september" = "Сентябрь";
+"month.october" = "Октябрь";
+"month.november" = "Ноябрь";
+"month.december" = "Декабрь";
+
+/*********************/
+/*  RepeatInterval   */
+/*********************/
+"repeatInterval.none" = "Без повтора";
+"repeatInterval.minute1" = "1 минута";
+"repeatInterval.minute5" = "5 минут";
+"repeatInterval.minute10" = "10 минут";
+"repeatInterval.minute15" = "15 минут";
+"repeatInterval.minute30" = "30 минут";
+"repeatInterval.minute35" = "35 минут";
+"repeatInterval.minute40" = "40 минут";
+"repeatInterval.hour" = "60 минут";
+
+/*********************/
+/*  EditEventView    */
+/*********************/
+// Заголовок секции (день рождения/событие)
+"editEvent.sectionHeader.birthday" = "день рождения";
+"editEvent.sectionHeader.event"    = "событие";
+
+// Поля ввода
+"editEvent.namePlaceholder"        = "Название";
+"editEvent.placeholder.notes"      = "Заметки";
+
+// Чек-лист
+"editEvent.checklist.header"             = "Чек-лист";
+"editEvent.checklist.taskPlaceholder"    = "Задача";
+"editEvent.checklist.newItemPlaceholder" = "Добавить новую задачу";
+
+// Уведомления
+"editEvent.notification.toggle" = "Уведомление";
+"editEvent.notification.typePickerTitle" = "Тип уведомления";
+"editEvent.notification.type.message"    = "Сообщение";
+"editEvent.notification.type.sound"      = "Звук";
+
+// Эмоджи
+"editEvent.emoji.sectionHeader"  = "Эмоджи";
+"editEvent.emoji.categoryPicker" = "Категория эмоджи";
+
+// Удалить прошедшее событие
+"editEvent.deletePastEvents.label" = "Удалить после завершения";
+
+// Переход к настройкам повтора
+"editEvent.repeatSettings.linkTitle" = "Повтор";
+
+// Общая кнопка «Сохранить» (можно использовать повторно)
+"common.saveButton" = "Сохранить";
+
+/*********************/
+/*  RepeatSettings   */
+/*********************/
+"repeatSettings.annualRepeatHeader"    = "Повтор по годам";
+"repeatSettings.annualRepeatToggle"    = "Ежегодный повтор";
+"repeatSettings.intervalHeader"        = "Интервал повтора";
+"repeatSettings.intervalPicker"        = "Интервал повтора";
+"repeatSettings.daysOfWeekHeader"      = "Повтор по дням";
+"repeatSettings.monthsHeader"          = "Повтор по месяцам";
+"repeatSettings.monthlyRepeatHeader"   = "Повтор по месяцам";
+"repeatSettings.monthlyRepeatToggle"   = "Ежемесячный повтор";
+
+/*********************/
+/*   И т.д...        */
+/*********************/
+
+
+// боковое меню
+
+/* Кнопка «Добавить событие» */
+"add_event_button_title" = "Добавить событие";
+
+/* Заголовок секции «События» */
+"events_section_header" = "События";
+
+
+"event.more_tasks" = "и ещё %d ";
+"WATCH_PAST_EVENTS_TITLE" = "Прошедшие события";
+"NO_EVENTS" = "Нет событий";
+"NO_SHORT" = "Нет";
+"COMPLICATION_DISPLAY_NAME" = "Ближайший момент";
+"COMPLICATION_DISPLAY_DESCRIPTION" = "Круговой прогресс и таймер до события";
+"COMPLICATION_EVENTS_LABEL" = "Событий";
