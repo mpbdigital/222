@@ -170,6 +170,11 @@
 "SETTINGS_NOTIFICATIONS_GRANTED" = "Permitido";
 "SETTINGS_NOTIFICATIONS_ALLOW_BUTTON" = "Permitir";
 
+"SETTINGS_MICROPHONE_PERMISSION" = "Permissão:";
+"SETTINGS_MICROPHONE_GRANTED" = "Permitido";
+"SETTINGS_MICROPHONE_ALLOW_BUTTON" = "Permitir";
+"SETTINGS_MICROPHONE_PERMISSION_INFO" = "Para gravar notas de voz, permita o acesso ao microfone.";
+
 "SETTINGS_FEEDBACK_HEADER" = "Feedback";
 "SETTINGS_FEEDBACK_SEND_BUTTON" = "Enviar feedback";
 
@@ -277,3 +282,4 @@
 "COMPLICATION_EVENTS_LABEL" = "Eventos";
 
 "SUBSCRIPTION_RESTORE_BUTTON" = "Restaurar compras";
+"voiceRecorder.swipeLeftCancel" = "< Deslize para a esquerda - Cancelar";

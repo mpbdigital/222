@@ -3238,6 +3238,7 @@ class EventManager: ObservableObject {
     
     @Published var subscriptionIsActive = false
     @Published var notificationsPermissionGranted = false
+    @Published var microphonePermissionGranted = false
     var eventTimer: Timer?
     // Массивы теперь являются лишь отображением данных из SwiftData
     @Published private(set) var events: [Event] = []
@@ -3250,6 +3251,7 @@ class EventManager: ObservableObject {
         deletePastEventsHandler()
         removeNotificationsForDeletedEvents()
         checkNotificationPermissions()
+        checkMicrophonePermissions()
     }
     
     
@@ -4116,6 +4118,17 @@ class EventManager: ObservableObject {
     func updateNotificationsPermission(granted: Bool) {
         notificationsPermissionGranted = granted
     }
+
+    func checkMicrophonePermissions() {
+        let status = AVAudioSession.sharedInstance().recordPermission
+        DispatchQueue.main.async {
+            self.microphonePermissionGranted = (status == .granted)
+        }
+    }
+
+    func updateMicrophonePermission(granted: Bool) {
+        microphonePermissionGranted = granted
+    }
 }
 
 
@@ -4664,6 +4677,7 @@ struct EditEventView: View {
     @State private var repeatMonthly: Bool
     @State private var repeatYearly: Bool
     @State private var isRepeatSectionExpanded: Bool
+    @State private var isDateSectionExpanded: Bool
     
     // Вспомогательные
     @State private var includeTimeForEvent: Bool
@@ -4703,6 +4717,7 @@ struct EditEventView: View {
                          || !event.notificationDaysOfWeek.isEmpty
                          || !event.notificationMonths.isEmpty
         _isRepeatSectionExpanded = State(initialValue: hasAnyRepeat)
+        _isDateSectionExpanded = State(initialValue: false)
 
         let hasEmoji = !event.emoji.isEmpty
         _isEmojiSectionExpanded = State(initialValue: hasEmoji)
@@ -4781,58 +4796,78 @@ struct EditEventView: View {
                 .environment(\.editMode, isEditingChecklist ? .constant(.active) : .constant(.inactive))
                 
                 // MARK: Дата и уведомления
-                Section {
-                    HStack {
-                        Image(systemName: "calendar").font(.title2).foregroundColor(.blue)
-                        DatePicker("", selection: $eventDate, displayedComponents: eventType == .birthday ? [.date] : (includeTimeForEvent ? [.date, .hourAndMinute] : [.date]))
-                            .labelsHidden()
-                            .datePickerStyle(CompactDatePickerStyle())
-                            .frame(maxWidth: .infinity, alignment: .trailing)
-                        if includeTimeForEvent && eventType != .birthday {
-                            Button { includeTimeForEvent = false; eventDate = Calendar.current.startOfDay(for: eventDate) } label: {
-                                Image(systemName: "xmark.circle.fill").foregroundColor(.red)
-                            }
-                        } else if eventType != .birthday {
-                            Button { includeTimeForEvent = true } label: {
-                                Image(systemName: "plus.circle.fill").foregroundColor(.green)
+                Section(header:
+                    HStack(spacing: 4) {
+                        Text(LocalizedStringKey("date_section_header"))
+                        if !isDateSectionExpanded {
+                            Text(dateSummary)
+                                .font(.system(size: 16, weight: .bold))
+                                .foregroundColor(.blue)
+                        }
+                        Image(systemName: isDateSectionExpanded ? "chevron.down" : "chevron.right")
+                            .foregroundColor(.blue)
+                            .font(.system(size: 12))
+                        Spacer()
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .contentShape(Rectangle())
+                    .onTapGesture { withAnimation { isDateSectionExpanded.toggle() } }
+                ) {
+                    if isDateSectionExpanded {
+                        HStack {
+                            Image(systemName: "calendar").font(.title2).foregroundColor(.blue)
+                            DatePicker("", selection: $eventDate, displayedComponents: eventType == .birthday ? [.date] : (includeTimeForEvent ? [.date, .hourAndMinute] : [.date]))
+                                .labelsHidden()
+                                .datePickerStyle(CompactDatePickerStyle())
+                                .frame(maxWidth: .infinity, alignment: .trailing)
+                            if includeTimeForEvent && eventType != .birthday {
+                                Button { includeTimeForEvent = false; eventDate = Calendar.current.startOfDay(for: eventDate) } label: {
+                                    Image(systemName: "xmark.circle.fill").foregroundColor(.red)
+                                }
+                            } else if eventType != .birthday {
+                                Button { includeTimeForEvent = true } label: {
+                                    Image(systemName: "plus.circle.fill").foregroundColor(.green)
+                                }
                             }
                         }
-                    }
-                    HStack {
-                        Image(systemName: "bell").font(.title2).foregroundColor(.blue)
-                        Toggle(LocalizedStringKey("editEvent.notification.toggle"), isOn: $notificationEnabled)
-                            .onChange(of: notificationEnabled) { if $0 && eventType == .birthday { setNotificationTimeForBirthday() } }
-                    }
-                    if notificationEnabled {
-                        DatePicker(
-                            "",
-                            selection: Binding(
-                                get: { notificationTime ?? eventDate },
-                                set: { notificationTime = $0 }
-                            ),
-                            displayedComponents: includeTimeForNotification ? [.date, .hourAndMinute] : [.date]
-                        )
-                            .frame(maxWidth: .infinity, alignment: .trailing)
-                        Picker(LocalizedStringKey("editEvent.notification.typePickerTitle"), selection: $selectedNotificationType) {
-                            Text(LocalizedStringKey("editEvent.notification.type.message")).tag(NotificationType.message)
-                            Text(LocalizedStringKey("editEvent.notification.type.sound")).tag(NotificationType.sound)
+                        HStack {
+                            Image(systemName: "bell").font(.title2).foregroundColor(.blue)
+                            Toggle(LocalizedStringKey("editEvent.notification.toggle"), isOn: $notificationEnabled)
+                                .onChange(of: notificationEnabled) { if $0 && eventType == .birthday { setNotificationTimeForBirthday() } }
                         }
-                        .pickerStyle(MenuPickerStyle())
+                        if notificationEnabled {
+                            DatePicker(
+                                "",
+                                selection: Binding(
+                                    get: { notificationTime ?? eventDate },
+                                    set: { notificationTime = $0 }
+                                ),
+                                displayedComponents: includeTimeForNotification ? [.date, .hourAndMinute] : [.date]
+                            )
+                                .frame(maxWidth: .infinity, alignment: .trailing)
+                            Picker(LocalizedStringKey("editEvent.notification.typePickerTitle"), selection: $selectedNotificationType) {
+                                Text(LocalizedStringKey("editEvent.notification.type.message")).tag(NotificationType.message)
+                                Text(LocalizedStringKey("editEvent.notification.type.sound")).tag(NotificationType.sound)
+                            }
+                            .pickerStyle(MenuPickerStyle())
+                        }
                     }
                 }
                 
                 // MARK: Эмоджи
                 Section(header:
-                    HStack {
+                    HStack(spacing: 4) {
                         Text(LocalizedStringKey("editEvent.emoji.sectionHeader"))
-                            .onTapGesture {
-                                withAnimation { isEmojiSectionExpanded.toggle() }
-                            }
                         Image(systemName: isEmojiSectionExpanded
                               ? "chevron.down" : "chevron.right")
                             .foregroundColor(.blue)
                             .font(.system(size: 12))
                         Spacer()
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        withAnimation { isEmojiSectionExpanded.toggle() }
                     }
                 ) {
                     if isEmojiSectionExpanded {
@@ -4848,6 +4883,11 @@ struct EditEventView: View {
                                 }
                             }
                             .pickerStyle(MenuPickerStyle())
+                            .onChange(of: selectedEmojiCategory) { category in
+                                if category?.name == NSLocalizedString("CATEGORY_NAME_NONE", comment: "") {
+                                    selectedEmoji = ""
+                                }
+                            }
                         }
                         if let category = selectedEmojiCategory {
                             ScrollView(.horizontal) {
@@ -4873,13 +4913,16 @@ struct EditEventView: View {
                 
                 // MARK: Повтор
                 if eventType == .event {
-                    Section(header: HStack {
+                    Section(header: HStack(spacing: 4) {
                         Text(LocalizedStringKey("repeat_section_header"))
-                            .gesture(TapGesture().onEnded { withAnimation { isRepeatSectionExpanded.toggle() } })
                         Image(systemName: isRepeatSectionExpanded ? "chevron.down" : "chevron.right")
-                            .foregroundColor(.blue).font(.system(size: 12))
+                            .foregroundColor(.blue)
+                            .font(.system(size: 12))
                         Spacer()
-                    }) {
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .contentShape(Rectangle())
+                    .onTapGesture { withAnimation { isRepeatSectionExpanded.toggle() } }) {
                         if isRepeatSectionExpanded {
                             NavigationLink(destination: RepeatSettingsView(
                                 selectedDaysOfWeek: $selectedDaysOfWeek,
@@ -4943,10 +4986,18 @@ struct EditEventView: View {
             .onChange(of: selectedEmoji) { newEmoji in
                 LiveActivityManager.shared.updateEmoji(newEmoji)
             }
-        }
+        }        
     }
-    
+
     // MARK: - Вспомогательные функции
+
+    private var dateSummary: String {
+        let fmt = DateFormatter()
+        fmt.locale = Locale.current
+        fmt.dateStyle = .medium
+        fmt.timeStyle = includeTimeForEvent ? .short : .none
+        return fmt.string(from: eventDate)
+    }
     
     private func moveChecklistItem(from source: IndexSet, to destination: Int) {
         checklist.move(fromOffsets: source, toOffset: destination)
@@ -5274,11 +5325,11 @@ extension EventsListView {
                 if !eventManager.canAddEvent(ofType: .event) && !eventManager.subscriptionIsActive {
                     // Показываем только Paywall, если лимит событий превышен и подписка неактивна
                     displayPaywall = true
-                    showingAddSheet = false
+                    dictationDraft = nil
                 } else {
                     // Показываем окно добавления события, если лимит не превышен
                     displayPaywall = false
-                    showingAddSheet = true
+                    dictationDraft = DictationDraft(title: "", date: selectedDate, note: "", hasTime: true)
                 }
             }
         }
@@ -5314,6 +5365,8 @@ extension EventsListView {
 
 struct AddEventView: View {
     @EnvironmentObject var eventManager: EventManager
+    private let sourceDate: Date
+    private let sourceHasTime: Bool
     @State private var showingSubscriptionModal = false
     @State private var name: String = ""
     @State private var eventDate: Date = Date()
@@ -5342,23 +5395,38 @@ struct AddEventView: View {
 
     @State private var hasAppeared = false
     @State private var isRepeatSectionExpanded: Bool = false
+    @State private var isDateSectionExpanded: Bool = false
     
     @Environment(\.modelContext) private var modelContext
 
     private let editorHeight: CGFloat = 100
-    
-    init(initialDate: Date, initialName: String = "") {
-        let calendar = Calendar.current
-        let now = Date()
-        let dateWithCurrentTime = calendar.date(
-            bySettingHour: calendar.component(.hour, from: now),
-            minute: calendar.component(.minute, from: now),
-            second: calendar.component(.second, from: now),
-            of: initialDate
-        ) ?? now
-        _eventDate = State(initialValue: dateWithCurrentTime)
-        _notificationTime = State(initialValue: dateWithCurrentTime)
+
+    init(initialDate: Date, initialName: String = "", initialNote: String = "", hasTime: Bool = true) {
+        self.sourceDate = initialDate
+        self.sourceHasTime = hasTime
+
+        let cal   = Calendar.current
+        let comps  = cal.dateComponents([.hour, .minute], from: initialDate)
+        let hasTimeInDate = (comps.hour ?? 0) != 0 || (comps.minute ?? 0) != 0
+
+        let finalDate: Date = hasTimeInDate
+            ? initialDate
+            : cal.date(
+                bySettingHour: cal.component(.hour, from: Date()),
+                minute:        cal.component(.minute, from: Date()),
+                second:        0,
+                of: initialDate
+              ) ?? initialDate
+
+        let showTime = hasTime || hasTimeInDate
+
+        _eventDate = State(initialValue: finalDate)
+        _notificationTime = State(initialValue: finalDate)
+        _includeTimeForEvent = State(initialValue: showTime)
+        _includeTimeForNotification = State(initialValue: showTime)
         _name = State(initialValue: initialName)
+        _note = State(initialValue: initialNote)
+        _isDateSectionExpanded = State(initialValue: true)
     }
     
     var body: some View {
@@ -5494,81 +5562,99 @@ struct AddEventView: View {
                 // -----------------------------
                 //   СЕКЦИЯ ДАТЫ И УВЕДОМЛЕНИЙ
                 // -----------------------------
-                Section(header: Text(LocalizedStringKey("date_section_header"))
-                    .padding(.top, -10)
-                ) {
-                    HStack {
-                        Image(systemName: "calendar")
-                            .font(.title2)
-                            .foregroundColor(.blue)
-                        DatePicker(
-                            "",
-                            selection: $eventDate,
-                            displayedComponents: eventType == .birthday
-                            ? [.date]
-                            : (includeTimeForEvent ? [.date, .hourAndMinute] : [.date])
-                        )
-                        .labelsHidden()
-                        .datePickerStyle(CompactDatePickerStyle())
-                        .onChange(of: eventDate) { newValue in
-                            if notificationEnabled {
-                                syncNotificationTime(for: newValue)
-                            }
+                Section(header:
+                    HStack(spacing: 4) {
+                        Text(LocalizedStringKey("date_section_header"))
+                        if !isDateSectionExpanded {
+                            Text(dateSummary)
+                                .font(.system(size: 16, weight: .bold))
+                                .foregroundColor(.blue)
                         }
+                        Image(systemName: isDateSectionExpanded ? "chevron.down" : "chevron.right")
+                            .foregroundColor(.blue)
+                            .font(.system(size: 12))
                         Spacer()
-                        if includeTimeForEvent && eventType != .birthday {
-                            Button(action: {
-                                includeTimeForEvent = false
-                                eventDate = Calendar.current.startOfDay(for: eventDate)
-                            }) {
-                                Image(systemName: "xmark.circle.fill")
-                                    .foregroundColor(.red)
-                            }
-                        } else if eventType != .birthday {
-                            Button(action: {
-                                includeTimeForEvent = true
-                            }) {
-                                Image(systemName: "plus.circle.fill")
-                                    .foregroundColor(.green)
-                            }
-                        }
                     }
-                    
-                    HStack {
-                        Image(systemName: "bell")
-                            .font(.title2)
-                            .foregroundColor(.blue)
-                        Toggle(LocalizedStringKey("notification_toggle_title"), isOn: $notificationEnabled)
-                            .onChange(of: notificationEnabled) { newValue in
-                                if newValue {
-                                    syncNotificationTime(for: eventDate)
-                                }
-                                if newValue && eventType == .birthday {
-                                    setNotificationTimeForBirthday()
-                                }
-                            }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        withAnimation { isDateSectionExpanded.toggle() }
                     }
-                    
-                    if notificationEnabled {
+                ) {
+                    if isDateSectionExpanded {
                         HStack {
+                            Image(systemName: "calendar")
+                                .font(.title2)
+                                .foregroundColor(.blue)
                             DatePicker(
                                 "",
-                                selection: Binding(
-                                    get: { notificationTime ?? eventDate },
-                                    set: { notificationTime = $0 }
-                                ),
-                                displayedComponents: includeTimeForNotification
-                                ? [.date, .hourAndMinute]
-                                : [.date]
+                                selection: $eventDate,
+                                displayedComponents: eventType == .birthday
+                                ? [.date]
+                                : (includeTimeForEvent ? [.date, .hourAndMinute] : [.date])
                             )
-                            .frame(maxWidth: .infinity, alignment: .trailing)
+                            .labelsHidden()
+                            .datePickerStyle(CompactDatePickerStyle())
+                            .onChange(of: eventDate) { newValue in
+                                if notificationEnabled {
+                                    syncNotificationTime(for: newValue)
+                                }
+                            }
+                            Spacer()
+                            if includeTimeForEvent && eventType != .birthday {
+                                Button(action: {
+                                    includeTimeForEvent = false
+                                    eventDate = Calendar.current.startOfDay(for: eventDate)
+                                }) {
+                                    Image(systemName: "xmark.circle.fill")
+                                        .foregroundColor(.red)
+                                }
+                            } else if eventType != .birthday {
+                                Button(action: {
+                                    includeTimeForEvent = true
+                                }) {
+                                    Image(systemName: "plus.circle.fill")
+                                        .foregroundColor(.green)
+                                }
+                            }
                         }
-                        
-                        Picker("", selection: $selectedNotificationType) {
-                            Text(LocalizedStringKey("notification_type_message")).tag(NotificationType.message)
-                            Text(LocalizedStringKey("notification_type_sound")).tag(NotificationType.sound)
+
+                        HStack {
+                            Image(systemName: "bell")
+                                .font(.title2)
+                                .foregroundColor(.blue)
+                            Toggle(LocalizedStringKey("notification_toggle_title"), isOn: $notificationEnabled)
+                                .onChange(of: notificationEnabled) { newValue in
+                                    if newValue {
+                                        syncNotificationTime(for: eventDate)
+                                    }
+                                    if newValue && eventType == .birthday {
+                                        setNotificationTimeForBirthday()
+                                    }
+                                }
                         }
-                        .pickerStyle(MenuPickerStyle())
+
+                        if notificationEnabled {
+                            HStack {
+                                DatePicker(
+                                    "",
+                                    selection: Binding(
+                                        get: { notificationTime ?? eventDate },
+                                        set: { notificationTime = $0 }
+                                    ),
+                                    displayedComponents: includeTimeForNotification
+                                    ? [.date, .hourAndMinute]
+                                    : [.date]
+                                )
+                                .frame(maxWidth: .infinity, alignment: .trailing)
+                            }
+
+                            Picker("", selection: $selectedNotificationType) {
+                                Text(LocalizedStringKey("notification_type_message")).tag(NotificationType.message)
+                                Text(LocalizedStringKey("notification_type_sound")).tag(NotificationType.sound)
+                            }
+                            .pickerStyle(MenuPickerStyle())
+                        }
                     }
                 }
                 .listRowInsets(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
@@ -5616,18 +5702,17 @@ struct AddEventView: View {
                 //   СЕКЦИЯ ПОВТОРА (ТОЛЬКО ДЛЯ EVENT)
                 // -----------------------------
                 if eventType == .event {
-                    Section(header: HStack {
+                    Section(header: HStack(spacing: 4) {
                         Text(LocalizedStringKey("repeat_section_header"))
-                            .gesture(TapGesture().onEnded {
-                                withAnimation {
-                                    isRepeatSectionExpanded.toggle()
-                                }
-                            })
-                        
                         Image(systemName: isRepeatSectionExpanded ? "chevron.down" : "chevron.right")
                             .foregroundColor(.blue)
                             .font(.system(size: 12))
                         Spacer()
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        withAnimation { isRepeatSectionExpanded.toggle() }
                     }) {
                         if isRepeatSectionExpanded {
                             NavigationLink(
@@ -5746,6 +5831,12 @@ struct AddEventView: View {
                     if !hasAppeared {
                         hasAppeared = true
                     }
+                    includeTimeForEvent = sourceHasTime ||
+                        !Calendar.current.isDate(
+                            sourceDate,
+                            equalTo: Calendar.current.startOfDay(for: sourceDate),
+                            toGranularity: .minute
+                        )
                 }
             }
             .navigationBarItems(leading: Button(action: {
@@ -5762,9 +5853,17 @@ struct AddEventView: View {
             }
         }
     }
-    
+
     // MARK: - Вспомогательные функции
-    
+
+    private var dateSummary: String {
+        let fmt = DateFormatter()
+        fmt.locale = Locale.current
+        fmt.dateStyle = .medium
+        fmt.timeStyle = includeTimeForEvent ? .short : .none
+        return fmt.string(from: eventDate)
+    }
+
     private func syncNotificationTime(for date: Date) {
         let now = Date()
         let calendar = Calendar.current
@@ -6079,11 +6178,17 @@ extension View {
 
 
 
+extension String: Identifiable {
+    public var id: String { self }   // Само значение строки и будет её уникальным id
+}
+
+
+
 
 struct EventsListView: View {
     @EnvironmentObject var eventManager: EventManager
     
-    @State private var showingAddSheet = false
+    @State private var dictationDraft: DictationDraft? = nil
     @State private var isCreatingEventFromSidebar = true
     @State private var searchText = ""
     @State private var showingSettingsSheet = false
@@ -6100,9 +6205,22 @@ struct EventsListView: View {
 
 
     @StateObject private var speechRecognizer = SpeechRecognizer()
-    @State private var dictatedName: String = ""
     @State private var isLongPressing = false
+    @State private var isPlusPressed = false // finger-contact only
     @State private var longPressTimer: Timer?
+    @State private var showDictationButton = false   // синяя кнопка всплыла?
+    @State private var didLongPress = false   // Было ли длинное нажатие
+
+    // ——— жест «отмена свайпом» ———
+    @State private var dragOffset: CGSize = .zero      // текущее смещение пальца
+    @State private var isCancelledBySwipe = false      // отменили ли диктовку
+    private let cancelThreshold: CGFloat = -100        // «насколько» увести палец влево
+    /// Прогресс закрытия окна (0 – порог не достигнут, 1 – у порога)
+    private var cancelSwipeProgress: CGFloat {
+        let leftDrag = max(0, -dragOffset.width)
+        let ratio = min(1, leftDrag / abs(cancelThreshold))
+        return 1 - ratio
+    }
     
 
     @Environment(\.modelContext) private var modelContext //для swift data
@@ -6152,266 +6270,70 @@ struct EventsListView: View {
    private var totalEventsCount: Int { allEvents.count }
     
     var body: some View {
+        let hideUI = isLongPressing
         AnimatedSideBar(
             rotatesWhenExpands: true,
             sideMenuWidth: 310,
             cornerRadius: 25,
             showMenu: $showMenu,
-            
+
             content: { safeArea in
-                NavigationView {
-                    ZStack(alignment: .bottomTrailing) {
-                        Color(.systemGray6)
-                            .edgesIgnoringSafeArea(.all)
-                        
-                        VStack {
-                            
-                            
-                            
-                            ScrollView {
-                                
-                                GeometryReader { geo in
-                                    Color.clear
-                                        .onAppear {
-                                            contentOffset = geo.frame(in: .global).minY
-                                        }
-                                        .onChange(of: geo.frame(in: .global).minY) { newValue in
-                                            contentOffset = newValue
+                ZStack(alignment: .bottomTrailing) {
+                    NavigationView {
+                        eventList
+                            .navigationBarHidden(isLongPressing)
+                    }
+                    .if(!isLongPressing) {
+                        $0.searchable(text: $searchText,
+                                      prompt: NSLocalizedString("search.prompt", comment: ""))
+                    }
 
-                                            // При сильной оттяжке вниз фиксируем положение скролла
-                                            if newValue <= 0 {
-                                                isAtTop = true
-                                            } else {
-                                                isAtTop = false
-                                            }
-                                        }
-                                }
-                                .frame(height: 0) // Занимает 0 высоты, но отслеживает положение скролла
-                                
-                                
-                                
-                                // 🔥 Фильтр событий
-                                Picker("Фильтр", selection: $selectedFilter) {
-                                    ForEach(EventFilter.allCases, id: \.index) { filter in
-                                        Text(filter.localized).tag(filter)
-                                    }
-                                }
-                                .pickerStyle(.segmented)
-                                .padding(.horizontal)
-                                
-                                if filteredPinnedEvents.isEmpty && filteredUnpinnedEvents.isEmpty && filteredBirthdays.isEmpty {
-                                    VStack {
-                                        (
-                                            Text(LocalizedStringKey("empty.prefix")) +
-                                            Text(LocalizedStringKey("empty.event"))
-                                                .foregroundColor(.blue)
-                                                .fontWeight(.bold) +
-                                            Text(LocalizedStringKey("empty.middle")) +
-                                            Text(LocalizedStringKey("empty.birthday"))
-                                                .foregroundColor(.blue)
-                                                .fontWeight(.bold)
-                                        )
-                                        .font(.title2)
-                                        .multilineTextAlignment(.center)
-                                        .foregroundColor(.gray)
-                                        .padding(.horizontal, 40)
-                                    }
-                                    
-                                } else {
-                                    LazyVStack(alignment: .leading,
-                                               pinnedViews: [.sectionHeaders]) {
-                                        if !filteredPinnedEvents.isEmpty {
-                                            Section(
-                                                header: Text(LocalizedStringKey("header.pinned"))
-                                                    .foregroundColor(.gray.opacity(0.7))
-                                                    .font(.subheadline)
-                                                    .padding(.leading, 20)
-                                            ) {
-                                                ForEach(filteredPinnedEvents) { event in
-                                                    EventCardView(event: event)
-                                                        .id(event.id.uuidString + "_\(event.lastModified.timeIntervalSince1970)")
-                                                        .padding(.horizontal, 10)
-                                                        .onTapGesture {
-                                                            selectedEventForEditing = event
-                                                        }
-                                                }
-                                            }
-                                        }
-                                        
-                                        if !filteredUnpinnedEvents.isEmpty {
-                                            Section(
-                                                header: Text(LocalizedStringKey("header.events"))
-                                                    .foregroundColor(.gray.opacity(0.7))
-                                                    .font(.subheadline)
-                                                    .padding(.leading, 20)
-                                            ) {
-                                                ForEach(filteredUnpinnedEvents) { event in
-                                                    EventCardView(event: event)
-                                                        .id(event.id.uuidString + "_\(event.lastModified.timeIntervalSince1970)")
-                                                        .padding(.horizontal, 10)
-                                                        .onTapGesture {
-                                                            selectedEventForEditing = event
-                                                        }
-                                                }
-                                            }
-                                        }
-                                        
-                                        if !filteredBirthdays.isEmpty {
-                                            Section(
-                                                header: Text(LocalizedStringKey("header.birthdays"))
-                                                    .foregroundColor(.gray.opacity(0.7))
-                                                    .font(.subheadline)
-                                                    .padding(.leading, 20)
-                                            ) {
-                                                ForEach(filteredBirthdays) { event in
-                                                    EventCardView(event: event)
-                                                        .id(event.id.uuidString + "_\(event.lastModified.timeIntervalSince1970)")
-                                                        .padding(.horizontal, 10)
-                                                        .onTapGesture {
-                                                            selectedEventForEditing = event
-                                                        }
-                                                }
-                                            }
+                    plusButton
+
+                    if isLongPressing {
+                        VoiceRecorderOverlay(
+                            amplitude: $speechRecognizer.amplitude,
+                            dragOffset: $dragOffset,
+                            transcript: speechRecognizer.transcript,
+                            fadeProgress: cancelSwipeProgress
+                        )
+
+                            .ignoresSafeArea()
+                            .overlay(alignment: .bottomTrailing) { dictationButton }
+                            .gesture(
+                                DragGesture()
+                                    .onChanged { value in
+                                        dragOffset = value.translation
+                                        if dragOffset.width < cancelThreshold {
+                                            isCancelledBySwipe = true
+                                            didLongPress = false
+                                            speechRecognizer.stopRecording { _ in }
+                                            isLongPressing = false
                                         }
                                     }
-                                    .padding(.top, 10)
-                                }
-                            }
-                            
-                            // удалеят прошедшие события в swift data
+                                    .onEnded { _ in dragOffset = .zero }
+                            )
                             .onAppear {
-                                startLiveActivityIfNeeded()
-                                EventManager.shared.deletePastEventsHandler(modelContext: modelContext)
-                                setupEventCleanupTimer()
+                                showDictationButton = true
+                                lightHaptic()
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) { lightHaptic() }
                             }
-                            // какойто таймер удалеят прошедшие события в swift data
                             .onDisappear {
-                                eventCleanupTimer?.invalidate()
-                                eventCleanupTimer = nil
+                                showDictationButton = false
+                                isCancelledBySwipe = false
+                                lightHaptic()
                             }
-
-
-                        }
-
-                        Button(action: {
-                            if !isLongPressing {
-                                dictatedName = ""
-                                showingAddSheet = true
-                            }
-                        }) {
-                            Image(systemName: "plus")
-                                .font(.title2)
-                                .foregroundColor(.blue)
-                                .padding()
-                                .background(
-                                    Circle()
-                                        .fill(.ultraThinMaterial)
-                                )
-                        }
-                        // Микрофон активируется только при длительном нажатии
-                        // Запускаем запись через 0.9 секунды после начала нажатия
-                        .onLongPressGesture(minimumDuration: 0,
-                                            pressing: { pressing in
-                            if pressing {
-                                longPressTimer?.invalidate()
-                                longPressTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { _ in
-                                    isLongPressing = true
-                                    speechRecognizer.startRecording()
-                                }
-                            } else {
-                                longPressTimer?.invalidate()
-                                longPressTimer = nil
-                                if isLongPressing {
-                                    speechRecognizer.stopRecording { text in
-                                        dictatedName = text
-                                        showingAddSheet = true
-                                        isLongPressing = false
-                                    }
-                                }
-                            }
-                        }, perform: { })
-                        .padding()
-
-                        if isLongPressing {
-                            ZStack {
-                                Color.black.opacity(0.4)
-                                    .ignoresSafeArea()
-
-                                ZStack {
-                                    Circle()
-                                        .fill(Color.red.opacity(0.3))
-                                        .frame(width: 100, height: 100)
-                                        .scaleEffect(1 + speechRecognizer.amplitude * 10)
-                                        .animation(.easeInOut(duration: 0.1), value: speechRecognizer.amplitude)
-
-                                    Image(systemName: "mic.fill")
-                                        .font(.system(size: 50))
-                                        .padding()
-                                        .background(Circle().fill(.thinMaterial))
-                                        .foregroundColor(.red)
-                                }
-                            }
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        }
+                            .transition(.opacity)
                     }
-                    .allowsHitTesting(!showMenu)
-                    .searchable(text: $searchText, prompt: NSLocalizedString("search.prompt", comment: ""))
-                    
-                    .navigationBarTitleDisplayMode(.inline)
-                    
-                    .toolbar {
-                        ToolbarItem(placement: .navigationBarLeading) {
-                            Button(action: { showMenu.toggle() }) {
-                                Image(systemName: showMenu ? "xmark" : "line.3.horizontal")
-                                    .font(.title2)
-                                    .foregroundColor(.blue)
-                            }
-                        }
-                        
-                        // Вставляем фильтр по центру
-                        ToolbarItem(placement: .principal) {
-                            // Секция с фильтром с максимально маленьким текстом
-                            if isAtTop {
-                                Menu {
-                                    ForEach(EventFilter.allCases, id: \.index) { filter in
-                                        Button(action: { selectedFilter = filter }) {
-                                            Text(filter.localized)
-                                                .font(.system(size: 8)) // Очень маленький текст
-                                        }
-                                    }
-                                } label: {
-                                    Text(selectedFilter.localized) // Динамический текст
-                                        .font(.system(size: 14)) // Очень маленький текст
-                                        .foregroundColor(.primary)
-                                }
-                                .padding(.horizontal)
-
-
-                            }
-                        }
-                        
-//                        ToolbarItem(placement: .navigationBarTrailing) {
-//                            Button(action: { showingAddSheet = true }) {
-//                                Image(systemName: "plus")
-//                                    .font(.title2)
-//                                    .foregroundColor(.blue)
-//                            }
-//                        }
-                    }
-
-
-
-
-
-
                 }
+                .allowsHitTesting(!showMenu)
             },
             
             menuView: { safeArea in
                 SideBarMenuView(
                     safeArea: safeArea,
                     selectedDate: $selectedDate,
-                    showingAddSheet: $showingAddSheet,
+                    dictationDraft: $dictationDraft,
                     showingSettingsSheet: $showingSettingsSheet,
                     isCreatingEventFromSidebar: $isCreatingEventFromSidebar
                 )
@@ -6422,12 +6344,273 @@ struct EventsListView: View {
                     .fill(Color.black)
             }
         )
-        .sheet(isPresented: $showingAddSheet) {
-            AddEventView(initialDate: selectedDate, initialName: dictatedName)
+        .sheet(item: $dictationDraft) { draft in
+            AddEventView(initialDate: draft.date,
+                         initialName: draft.title,
+                         initialNote: draft.note,
+                         hasTime: draft.hasTime)
                 .environmentObject(eventManager)
         }
+        .onChange(of: isLongPressing) { started in
+            if started {
+                HapticManager.shared.light()
+            }
+        }
+        .onChange(of: showDictationButton) { visible in
+            if visible {
+                HapticManager.shared.light()
+            }
+        }
 
-        
+    }
+
+
+    private var eventList: some View {
+        ZStack(alignment: .bottomTrailing) {
+            Color(.systemGray6)
+                .edgesIgnoringSafeArea(.all)
+
+            VStack {
+                ScrollView {
+                    GeometryReader { geo in
+                        Color.clear
+                            .onAppear {
+                                contentOffset = geo.frame(in: .global).minY
+                            }
+                            .onChange(of: geo.frame(in: .global).minY) { newValue in
+                                contentOffset = newValue
+
+                                if newValue <= 0 {
+                                    isAtTop = true
+                                } else {
+                                    isAtTop = false
+                                }
+                            }
+                    }
+                    .frame(height: 0)
+
+                    Picker("Фильтр", selection: $selectedFilter) {
+                        ForEach(EventFilter.allCases, id: \.index) { filter in
+                            Text(filter.localized).tag(filter)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                    .padding(.horizontal)
+
+                    if filteredPinnedEvents.isEmpty && filteredUnpinnedEvents.isEmpty && filteredBirthdays.isEmpty {
+                        VStack {
+                            (
+                                Text(LocalizedStringKey("empty.prefix")) +
+                                Text(LocalizedStringKey("empty.event"))
+                                    .foregroundColor(.blue)
+                                    .fontWeight(.bold) +
+                                Text(LocalizedStringKey("empty.middle")) +
+                                Text(LocalizedStringKey("empty.birthday"))
+                                    .foregroundColor(.blue)
+                                    .fontWeight(.bold)
+                            )
+                            .font(.title2)
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(.gray)
+                            .padding(.horizontal, 40)
+                        }
+                    } else {
+                        LazyVStack(alignment: .leading, pinnedViews: [.sectionHeaders]) {
+                            if !filteredPinnedEvents.isEmpty {
+                                Section(
+                                    header: Text(LocalizedStringKey("header.pinned"))
+                                        .foregroundColor(.gray.opacity(0.7))
+                                        .font(.subheadline)
+                                        .padding(.leading, 20)
+                                ) {
+                                    ForEach(filteredPinnedEvents) { event in
+                                        EventCardView(event: event)
+                                            .id(event.id)
+                                            .padding(.horizontal, 10)
+                                            .onTapGesture {
+                                                selectedEventForEditing = event
+                                            }
+                                    }
+                                }
+                            }
+
+                            if !filteredUnpinnedEvents.isEmpty {
+                                Section(
+                                    header: Text(LocalizedStringKey("header.events"))
+                                        .foregroundColor(.gray.opacity(0.7))
+                                        .font(.subheadline)
+                                        .padding(.leading, 20)
+                                ) {
+                                    ForEach(filteredUnpinnedEvents) { event in
+                                        EventCardView(event: event)
+                                            .id(event.id)
+                                            .padding(.horizontal, 10)
+                                            .onTapGesture {
+                                                selectedEventForEditing = event
+                                            }
+                                    }
+                                }
+                            }
+
+                            if !filteredBirthdays.isEmpty {
+                                Section(
+                                    header: Text(LocalizedStringKey("header.birthdays"))
+                                        .foregroundColor(.gray.opacity(0.7))
+                                        .font(.subheadline)
+                                        .padding(.leading, 20)
+                                ) {
+                                    ForEach(filteredBirthdays) { event in
+                                        EventCardView(event: event)
+                                            .id(event.id)
+                                            .padding(.horizontal, 10)
+                                            .onTapGesture {
+                                                selectedEventForEditing = event
+                                            }
+                                    }
+                                }
+                            }
+                        }
+                        .padding(.top, 10)
+                    }
+                }
+                .onAppear {
+                    startLiveActivityIfNeeded()
+                    EventManager.shared.deletePastEventsHandler(modelContext: modelContext)
+                    setupEventCleanupTimer()
+                }
+                .onDisappear {
+                    eventCleanupTimer?.invalidate()
+                    eventCleanupTimer = nil
+                }
+            }
+        }
+        .allowsHitTesting(!showMenu)
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: { showMenu.toggle() }) {
+                    Image(systemName: showMenu ? "xmark" : "line.3.horizontal")
+                        .font(.title2)
+                        .foregroundColor(.blue)
+                }
+            }
+
+            ToolbarItem(placement: .principal) {
+                if isAtTop {
+                    Menu {
+                        ForEach(EventFilter.allCases, id: \.index) { filter in
+                            Button(action: { selectedFilter = filter }) {
+                                Text(filter.localized)
+                                    .font(.system(size: 8))
+                            }
+                        }
+                    } label: {
+                        Text(selectedFilter.localized)
+                            .font(.system(size: 14))
+                            .foregroundColor(.primary)
+                    }
+                    .padding(.horizontal)
+                }
+            }
+        }
+    }
+
+
+    private var plusButton: some View {
+        Button {
+            // gасим обычный tap, если был долгий нажим
+            guard !didLongPress else {
+                didLongPress = false      // сброс на будущее
+                return
+            }
+            // "Нормальный" короткий тап
+            dictationDraft = DictationDraft(title: "", date: selectedDate, note: "", hasTime: true)
+        } label: {
+            Image(systemName: "plus")
+                .font(.title2)
+                .foregroundColor(.blue)
+                .padding()
+                .background(Circle().fill(.ultraThinMaterial))
+        }
+        .padding(.trailing, 24)
+        .padding(.bottom,   34)
+        .scaleEffect(isPlusPressed ? 0.95 : 1)
+        .animation(.easeInOut(duration: 0.1), value: isPlusPressed)
+        .onLongPressGesture(minimumDuration: 0,
+                            pressing: handlePressing,
+                            perform: {})
+        .simultaneousGesture(
+            DragGesture()
+                .onChanged { value in
+                    dragOffset = value.translation
+                    if isLongPressing && dragOffset.width < cancelThreshold {
+                        isCancelledBySwipe = true
+                        didLongPress = false
+                        speechRecognizer.stopRecording { _ in }
+                        isLongPressing = false
+                    }
+                }
+                .onEnded { _ in dragOffset = .zero }
+        )
+    }
+
+    private var dictationButton: some View {
+        Image(systemName: "plus")
+            .font(.title2)
+            .foregroundColor(.white)
+            .padding()
+            .background(Circle().fill(Color.blue))
+            // Двигаем кнопку в соответствии с свайпом
+            .offset(x: min(dragOffset.width, 0))
+            .opacity(cancelSwipeProgress)
+            .scaleEffect(showDictationButton ? 1.25 : 0.4)
+            .scaleEffect(0.85 + 0.15 * cancelSwipeProgress)
+            .animation(
+                .interpolatingSpring(stiffness: 170, damping: 11)
+                    .speed(1.2),
+                value: showDictationButton
+            )
+            .animation(.easeInOut(duration: 0.2), value: cancelSwipeProgress)
+            .padding(.trailing, 24)
+            .padding(.bottom,   34)
+            .onTapGesture {
+                speechRecognizer.stopRecording { rawText in
+                    let draft = parseDictation(rawText)
+                    dictationDraft = draft
+                    isLongPressing = false
+                }
+
+            }
+    }
+
+    private func handlePressing(_ pressing: Bool) {
+        withAnimation(.easeInOut(duration: 0.1)) { isPlusPressed = pressing }
+
+        if pressing {
+            longPressTimer?.invalidate()
+            longPressTimer = Timer.scheduledTimer(withTimeInterval: 0.5,
+                                                  repeats: false) { _ in
+                isLongPressing = true
+                speechRecognizer.startRecording()
+                didLongPress = true
+                
+            }
+        } else {
+            longPressTimer?.invalidate()
+            longPressTimer = nil
+            if isLongPressing {
+                speechRecognizer.stopRecording { rawText in
+                    if !isCancelledBySwipe {
+                        let draft = parseDictation(rawText)
+                        dictationDraft = draft
+                    }
+                    isLongPressing = false
+                    didLongPress = false
+
+                }
+
+            }
+        }
     }
     
     var filteredPinnedEvents: [Event] {
@@ -6834,7 +7017,7 @@ struct DayView: View {
 struct SideBarMenuView: View {
     let safeArea: UIEdgeInsets
     @Binding var selectedDate: Date
-    @Binding var showingAddSheet: Bool
+    @Binding var dictationDraft: DictationDraft?
     @Binding var showingSettingsSheet: Bool
     @Binding var isCreatingEventFromSidebar: Bool
     @EnvironmentObject var eventManager: EventManager
@@ -6958,7 +7141,7 @@ struct SideBarMenuView: View {
                 Button(action: {
                     if eventManager.subscriptionIsActive {
                         isCreatingEventFromSidebar = true
-                        showingAddSheet = true
+                        dictationDraft = DictationDraft(title: "", date: selectedDate, note: "", hasTime: true)
                     } else {
                         checkSubscriptionBeforeAddingEventFromSidebar()
                     }
@@ -7041,7 +7224,7 @@ struct SideBarMenuView: View {
 
     private func checkSubscriptionBeforeAddingEventFromSidebar() {
         if eventManager.subscriptionIsActive {
-            showingAddSheet = true
+            dictationDraft = DictationDraft(title: "", date: selectedDate, note: "", hasTime: true)
             displayPaywall = false
             return
         }
@@ -7050,10 +7233,10 @@ struct SideBarMenuView: View {
             DispatchQueue.main.async {
                 if !eventManager.canAddEvent(ofType: .event) {
                     displayPaywall = true
-                    showingAddSheet = false
+                    dictationDraft = nil
                 } else {
                     displayPaywall = false
-                    showingAddSheet = true
+                    dictationDraft = DictationDraft(title: "", date: selectedDate, note: "", hasTime: true)
                 }
             }
         }
@@ -7317,6 +7500,32 @@ struct SettingsSheetView: View {
                         }
                     }
 
+                    Section(header: Text("Микрофон")) {
+                        HStack {
+                            Text(NSLocalizedString("SETTINGS_MICROPHONE_PERMISSION", comment: ""))
+                            Spacer()
+                            if eventManager.microphonePermissionGranted {
+                                Text(NSLocalizedString("SETTINGS_MICROPHONE_GRANTED", comment: ""))
+                                    .foregroundColor(.green)
+                            } else {
+                                Button(action: {
+                                    requestMicrophonePermission()
+                                }) {
+                                    Text(NSLocalizedString("SETTINGS_MICROPHONE_ALLOW_BUTTON", comment: ""))
+                                        .foregroundColor(.blue)
+                                }
+                            }
+                        }
+                        if !eventManager.microphonePermissionGranted {
+                            HStack(alignment: .top, spacing: 8) {
+                                Image(systemName: "info.circle.fill")
+                                    .foregroundColor(.orange)
+                                Text(LocalizedStringKey("SETTINGS_MICROPHONE_PERMISSION_INFO"))
+                                    .font(.footnote)
+                            }
+                        }
+                    }
+
                     Section(header: Text(NSLocalizedString("SETTINGS_FEEDBACK_HEADER", comment: ""))) {
                         Button(action: {
                             showingFeedbackView = true
@@ -7363,6 +7572,14 @@ struct SettingsSheetView: View {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
             DispatchQueue.main.async {
                 eventManager.updateNotificationsPermission(granted: granted)
+            }
+        }
+    }
+
+    private func requestMicrophonePermission() {
+        AVAudioSession.sharedInstance().requestRecordPermission { granted in
+            DispatchQueue.main.async {
+                eventManager.updateMicrophonePermission(granted: granted)
             }
         }
     }
@@ -7660,6 +7877,13 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.banner, .sound])
     }
+}
+
+/// Помощник, чтобы дергать системный Taptic Engine
+func lightHaptic() {
+    let gen = UIImpactFeedbackGenerator(style: .light)
+    gen.prepare()
+    gen.impactOccurred()
 }
 
 

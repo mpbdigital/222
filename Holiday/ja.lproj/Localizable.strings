@@ -70,6 +70,11 @@
 "SETTINGS_NOTIFICATIONS_GRANTED" = "許可済み";
 "SETTINGS_NOTIFICATIONS_ALLOW_BUTTON" = "許可";
 
+"SETTINGS_MICROPHONE_PERMISSION" = "権限:";
+"SETTINGS_MICROPHONE_GRANTED" = "許可済み";
+"SETTINGS_MICROPHONE_ALLOW_BUTTON" = "許可";
+"SETTINGS_MICROPHONE_PERMISSION_INFO" = "音声メモを録音するには、マイクへのアクセスを許可してください。";
+
 "SETTINGS_FEEDBACK_HEADER" = "フィードバック";
 "SETTINGS_FEEDBACK_SEND_BUTTON" = "フィードバックを送る";
 
@@ -348,3 +353,4 @@
 "SIDEBAR_DOCTOR_EMOJI" = "💊";
 "SIDEBAR_CONVENIENT_CALENDAR" = "便利なカレンダー";
 "SIDEBAR_SHOWS_ALL_EVENTS" = "特定の日のすべてのイベントを表示します。";
+"voiceRecorder.swipeLeftCancel" = "< 左にスワイプ - キャンセル";

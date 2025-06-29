@@ -257,6 +257,11 @@
 "SETTINGS_NOTIFICATIONS_GRANTED" = "Verildi";
 "SETTINGS_NOTIFICATIONS_ALLOW_BUTTON" = "İzin Ver";
 
+"SETTINGS_MICROPHONE_PERMISSION" = "İzin:";
+"SETTINGS_MICROPHONE_GRANTED" = "Verildi";
+"SETTINGS_MICROPHONE_ALLOW_BUTTON" = "İzin Ver";
+"SETTINGS_MICROPHONE_PERMISSION_INFO" = "Sesli not kaydetmek için mikrofon erişimine izin verin.";
+
 "SETTINGS_FEEDBACK_HEADER" = "Geri Bildirim";
 "SETTINGS_FEEDBACK_SEND_BUTTON" = "Geri Bildirim Gönder";
 
@@ -362,3 +367,4 @@
 "COMPLICATION_DISPLAY_NAME" = "Sonraki an";
 "COMPLICATION_DISPLAY_DESCRIPTION" = "Etkinliğe kadar dairesel ilerleme ve zamanlayıcı";
 "COMPLICATION_EVENTS_LABEL" = "Etkinlikler";
+"voiceRecorder.swipeLeftCancel" = "< Sola kaydır - İptal";

@@ -209,10 +209,13 @@ struct LiveActivityWidgetLiveActivity: Widget {
             } compactTrailing: {
                 EmptyView()
             } minimal: {
-                // привет
-                if !context.displayEmoji.isEmpty {
-                    Text(context.displayEmoji)
-                }
+                StaticCircularProgressView(
+                        start: context.attributes.startDate,
+                        end: context.attributes.eventDate,
+                        emoji: context.displayEmoji,
+                        isBirthday: context.attributes.isBirthday,
+                        size: 22     // подобрать нужный размер
+                    )
             }
           //  .widgetURL(URL(string: "http://www.apple.com"))
             .keylineTint(Color.blue)

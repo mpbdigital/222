@@ -37,7 +37,9 @@ class SpeechRecognizer: ObservableObject {
                 let bufferPointer = UnsafeBufferPointer(start: channelData, count: frameLength)
                 let rms = sqrt(bufferPointer.reduce(0) { $0 + $1 * $1 } / Float(frameLength))
                 DispatchQueue.main.async {
-                    self.amplitude = CGFloat(rms)
+                    // Применяем масштабирование, чтобы амплитуда была в диапазоне 0...1
+                    let normalized = min(1, CGFloat(rms) * 10) // коэффициент 10 подобран экспериментально
+                    self.amplitude = normalized
                 }
             }
         }

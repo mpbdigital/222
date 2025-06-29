@@ -152,6 +152,11 @@
 "SETTINGS_NOTIFICATIONS_GRANTED" = "Autorisée";
 "SETTINGS_NOTIFICATIONS_ALLOW_BUTTON" = "Autoriser";
 
+"SETTINGS_MICROPHONE_PERMISSION" = "Autorisation :";
+"SETTINGS_MICROPHONE_GRANTED" = "Autorisé";
+"SETTINGS_MICROPHONE_ALLOW_BUTTON" = "Autoriser";
+"SETTINGS_MICROPHONE_PERMISSION_INFO" = "Pour enregistrer des notes vocales, autorisez l'accès au microphone.";
+
 "SETTINGS_FEEDBACK_HEADER" = "Retour";
 "SETTINGS_FEEDBACK_SEND_BUTTON" = "Envoyer un avis";
 
@@ -374,3 +379,4 @@
 "COMPLICATION_DISPLAY_NAME" = "Moment suivant";
 "COMPLICATION_DISPLAY_DESCRIPTION" = "Progression circulaire et minuteur avant l’événement";
 "COMPLICATION_EVENTS_LABEL" = "Événements";
+"voiceRecorder.swipeLeftCancel" = "< Balayer vers la gauche - Annuler";

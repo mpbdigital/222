@@ -276,6 +276,11 @@
 "SETTINGS_NOTIFICATIONS_GRANTED" = "Erlaubt";
 "SETTINGS_NOTIFICATIONS_ALLOW_BUTTON" = "Erlauben";
 
+"SETTINGS_MICROPHONE_PERMISSION" = "Erlaubnis:";
+"SETTINGS_MICROPHONE_GRANTED" = "Erlaubt";
+"SETTINGS_MICROPHONE_ALLOW_BUTTON" = "Erlauben";
+"SETTINGS_MICROPHONE_PERMISSION_INFO" = "Um Sprachaufnahmen zu erstellen, erlauben Sie den Mikrofonzugriff.";
+
 "SETTINGS_FEEDBACK_HEADER" = "Feedback";
 "SETTINGS_FEEDBACK_SEND_BUTTON" = "Feedback senden";
 
@@ -381,3 +386,4 @@
 "COMPLICATION_DISPLAY_NAME" = "Nächster Moment";
 "COMPLICATION_DISPLAY_DESCRIPTION" = "Runder Fortschritt und Timer bis zum Ereignis";
 "COMPLICATION_EVENTS_LABEL" = "Ereignisse";
+"voiceRecorder.swipeLeftCancel" = "< Nach links wischen - Abbrechen";

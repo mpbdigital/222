@@ -86,7 +86,12 @@
  "SETTINGS_NOTIFICATIONS_ALLOW_BUTTON" = "Разрешить";
 "SETTINGS_NOTIFICATIONS_PERMISSION_INFO" = "Для полноценной работы приложения разрешите отправку уведомлений.";
 
- "SETTINGS_FEEDBACK_HEADER" = "Обратная связь";
+"SETTINGS_MICROPHONE_PERMISSION" = "Разрешение:";
+"SETTINGS_MICROPHONE_GRANTED" = "Разрешено";
+"SETTINGS_MICROPHONE_ALLOW_BUTTON" = "Разрешить";
+"SETTINGS_MICROPHONE_PERMISSION_INFO" = "Для записи голосовых заметок разрешите доступ к микрофону.";
+
+"SETTINGS_FEEDBACK_HEADER" = "Обратная связь";
  "SETTINGS_FEEDBACK_SEND_BUTTON" = "Отправить отзыв";
 
  /* SubscriptionModalView */
@@ -424,3 +429,4 @@
 "COMPLICATION_DISPLAY_NAME" = "Ближайший момент";
 "COMPLICATION_DISPLAY_DESCRIPTION" = "Круговой прогресс и таймер до события";
 "COMPLICATION_EVENTS_LABEL" = "Событий";
+"voiceRecorder.swipeLeftCancel" = "< Влево - Отмена";

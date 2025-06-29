@@ -38,6 +38,7 @@
 "SAMPLE_EVENT_WORK_MEETING" = "اجتماع عمل";
 
 "SAMPLE_EVENT_PICNIC" = "نزهة";
+"voiceRecorder.swipeLeftCancel" = "إلغاء - اسحب لليسار >";
 "SAMPLE_EVENT_CHECK_BRING_FOOD" = "إحضار الطعام";
 "SAMPLE_EVENT_CHECK_SETUP_GAMES" = "تحضير الألعاب";
 
@@ -107,6 +108,11 @@
 "SETTINGS_NOTIFICATIONS_PERMISSION" = "الإذن:";
 "SETTINGS_NOTIFICATIONS_GRANTED" = "مسموح به";
 "SETTINGS_NOTIFICATIONS_ALLOW_BUTTON" = "السماح";
+
+"SETTINGS_MICROPHONE_PERMISSION" = "الإذن:";
+"SETTINGS_MICROPHONE_GRANTED" = "مسموح به";
+"SETTINGS_MICROPHONE_ALLOW_BUTTON" = "السماح";
+"SETTINGS_MICROPHONE_PERMISSION_INFO" = "لتسجيل الملاحظات الصوتية، يرجى السماح بالوصول إلى الميكروفون.";
 
 "SETTINGS_FEEDBACK_HEADER" = "التعليقات";
 "SETTINGS_FEEDBACK_SEND_BUTTON" = "إرسال تعليق";
