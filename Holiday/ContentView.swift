@@ -6593,7 +6593,8 @@ struct EventsListView: View {
                 isLongPressing = true
                 speechRecognizer.startRecording()
                 didLongPress = true
-                
+                generateFeedback()
+
             }
         } else {
             longPressTimer?.invalidate()
